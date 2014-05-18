@@ -31,4 +31,27 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+
+	public $components = array(
+		'Acl',
+		'Session',
+		'Auth',
+	);
+
+	public function beforeFilter() {
+		if(!isset($this->request->params['prefix']) || empty($this->request->params['prefix']))
+			$this->Auth->allow();
+	}
+
+	public function beforeRender() {
+		$this->loadModel('Param');
+		$m = $this->Param->find('first', array('conditions' => array('param_id' => 1)));
+		if(isset($m) && !empty($m) && $m['Param']['param_is_maintenance'] == true) {
+			$this->layout = 'maintenance_default';
+			$this->set('msg', $m['Param']['param_message_maintenance']);
+		}
+		if (isset($this->request->params['prefix']) && !empty($this->request->params['prefix']) && $this->request->params['prefix'] == 'admin')
+			$this->layout = 'admin_login';
+
+	}
 }
