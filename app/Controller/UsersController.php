@@ -4,11 +4,13 @@ class UsersController extends AppController {
 
 	public function admin_login() {
 		if (!$this->Auth->loggedIn()) {
-			if ($this->Auth->login()) {
-				$this->Session->setFlash("Vous êtes maintenant connecté !", 'notif');
-				$this->redirect('/');
-			}else
-				$this->Session->setFlash("Username ou Mots de passe incorrect !", 'notif', array('type' => 'error'));
+			if ($this->request->is('post')) {
+				if ($this->Auth->login()) {
+					$this->Session->setFlash("Vous êtes maintenant connecté !", 'notif');
+					$this->redirect('/');
+				}else
+					$this->Session->setFlash("Username ou Mots de passe incorrect !", 'notif', array('type' => 'error'));
+			}
 		}else{
 			$this->Session->setFlash("Vous êtes déjà connecté !", 'notif');
 			$this->redirect('/');
