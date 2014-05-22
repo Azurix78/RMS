@@ -36,6 +36,8 @@ html
 	width: 100%;
 	height: 100%;
 	background: #ffffff;
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
 }
 
 body
@@ -48,6 +50,11 @@ body
 ol, ul {
 	list-style: none;
 }
+
+p{
+	color: #5f5f5f;
+}
+
 blockquote, q {
 	quotes: none;
 }
@@ -80,9 +87,9 @@ table {
 :-ms-input-placeholder { color:#242B2B; } /* ie */
 input:-moz-placeholder { color:#242B2B; }
 
-h3 { font-size: 1.375em; color: #de9251;  height: 50px; line-height: 50px; font-weight: 700; font-family: "Oswald", Verdana;}
+h3 { font-size: 1.375em; color: #de9251;  margin: 10px 0 0 0; line-height: 50px; font-weight: 700; font-family: "Oswald", Verdana;}
 
-.container{ width: 960px; margin: auto; overflow: hidden;}
+.container{ max-width: 960px; margin: auto; overflow: hidden;}
 
 .footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
  
@@ -108,7 +115,44 @@ h3 { font-size: 1.375em; color: #de9251;  height: 50px; line-height: 50px; font-
 
 
 /*Nicolas Riviere*/
+
+/* all */
+::-webkit-input-placeholder { color:#cacaca; font-style:italic; }
+::-moz-placeholder { color:#cacaca;  font-style:italic;} /* firefox 19+ */
+:-ms-input-placeholder { color:#cacaca; font-style:italic; } /* ie */
+input:-moz-placeholder { color:#cacaca; font-style:italic; }
+
+/* individual: webkit */
+#field2::-webkit-input-placeholder { color:#cacaca; font-style:italic; }
+#field3::-webkit-input-placeholder { color:#cacaca; font-style:italic;}
+#field4::-webkit-input-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#cacaca; }
+
+/* individual: mozilla */
+#field2::-moz-placeholder { color:#cacaca; font-style:italic; }
+#field3::-moz-placeholder { color:#cacaca; font-style:italic;}
+#field4::-moz-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#cacaca; }
+
+.btn{
+	padding: 10px 15px;
+	background-color: #911f77;
+	color: white;
+	font-family: "Oswald", Verdana, sans-serif;
+	border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 /*----- Partners -----*/
+
+.ctnPartners{
+	width: 100%;
+	overflow: hidden;
+}
 
 .partners{
 	float: left;
@@ -121,7 +165,7 @@ h3 { font-size: 1.375em; color: #de9251;  height: 50px; line-height: 50px; font-
 .partners section{
 	float: left;
 	width: 50%;
-	padding: 10px;
+	padding: 15px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -140,18 +184,251 @@ h3 { font-size: 1.375em; color: #de9251;  height: 50px; line-height: 50px; font-
 	font-family: "Oswald", Verdana;
 }
 
-.partners section h5{
+.partners section img{
+	width: 100%;
+	box-shadow: 0 0 5px #cdcdcd;
+}
+
+.partnersSecond section{
+	float: left;
+	width: 18%;
+	margin: 1%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px #cdcdcd;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.partnersSecond section img{
+	width: 100%;
+}
+
+.partnersSecond section h6{
+	background-color: rgba(222,146,81, 0.3);
+	position: absolute;
+	width: 90%;
+	font-size: 0.625em;
+	bottom:5%;
+	line-height: 25px;
+	left: 5%;
+	z-index: 3000;
+	font-weight: bold;
+	text-align: center;
+	color: #646464;
+}
+
+/*----------*/
+
+/*----- Contact -----*/
+.instruct{
+	font-size: 0.813em;
+	margin-bottom: 15px;
+}
+
+label{
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+input, textarea{
+	padding: 12px;
+	border: solid 1px #de9251;
+	border-radius: 4px;
+	width: 100%;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	margin: 10px 20px 5px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+textarea{
+	height: 300px;
+	resize:vertical;
+}
+
+.inputs{
+	width: 40%;
+	float: left;
+	overflow: hidden;
+}
+
+.map{
+	width: 60%;
+	height: 336px;
+	float: left;
+	overflow: hidden;
+}
+
+input[type=submit]
+{
+	float: right;
+	overflow: hidden;
+	width: auto;
+	margin: 0;
+}
+
+.map section{
+	width: 80%;
+	height: 82%;
+	margin: 8% 0 8% 16%;
+	padding: 2%;
+	border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: #de9251;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#map-canvas{
+	width: 100%;
+	height: 100%;
+}
+
+.ctnContact{
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+/*----------*/
+
+/*----- Coachs -----*/
+
+.descTeam p{
+	font-size: 0.813em;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+
+.coachs .membre{
+	width: 30%;
+	margin: 1.5%;
+	float: left;
+	padding: 15px;
+	border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: solid 1px #de9251;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+.coachs section p{
+	font-size: 0.750em;
+	text-align: justify;
+	line-height: 15px;
+}
+
+.coachs section h5{
 	text-align: justify;
 	color: #de9251;
 	margin: 5px 0;
 	font-family: "Oswald", Verdana;
 }
 
-.partners section img{
+.coachs section img{
 	width: 100%;
-	box-shadow: 0 0 5px #cdcdcd;
+	border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 }
 
+/*----------*/
+
+/*----- Coachs -----*/
+
+.articles article{
+	width: 100%;
+	padding: 15px;
+	border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: solid 1px #de9251;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 20px 0;
+}
+
+.articles article .leftArticle{
+	width: 25%;
+	padding: 0 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+}
+
+.articles article .rightArticle{
+	width: 75%;
+	float: left;
+	padding: 0 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.articles p{
+	font-size: 0.813em;
+	margin-bottom: 10px;
+}
+
+.articles h5{
+	text-align: justify;
+	color: #de9251;
+	margin: 5px 0;
+	font-family: "Oswald", Verdana;
+}
+
+.articles img{
+	width: 100%;
+	border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+.articles .plus{
+	font-size: 0.750em;
+	float: right;
+}
+
+.rightA .rightArticle{
+	float: right !important;
+	text-align: right !important;
+}
+
+.rightA .rightArticle h5{
+	text-align: right !important;
+}
+
+.rightA .rightArticle .plus{
+	float: left !important;
+}
+
+.rightA .leftArticle{
+	float: right !important;
+}
 
 /*----------*/
 
