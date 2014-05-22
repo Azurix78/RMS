@@ -10,35 +10,33 @@
 		?>
 	</head>
 	<body>
-		<section class="container">
-			<header class="header">
-				<section id="logo-site">
-					<img alt="logo" src="/img/logo-site.png" />
-				</section>
-				<nav>
-					<ul class="navigation-site">
-						<li><a href="#" class="help-us-link"><span>Link</span></a></li>
-						<li><a href="#"><span>Link</span></a></li>
-						<li><a href="#"><span>Link</span></a></li>
-						<li><a href="#"><span>Link</span></a></li>
-						<li><a href="#"><span>Link</span></a></li>
-						<li><a href="#"><span>Link</span></a></li>
-						<li><a href="#"><span>Link</span></a></li><li><a class="active" href="#"><span>Link</span></a></li>
-					</ul>
-				</nav>
-			</header>
-			<section id="content-container">
-				<section class="alert">
-					<?php echo $this->Session->flash(); ?>
-				</section>
-				<section class="content">
-					<?php echo $this->fetch('content'); ?>
-				</section>
+		<header class="header">
+			<section id="logo-site">
+				<img alt="logo" src="/img/logo-site.png" />
 			</section>
-			<footer class="footer">
-				
-			</footer>
+			<nav>
+				<ul class="navigation-site">
+					<li><a href="#" class="help-us-link"><span>Link</span></a></li>
+					<li><a href="#"><span>Link</span></a></li>
+					<li><a href="#"><span>Link</span></a></li>
+					<li><a href="#"><span>Link</span></a></li>
+					<li><a href="#"><span>Link</span></a></li>
+					<li><a href="#"><span>Link</span></a></li>
+					<li><a href="#"><span>Link</span></a></li><li><a class="active" href="#"><span>Link</span></a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="container">
+			<section class="alert">
+				<?php echo $this->Session->flash(); ?>
+			</section>
+			<section class="content">
+				<?php echo $this->fetch('content'); ?>
+			</section>
 		</section>
+		<footer class="footer">
+				
+		</footer>
 		
 		
 		<?php
