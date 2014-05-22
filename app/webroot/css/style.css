@@ -80,9 +80,9 @@ table {
 :-ms-input-placeholder { color:#242B2B; } /* ie */
 input:-moz-placeholder { color:#242B2B; }
 
-h3 { font-size: 1.375em; color: #de9251; font-family: Arial, sans-serif; height: 50px; line-height: 50px; font-weight: 700; font-family: "Oswald", Verdana;}
+h3 { font-size: 1.375em; color: #de9251;  height: 50px; line-height: 50px; font-weight: 700; font-family: "Oswald", Verdana;}
 
-.container{ width: 960px; margin: auto; }
+.container{ width: 960px; margin: auto; overflow: hidden;}
 
 .footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
  
@@ -116,6 +116,40 @@ h3 { font-size: 1.375em; color: #de9251; font-family: Arial, sans-serif; height:
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.partners section{
+	float: left;
+	width: 50%;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.partners section p{
+	font-size: 0.750em;
+	text-align: justify;
+	line-height: 15px;
+}
+
+.partners section h5{
+	text-align: justify;
+	color: #de9251;
+	margin: 5px 0;
+	font-family: "Oswald", Verdana;
+}
+
+.partners section h5{
+	text-align: justify;
+	color: #de9251;
+	margin: 5px 0;
+	font-family: "Oswald", Verdana;
+}
+
+.partners section img{
+	width: 100%;
+	box-shadow: 0 0 5px #cdcdcd;
 }
 
 
