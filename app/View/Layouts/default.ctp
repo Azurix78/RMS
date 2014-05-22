@@ -35,27 +35,15 @@
 					<?php echo $this->fetch('content'); ?>
 				</section>
 			</section>
-			<footer>
-				<div class="container">
-					<div class="column">
-						<h3>Réseaux sociaux :</h3>
-						<a href="https://plus.google.com/u/0/116029246884386023362/about"><img src="/img/logo-gp.png" alt="logo-gp" /></a>
-						<a href="https://twitter.com/ni_rubio"><img src="/img/logo-twitter.png" alt="logo-twitter" /></a>
-					</div>
-					<div class="column">
-						<h3>A propos :</h3>
-						<p>Je suis <strong>Nicolas RUBIO</strong>, développeur web, actuelement étudiant à la Web@cademie.</p>
-					</div>
-					<div id="copyright">
-						&copy; Nicolas Rubio 2013
-					</div>
-				</div>
+			<footer class="footer">
+				
 			</footer>
 		</section>
 		
 		
 		<?php
-			echo $this->Html->script('jQuery_v2.0.3');
+			echo $this->Html->script('jQuery-v1.11.1');
+			echo $this->Html->script('slick.min');
 			echo $this->Html->script('js');
 		?>
 	</body>

@@ -79,6 +79,8 @@ table {
 input:-moz-placeholder { color:#242B2B; }
 
 .container{ width: 960px; margin: auto; }
+
+.footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
  
 .header{height: 130px;width: 100%;border-bottom: 2px solid #e97716; overflow: hidden;}
 	.header #logo-site{float: left;width: 20%;height: 100%;}
