@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
 		<?php
+			echo $this->Html->css('slick');
 			echo $this->Html->css('style');
 		?>
 	</head>
