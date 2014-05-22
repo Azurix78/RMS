@@ -78,13 +78,9 @@ table {
 :-ms-input-placeholder { color:#242B2B; } /* ie */
 input:-moz-placeholder { color:#242B2B; }
 
-<<<<<<< HEAD
-.container{ width: 960px; margin: auto; overflow: hidden; }
-=======
 h3 { font-size: 1.786em; color: #ec7e21; font-family: Arial, sans-serif; height: 50px; line-height: 50px; font-weight: 700; }
 
 .container{ width: 960px; margin: auto; }
->>>>>>> FETCH_HEAD
 
 .footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
  

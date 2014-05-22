@@ -1,4 +1,4 @@
-<h2>Nos institutions partenaires, mécènes et soutiens</h2>
+<h3>Nos institutions partenaires, mécènes et soutiens</h3>
 <section class="partners">
 	<section>
 		<img src="" alt="Nom du partner">
