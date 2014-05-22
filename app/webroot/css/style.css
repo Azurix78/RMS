@@ -102,6 +102,11 @@ h3 { font-size: 1.375em; color: #de9251; font-family: Arial, sans-serif; height:
 	.slick-slide{ background: grey }
 		.slick-slide img{ width: auto; height: 100%; margin: 0 auto;  }
 
+/* READ MORE */
+
+.plus{ font-size:1.143em; height: 30px; line-height: 30px; padding: 0 5px 0 25px; font-style: italic; color: #911f77; background: url(../img/link-plus.png) 0 center no-repeat; display: block;}
+
+
 /*Nicolas Riviere*/
 /*----- Partners -----*/
 
