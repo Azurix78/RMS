@@ -97,8 +97,8 @@ h3 { font-size: 1.438em; color: #de9251; font-family: Arial, sans-serif; height:
 
 /* SLIDER */
 .slider-home{ height: 380px; width: 100%; margin-bottom: 0; }
-
-.slick-slide img{ width: auto; height: 100%; margin: 0 auto;  }
+	.slick-slide{ background: grey }
+		.slick-slide img{ width: auto; height: 100%; margin: 0 auto;  }
 
 /*Nicolas Riviere*/
 /*----- Partners -----*/
