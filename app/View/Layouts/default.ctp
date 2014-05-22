@@ -1,65 +1,62 @@
-<?php
-/**
- *
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
-?>
 <!DOCTYPE html>
 <html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
-
-		echo $this->Html->css('cake.generic');
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-</body>
+	<head>
+		<title><?php echo $this->fetch('title');?></title>
+		<meta name="author" content="rubio_n">
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+		<?php
+			echo $this->Html->css('style');
+		?>
+	</head>
+	<body>
+		<section class="container">
+			<header class="header">
+				<section id="logo-site">
+					<img alt="logo" src="/img/logo-site.png" />
+				</section>
+				<nav>
+					<ul class="navigation-site">
+						<li><a href="#" class="help-us-link"><span>Link</span></a></li>
+						<li><a href="#"><span>Link</span></a></li>
+						<li><a href="#"><span>Link</span></a></li>
+						<li><a href="#"><span>Link</span></a></li>
+						<li><a href="#"><span>Link</span></a></li>
+						<li><a href="#"><span>Link</span></a></li>
+						<li><a href="#"><span>Link</span></a></li><li><a class="active" href="#"><span>Link</span></a></li>
+					</ul>
+				</nav>
+			</header>
+			<section id="content-container">
+				<section class="alert">
+					<?php echo $this->Session->flash(); ?>
+				</section>
+				<section class="content">
+					<?php echo $this->fetch('content'); ?>
+				</section>
+			</section>
+			<footer>
+				<div class="container">
+					<div class="column">
+						<h3>Réseaux sociaux :</h3>
+						<a href="https://plus.google.com/u/0/116029246884386023362/about"><img src="/img/logo-gp.png" alt="logo-gp" /></a>
+						<a href="https://twitter.com/ni_rubio"><img src="/img/logo-twitter.png" alt="logo-twitter" /></a>
+					</div>
+					<div class="column">
+						<h3>A propos :</h3>
+						<p>Je suis <strong>Nicolas RUBIO</strong>, développeur web, actuelement étudiant à la Web@cademie.</p>
+					</div>
+					<div id="copyright">
+						&copy; Nicolas Rubio 2013
+					</div>
+				</div>
+			</footer>
+		</section>
+		
+		
+		<?php
+			echo $this->Html->script('jQuery_v2.0.3');
+			echo $this->Html->script('js');
+		?>
+	</body>
 </html>

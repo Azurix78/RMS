@@ -1,0 +1,104 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0b1 | 201101 
+NOTE: WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html
+{
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+}
+
+body
+{
+	line-height: 20px;
+	font-size: 14px;
+	color: #3e3e3e;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define visible focus styles! 
+:focus {
+outline: ?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+::-webkit-input-placeholder { color:#242B2B; }
+::-moz-placeholder { color:#242B2B; } /* firefox 19+ */
+:-ms-input-placeholder { color:#242B2B; } /* ie */
+input:-moz-placeholder { color:#242B2B; }
+
+.container{ width: 960px; margin: auto; }
+ 
+.header{height: 130px;width: 100%;border-bottom: 2px solid #e97716; overflow: hidden;}
+	.header #logo-site{float: left;width: 20%;height: 100%;}
+		.header #logo-site img{ padding: 5%; width: auto; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 20px;}
+	.header nav{float: left; width: 80%; height: 100%;}
+		.header .navigation-site{height: 100%;overflow: hidden;}
+			.header .navigation-site > li{ width: 10%;height: 100%;float: right;display: table; }
+				.header .navigation-site > li > a{ text-transform:uppercase;font-size: 1.071em;color: #4f4f4f;display: table-cell; vertical-align: middle; text-align: center; text-decoration: none; }
+					.header .navigation-site > li > a > span{padding: 10px;}
+					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a:hover span{border-bottom: 3px solid #de9251;}
+					.header .navigation-site > li > a.help-us-link > span{background: #911f77; border-radius: 5px; color: #ffffff;}
+
+
+
+
+
+
+
+
+
+
+
+
