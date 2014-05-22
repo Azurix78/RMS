@@ -83,7 +83,7 @@ input:-moz-placeholder { color:#242B2B; }
 h3 { font-size: 1.375em; color: #de9251;  height: 50px; line-height: 50px; font-weight: 700; font-family: "Oswald", Verdana;}
 
 .container{ width: 960px; margin: auto; overflow: hidden;}
-
+.content{overflow: hidden;}
 .footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
  
 .header{height: 130px;width: 100%;border-bottom: 2px solid #de9251; overflow: hidden;}
@@ -96,15 +96,77 @@ h3 { font-size: 1.375em; color: #de9251;  height: 50px; line-height: 50px; font-
 					.header .navigation-site > li > a > span{padding: 10px;}
 					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a:hover span{border-bottom: 3px solid #de9251;}
 
-
-/* SLIDER */
-.slider-home{ height: 380px; width: 100%; margin-bottom: 0; }
-	.slick-slide{ background: grey }
-		.slick-slide img{ width: auto; height: 100%; margin: 0 auto;  }
-
 /* READ MORE */
 
 .plus{ font-size:1.143em; height: 30px; line-height: 30px; padding: 0 5px 0 25px; font-style: italic; color: #911f77; background: url(../img/link-plus.png) 0 center no-repeat; display: block;}
+
+
+/*  ACCUEIL  */
+
+/* SLIDER BAN */
+.slider-home.accueil{ height: 380px; width: 100%; margin-bottom: 0; }
+	.accueil .slick-slide{ background: grey; }
+		.accueil .slick-slide img{ width: auto; height: 100%; margin: 0 auto;  }
+		.accueil .slick-slide .container-slider-desc{ position: absolute; top: 0; left: 0; height: 100%; width: 30%; background: rgb(0,0,0,0); background: rgba(0,0,0,0.7);  z-index: 2; padding: 75px 30px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+			.accueil .slick-slide .container-slider-desc h2{ line-height: 25px;font-weight: 700;font-family: "Oswald", Verdana; width: 100%;height: 50px;display: table; font-size: 25px; margin-bottom: 10px;}
+				.accueil .slick-slide .container-slider-desc h2 > span{ display: table-cell; color: #de9251; vertical-align: middle; text-transform: uppercase; }
+				.accueil .slick-slide .container-slider-desc p{ height: 170px; line-height: 17px; overflow: hidden; text-overflow: ellipsis;font-size: 14px; color: #ffffff; font-family: Verdana; }
+
+/* SLIDER PARTNERS */
+.slider-partners-container{ width: 60%; float: left; }
+	.slider-partners-container button { background: #911f77; border-radius: 50%; } 
+		.slider-partners-container button:before { content: "<"; font-family: Arial; } 
+		.slider-partners-container button.slick-next:before { content: ">";} 
+	.slider-partners{ width: 90%; margin: 0 auto;}
+		.slider-partners section{ width: 100%; padding: 10px 5px;  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+			.slider-partners .slick-slide img{ width: 100%; height: auto; margin: 0 auto;  }
+			.slider-partners .slick-slide p { text-align: center; color: #474747;height: 30px; line-height: 30px; background: #fbe5d3; margin-top: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+
+/* ASSOS DESC */
+
+.association-desc { float: left; width: 60%; }
+	.association-desc footer { overflow: hidden; margin: 5px 0;}
+		.association-desc footer span{ float: right; }
+
+/* HELP US */
+.help-us-container{ float: right; width: 35%; margin: 20px 0 20px 5%;}
+	.help-us-container a{display: block; height: 100%; width: 100%; padding: 0; margin: 0;}
+		.help-us-container a img{width: 100%; }
+
+/* OUR VALUES */
+.our-values-container{ float: right; width: 35%; margin: 20px 0 20px 5%;}
+	.our-values-container > section{ width: 100%; height: 130px; }
+		.our-values-container article{ float: left;display: block; height: 100px; width: 65%; padding: 0; margin: 0; overflow: hidden;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;padding: 0 5px;}
+			.our-values-container img{float:left; width: 30%; margin-right: 5%;}
+
+.cell2{float: left; width: 60%; overflow: hidden;}
+
+/* COACH DESC */
+
+.coaching-desc { float: left; width: 50%; }
+	.coaching-desc header img { width: 100%; height: auto; }
+	.coaching-desc article { height: 300px; line-height: 20px; overflow: hidden; text-align: justify;}
+	.coaching-desc footer { overflow: hidden; margin: 5px 0;}
+		.coaching-desc footer span{ float: right; }
+
+/* ACTION DESC */
+
+.action-desc { float: left; width: 45%; margin-left: 5%; }
+	.action-desc article { overflow: hidden;}
+		.action-desc article ul{list-style: initial; padding: 10px 0 10px 20px;  }
+			.action-desc article li{ line-height: 17px;margin-bottom: 10px;list-style-type: disc; }
+	.action-desc footer { overflow: hidden; margin: 5px 0;}
+		.action-desc footer span{ float: right; }
+
+/* SOCIAL DESC */
+.socials-desc { float: right; width: 35%; margin-left: 5%; }
+	.socials-desc article { overflow: hidden;}
+		.socials-desc article ul{list-style: initial; padding: 10px 0 10px 20px;  }
+			.socials-desc article li{ margin-bottom: 10px;list-style-type: disc;}
+			.socials-desc article a{ height: 25px; line-height: 25px; text-decoration: none; color: #868686;}
+	.socials-desc footer { overflow: hidden; margin: 5px 0;}
+		.socials-desc footer span{ float: right; }
 
 
 /*Nicolas Riviere*/

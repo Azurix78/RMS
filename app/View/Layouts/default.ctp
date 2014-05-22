@@ -23,7 +23,8 @@
 					<li><a href="#"><span>Link</span></a></li>
 					<li><a href="#"><span>Link</span></a></li>
 					<li><a href="#"><span>Link</span></a></li>
-					<li><a href="#"><span>Link</span></a></li><li><a class="active" href="#"><span>Link</span></a></li>
+					<li><a href="#"><span>Link</span></a></li>
+					<li><a class="active" href="#"><span>Link</span></a></li>
 				</ul>
 			</nav>
 		</header>
