@@ -8,4 +8,5 @@
 	<div><img alt="" src="http://placehold.it/1000x400/blue/ffffff.png" /></div>
 </section>
 <section class="container">
-	
+	<section class="content">
+		<h3>Test ets tets</h3>
