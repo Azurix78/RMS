@@ -78,7 +78,7 @@ table {
 :-ms-input-placeholder { color:#242B2B; } /* ie */
 input:-moz-placeholder { color:#242B2B; }
 
-.container{ width: 960px; margin: auto; }
+.container{ width: 960px; margin: auto; overflow: hidden; }
 
 .footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
  
@@ -93,7 +93,19 @@ input:-moz-placeholder { color:#242B2B; }
 					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a:hover span{border-bottom: 3px solid #de9251;}
 					.header .navigation-site > li > a.help-us-link > span{background: #911f77; border-radius: 5px; color: #ffffff;}
 
+/*Nicolas Riviere*/
+/*----- Partners -----*/
 
+.partners{
+	float: left;
+	width: 50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*----------*/
 
 
 
