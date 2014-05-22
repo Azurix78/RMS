@@ -9,6 +9,18 @@ class HomeController extends AppController {
 	public function partners(){
 		
 	}
+
+	public function contact(){
+		
+	}
+
+	public function coachs(){
+		
+	}
+
+	public function presse(){
+		
+	}
 }
 
 ?>
