@@ -17,4 +17,16 @@ $( document ).ready(function() {
   		speed: 3000,
 	});
 
+  $(document).on('click', '.left-nav li', function(event) {
+    $( ".left-nav li" ).each(function() {
+      $( this ).removeClass( "active" );
+    });
+
+    $( this ).addClass( "active" );
+
+    $('.actions-content-container').fadeOut(function(){
+      $('.actions-content-container').fadeIn();
+    });
+  });
+
 });

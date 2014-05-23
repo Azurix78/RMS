@@ -21,6 +21,14 @@ class HomeController extends AppController {
 	public function presse(){
 		
 	}
+
+	public function actions(){
+		
+	}
+
+	public function help(){
+		
+	}
 }
 
 ?>
