@@ -29,6 +29,8 @@ $( document ).ready(function() {
     });
   });
 
+  $('body').css('min-height', $(window).height() + 'px')
+
   $(window).scroll(function() {
     if($(window).scrollTop() > 0)
     {
