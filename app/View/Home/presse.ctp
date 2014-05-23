@@ -2,7 +2,7 @@
 <section class="articles">
 	<article class="leftA">
 		<section class="leftArticle">
-			<img src="/img/presse.png" alt="Le figaro">
+			<img src="http://placehold.it/300x280/green/ffffff.png" alt="Le figaro">
 		</section>
 		<section class="rightArticle">
 			<h5>Titre de l'article</h5>
@@ -13,7 +13,7 @@
 	</article>
 	<article class="rightA">
 		<section class="leftArticle">
-			<img src="/img/presse.png" alt="Le figaro">
+			<img src="http://placehold.it/300x280/green/ffffff.png" alt="Le figaro">
 		</section>
 		<section class="rightArticle">
 			<h5>Titre de l'article</h5>
@@ -24,7 +24,7 @@
 	</article>
 	<article class="leftA">
 		<section class="leftArticle">
-			<img src="/img/presse.png" alt="Le figaro">
+			<img src="http://placehold.it/300x280/green/ffffff.png" alt="Le figaro">
 		</section>
 		<section class="rightArticle">
 			<h5>Titre de l'article</h5>
@@ -35,7 +35,7 @@
 	</article>
 	<article class="rightA">
 		<section class="leftArticle">
-			<img src="/img/presse.png" alt="Le figaro">
+			<img src="http://placehold.it/300x280/green/ffffff.png" alt="Le figaro">
 		</section>
 		<section class="rightArticle">
 			<h5>Titre de l'article</h5>

@@ -1,13 +1,13 @@
 <section class="left-nav">
 	<ul>
 		<li>Liste des programme</li>
-		<li>Programme</li>
-		<li>Programme</li>
-		<li>Programme</li>
-		<li>Programme</li>
-		<li>Programme</li>
-		<li>Programme</li>
-		<li>Programme</li>
+		<li>Titre du programme</li>
+		<li>Titre du programme</li>
+		<li>Titre du programme</li>
+		<li>Titre du programme</li>
+		<li>Titre du programme</li>
+		<li>Titre du programme</li>
+		<li>Titre du programme</li>
 	</ul>
 </section>
 <section class="actions-content-container">

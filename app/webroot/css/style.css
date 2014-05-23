@@ -35,15 +35,15 @@ html
 {
 	width: 100%;
 	height: 100%;
-	background: #ffffff;
+	background: #f7f6f6;
 	font-family: Verdana, sans-serif;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 body
 {
 	line-height: 20px;
-	font-size: 14px;
+	font-size: 13px;
 	color: #3e3e3e;
 }
 
@@ -94,15 +94,16 @@ h3 { font-size: 1.375em; color: #de9251;  margin: 10px 0 0 0; line-height: 50px;
 
 .footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
  
-.header{height: 130px;width: 100%;border-bottom: 2px solid #de9251; overflow: hidden;}
-	.header #logo-site{float: left;width: 20%;height: 100%;}
-		.header #logo-site img{ padding: 5%; width: auto; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 20px;}
-	.header nav{float: left; width: 80%; height: 100%;}
+.header{height: 100px;width: 100%;border-bottom: 2px solid #de9251; overflow: hidden; background-color: white}
+	.header #logo-site{float: left;width: 8%;height: 100%;}
+		.header #logo-site img{ padding: 5%; width: auto; height: 90%; margin: 5% 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 20px;}
+	.header nav{float: left; width: 92%; height: 100%;}
 		.header .navigation-site{height: 100%;overflow: hidden;}
-			.header .navigation-site > li{ width: 10%;height: 100%;float: right;display: table; }
-				.header .navigation-site > li > a{ text-transform:uppercase;font-size: 1.071em;color: #4f4f4f;display: table-cell; vertical-align: middle; text-align: center; text-decoration: none; }
+			.header .navigation-site > li{ height: 100%;float: right;display: block; }
+				.header .navigation-site > li > a{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 100px; text-align: center; text-decoration: none; }
 					.header .navigation-site > li > a > span{padding: 10px;}
-					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a:hover span{border-bottom: 3px solid #de9251;}
+					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a > span:hover{border-bottom: 3px solid #de9251;}
+					.help-us-link > span{border: none !important;}
 
 /* READ MORE */
 
@@ -180,21 +181,22 @@ h3 { font-size: 1.375em; color: #de9251;  margin: 10px 0 0 0; line-height: 50px;
 
 /*  PROGRAMS  */
 
-.left-nav{float: left; width: 30%;margin: 20px 5% 20px 0;}
-	.left-nav ul{border-radius: 10px; overflow: hidden; border-left: 2px #de9251 solid; border-right: 2px #de9251 solid; border-bottom: 2px solid #de9251;}
-	.left-nav ul li{ height: 60px; line-height: 60px; border-top: 2px #de9251 solid; padding: 0 5px; text-align: center; font-size: 20px; text-transform: uppercase; font-family: 'Oswald', Verdana;}
-	.left-nav ul li:first-child, .left-nav ul li:hover, .left-nav ul li.active{ background: #de9251; color:#ffffff; }
-	.left-nav ul li:hover{cursor: pointer;}
+.left-nav{float: left; width: 25%;margin: 20px 5% 20px 0;}
+	.left-nav ul{background-color:white; border-radius: 4px; -ms-border-radius: 4px;-o-border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px; overflow: hidden; border-left: 2px #de9251 solid; border-right: 2px #de9251 solid; border-bottom: 2px solid #de9251;}
+	.left-nav ul li{ height: 40px; line-height: 40px; border-top: 2px #de9251 solid; padding: 0 5px; text-align: center; font-size: 14px; font-family: 'Oswald', Verdana;}
+	.left-nav ul li:first-child, .left-nav ul li.active{ background: #de9251; color:#ffffff; }
+	.left-nav ul li:hover{background: #f2d8c5; cursor: pointer;}
+	.left-nav ul li:first-child:hover{ background-color: #de9251; cursor: text;}
 
-.actions-content-container{ float: right; width: 65%; overflow: hidden; margin: 20px 0;}
+.actions-content-container{ float: right; width: 70%; overflow: hidden; margin: 20px 0;}
 	.actions-programmes-desc { display: block; margin-bottom: 20px;}
 		.actions-programmes-desc article h2{ display: table; height: 50px; line-height: 50px; margin-bottom: 20px;}
-			.actions-programmes-desc article h2 span{ display: table-cell;color: #de9251; font-size: 40px; font-family: 'Oswald', Verdana;vertical-align: middle; }
-		.actions-programmes-desc article img{float: left; padding: 10px;}
+			.actions-programmes-desc article h2 span{ display: table-cell;color: #de9251; font-size: 30px; font-family: 'Oswald', Verdana;vertical-align: middle; }
+		.actions-programmes-desc article img{float: left; padding: 10px 10px 10px 0;}
 
 .actions-action-container{ overflow: hidden;}
 	.actions-action{ margin-bottom: 20px; overflow: hidden; }
-		.actions-action-date{ float: left; display: block; width: 25%; margin-right: 5%; overflow: hidden;}
+		.actions-action-date{ float: left; display: block; width: 25%; margin: 0 0 0 2%; overflow: hidden;}
 			.actions-action-date span{ font-weight: 700; font-size: 30px; display: block; float: left; font-family: 'Oswald', Verdana; height: 40px; line-height: 40px;}
 			.actions-action-date span + span{ font-weight: 700; font-size: 35px;  height: 50px; line-height: 50px;}
 			.actions-action-date span + span + span { font-weight: 700; font-size: 40px; color:#de9251; height: 60px; line-height: 60px;}
@@ -244,6 +246,16 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 	text-transform: uppercase;
 }
 
+.btn:hover{
+	background-color: #a32687;
+	cursor: pointer;
+}
+
+.help-us-link{
+	line-height: 100px;
+	display: block !important;
+}
+
 /*----- Partners -----*/
 
 .ctnPartners{
@@ -269,15 +281,15 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 }
 
 .partners section p{
-	font-size: 0.750em;
 	text-align: justify;
 	line-height: 15px;
 }
 
-.partners section h5{
+.partners section h4{
+	font-size: 16px;
 	text-align: justify;
 	color: #de9251;
-	margin: 5px 0;
+	margin: 8px 0;
 	font-family: "Oswald", Verdana;
 }
 
@@ -296,17 +308,18 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 	box-shadow: 0 0 5px #cdcdcd;
 	position: relative;
 	padding-bottom: 10px;
+	background-color: white;
 }
 
 .partnersSecond section img{
 	width: 100%;
 }
 
-.partnersSecond section h6{
+.partnersSecond section h5{
 	background-color: rgba(222,146,81, 0.3);
 	position: absolute;
 	width: 90%;
-	font-size: 0.625em;
+	font-size: 10px;
 	bottom:5%;
 	line-height: 25px;
 	left: 5%;
@@ -402,7 +415,6 @@ input[type=submit]
 /*----- Coachs -----*/
 
 .descTeam p{
-	font-size: 0.813em;
 	line-height: 15px;
 	margin-bottom: 10px;
 }
@@ -418,6 +430,7 @@ input[type=submit]
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border: solid 1px #de9251;
+	background-color: white;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -425,15 +438,15 @@ input[type=submit]
 }
 
 .coachs section p{
-	font-size: 0.750em;
 	text-align: justify;
 	line-height: 15px;
 }
 
-.coachs section h5{
+.coachs section h4{
+	font-size: 16px;
 	text-align: justify;
 	color: #de9251;
-	margin: 5px 0;
+	margin: 8px 0;
 	font-family: "Oswald", Verdana;
 }
 

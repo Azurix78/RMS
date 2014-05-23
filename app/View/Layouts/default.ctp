@@ -13,18 +13,18 @@
 	<body>
 		<header class="header">
 			<section id="logo-site">
-				<img alt="logo" src="/img/logo-site.png" />
+				<a href="/"><img alt="logo" src="/img/logo-site.png" /></a>
 			</section>
 			<nav>
 				<ul class="navigation-site">
-					<li><a href="#" class="help-us-link"><span>Link</span></a></li>
-					<li><a href="#"><span>Link</span></a></li>
-					<li><a href="#"><span>Link</span></a></li>
-					<li><a href="#"><span>Link</span></a></li>
-					<li><a href="#"><span>Link</span></a></li>
-					<li><a href="#"><span>Link</span></a></li>
-					<li><a href="#"><span>Link</span></a></li>
-					<li><a class="active" href="#"><span>Link</span></a></li>
+					<li><a href="/home/help" class="help-us-link"><span class="btn">Nous aider</span></a></li>
+					<li><a href="/home/contact"><span>Contact</span></a></li>
+					<li><a href="/home/partners"><span>Nos partenaires</span></a></li>
+					<li><a href="/home/coachs"><span>Notre équipe</span></a></li>
+					<li><a href="/home/actions"><span>Les programmes</span></a></li>
+					<li><a href="#"><span>Le coaching</span></a></li>
+					<li><a href="#"><span>Les actualités</span></a></li>
+					<li><a class="active" href="/"><span>Acceuil</span></a></li>
 				</ul>
 			</nav>
 		</header>
