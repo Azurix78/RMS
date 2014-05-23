@@ -45,6 +45,7 @@ body
 	line-height: 20px;
 	font-size: 13px;
 	color: #3e3e3e;
+	position: relative;
 }
 
 ol, ul {
@@ -92,13 +93,13 @@ h3 { font-size: 1.375em; color: #de9251;  margin: 10px 0 0 0; line-height: 50px;
 .content{overflow: hidden;}
 .container{ max-width: 960px; margin: auto; overflow: hidden;}
 
-.footer{ background: #aaaaaa; min-height: 90px; border-bottom: 10px solid #ffffff; }
+.footer{ background: #aaaaaa; min-height: 100px; border-bottom: 10px solid #ffffff; width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; margin-top: 20px;}
 
-.header{ -webkit-transition: 0.5s all;
--moz-transition: 0.5s all;
--ms-transition: 0.5s all;
--o-transition: 0.5s all;
-transition: 0.5s all; }
+.header{ -webkit-transition: 0.2s all;
+-moz-transition: 0.2s all;
+-ms-transition: 0.2s all;
+-o-transition: 0.2s all;
+transition: 0.2s all; }
 
 
  
@@ -109,7 +110,7 @@ transition: 0.5s all; }
 	.header nav{float: left; width: 92%; height: 100%;}
 		.header .navigation-site{height: 100%;overflow: hidden;}
 			.header .navigation-site > li{ height: 100%;float: right;display: block; }
-				.header .navigation-site > li > a{ color:#717171 !important; font-family: "Oswald", Verdana; -webkit-transition: 0.5s line-height; -moz-transition: 0.5s line-height; -ms-transition: 0.5s line-height; -o-transition: 0.5s line-height; transition: 0.5s all; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 100px; text-align: center; text-decoration: none; }
+				.header .navigation-site > li > a{ color:#717171 !important; font-family: "Oswald", Verdana; -webkit-transition: 0.2s line-height; -moz-transition: 0.2s line-height; -ms-transition: 0.2s line-height; -o-transition: 0.2s line-height; transition: 0.2s all; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 100px; text-align: center; text-decoration: none; }
 					.header .navigation-site > li > a > span{padding: 12px 10px;}
 					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a > span:hover{border-bottom: 3px solid #de9251;}
 					.help-us-link > span{border: none !important;}

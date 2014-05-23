@@ -29,7 +29,15 @@ $( document ).ready(function() {
     });
   });
 
-  $('body').css('min-height', $(window).height() + 'px')
+  // function fixHeght(){
+  //   $('body').css('min-height', $(window).height() - $('.footer').height() + 'px');
+  //   $('body').css('padding-bottom', $('.footer').height() + 10 + 'px');
+  //   console.log($(window).height());
+  // }
+
+  // $(window).resize(fixHeght());
+
+  // fixHeght();
 
   $(window).scroll(function() {
     if($(window).scrollTop() > 0)
