@@ -48,7 +48,7 @@
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, pariatur, molestias, consequuntur quia illum nesciunt iure nostrum sapiente deleniti expedita esse ea eius eligendi libero voluptate non labore incidunt ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nostrum, atque fugit repellat autem soluta eos deleniti voluptas itaque hic? Architecto, deleniti, non laborum magnam voluptatibus a nesciunt culpa similique.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iste officia odit numquam enim ratione amet. Blanditiis, facilis qui et. Ab, quaerat aperiam veritatis molestias repellat delectus porro temporibus molestiae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quisquam, magnam, facilis, nisi est totam dolore ut nam expedita eveniet earum quas fugit necessitatibus! Animi tempora voluptates quas illum omnis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nulla, iure, magni, aut suscipit magnam numquam labore maxime tempora natus quos commodi tenetur doloribus harum quaerat libero ad eveniet sit?
 			</article>
 			<footer>
-				<span class="plus">lire plus</span>
+				<a href="#" class="plus">lire plus</a>
 			</footer>
 		</section>
 		<section class="help-us-container">
@@ -66,7 +66,7 @@
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, pariatur, molestias, consequuntur quia illum nesciunt iure nostrum sapiente deleniti expedita esse ea eius eligendi libero voluptate non labore incidunt ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nostrum, atque fugit repellat autem soluta eos deleniti voluptas itaque hic? Architecto, deleniti, non laborum magnam voluptatibus a nesciunt culpa similique.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iste officia odit numquam enim ratione amet. Blanditiis, facilis qui et. Ab, quaerat aperiam veritatis molestias repellat delectus porro temporibus molestiae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quisquam, magnam, facilis, nisi est totam dolore ut nam expedita eveniet earum quas fugit necessitatibus!
 				</article>
 				<footer>
-					<span class="plus">lire plus</span>
+					<a href="#" class="plus">lire plus</a>
 				</footer>
 			</section>
 			<section class="action-desc">
@@ -86,7 +86,7 @@
 					</ul>
 				</article>
 				<footer>
-					<span class="plus">lire plus</span>
+					<a href="#" class="plus">lire plus</a>
 				</footer>
 			</section>
 		</section>

@@ -29,4 +29,20 @@ $( document ).ready(function() {
     });
   });
 
+  $(window).scroll(function() {
+    if($(window).scrollTop() != 0)
+    {
+      $('.header').css('position', 'fixed');
+      $('.header').css('top', '0');
+      $('.header').css('height', '50px');
+      $('body').css('margin-top',$('.header').height() + 'px' );
+    }
+    else
+    {
+      $('.header').css('position', 'static');
+      $('.header').css('height', '130px');
+      $('body').css('margin-top','0px' );
+    }
+  });
+
 });
