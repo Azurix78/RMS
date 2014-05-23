@@ -110,12 +110,14 @@ transition: 0.5s all; }
 		.header .navigation-site{height: 100%;overflow: hidden;}
 			.header .navigation-site > li{ height: 100%;float: right;display: block; }
 				.header .navigation-site > li > a{ -webkit-transition: 0.5s line-height; -moz-transition: 0.5s line-height; -ms-transition: 0.5s line-height; -o-transition: 0.5s line-height; transition: 0.5s all; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 100px; text-align: center; text-decoration: none; }
-					.header .navigation-site > li > a > span{padding: 10px;}
+					.header .navigation-site > li > a > span{padding: 10px; -webkit-transition: 0.5s padding; -moz-transition: 0.5s padding; -ms-transition: 0.5s padding; -o-transition: 0.5s padding; transition: 0.5s padding;}
 					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a > span:hover{border-bottom: 3px solid #de9251;}
 					.help-us-link > span{border: none !important;}
 
 .sticky-nav{ height: 50px !important; line-height: 50px; position: fixed; top:0;}
 	.header.sticky-nav .navigation-site > li > a{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 50px; text-align: center; text-decoration: none; }
+	.header.sticky-nav .navigation-site > li > a > span{ padding: 0 10px; height: 48px; display: block;}
+	.header.sticky-nav .help-us-link > span{ display: block; height: 50px !important; border-radius: 0}
 		.header.sticky-nav  #logo-site img{ padding: 0; width: auto; height: 100%; margin: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 20px;}
 
 
