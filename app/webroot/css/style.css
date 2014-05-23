@@ -105,21 +105,19 @@ transition: 0.5s all; }
 .header{height: 100px;width: 100%;border-bottom: 2px solid #de9251; overflow: hidden; background-color: white; z-index: 10;}
 	.header #logo-site{float: left;width: 8%;height: 100%;}
 		.header #logo-site a{width: 100%;height: 100%; display: block;}
-			.header #logo-site img{ padding: 5%; width: auto; height: 90%; margin: 5% 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 20px;}
+			.header #logo-site img{ padding: 5%;width: auto;height: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 10px 20px;}
 	.header nav{float: left; width: 92%; height: 100%;}
 		.header .navigation-site{height: 100%;overflow: hidden;}
 			.header .navigation-site > li{ height: 100%;float: right;display: block; }
-				.header .navigation-site > li > a{ -webkit-transition: 0.5s line-height; -moz-transition: 0.5s line-height; -ms-transition: 0.5s line-height; -o-transition: 0.5s line-height; transition: 0.5s all; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 100px; text-align: center; text-decoration: none; }
-					.header .navigation-site > li > a > span{padding: 10px; -webkit-transition: 0.5s padding; -moz-transition: 0.5s padding; -ms-transition: 0.5s padding; -o-transition: 0.5s padding; transition: 0.5s padding;}
+				.header .navigation-site > li > a{ color:#717171 !important; font-family: "Oswald", Verdana; -webkit-transition: 0.5s line-height; -moz-transition: 0.5s line-height; -ms-transition: 0.5s line-height; -o-transition: 0.5s line-height; transition: 0.5s all; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 100px; text-align: center; text-decoration: none; }
+					.header .navigation-site > li > a > span{padding: 12px 10px;}
 					.header .navigation-site > li > a.active > span, .header .navigation-site > li > a > span:hover{border-bottom: 3px solid #de9251;}
 					.help-us-link > span{border: none !important;}
 
 .sticky-nav{ height: 50px !important; line-height: 50px; position: fixed; top:0;}
-	.header.sticky-nav .navigation-site > li > a{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 50px; text-align: center; text-decoration: none; }
-	.header.sticky-nav .navigation-site > li > a > span{ padding: 0 10px; height: 48px; display: block;}
-	.header.sticky-nav .help-us-link > span{ display: block; height: 50px !important; border-radius: 0}
-		.header.sticky-nav  #logo-site img{ padding: 0; width: auto; height: 100%; margin: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 20px;}
-
+	.header.sticky-nav .navigation-site > li > a{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 12px;text-transform:uppercase; color: #4f4f4f;float:left; display: block; line-height: 50px; text-align: center; text-decoration: none; border-right: solid 1px #d8d8d8 }
+	.header.sticky-nav .navigation-site > li > a.active > span, .header.sticky-nav .navigation-site > li > a > span:hover{border-bottom: 5px solid #de9251;}
+		.header.sticky-nav  #logo-site img{ padding: 0; width: auto; height: 100%; margin: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 20px;}
 
 /* READ MORE */
 
@@ -385,40 +383,12 @@ textarea{
 	overflow: hidden;
 }
 
-.map{
-	width: 60%;
-	height: 336px;
-	float: left;
-	overflow: hidden;
-}
-
 input[type=submit]
 {
 	float: right;
 	overflow: hidden;
 	width: auto;
 	margin: 0;
-}
-
-.map section{
-	width: 80%;
-	height: 82%;
-	margin: 8% 0 8% 16%;
-	padding: 2%;
-	border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	background-color: #de9251;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-#map-canvas{
-	width: 100%;
-	height: 100%;
 }
 
 .ctnContact{
@@ -477,7 +447,7 @@ input[type=submit]
 
 /*----------*/
 
-/*----- Coachs -----*/
+/*----- Presse -----*/
 
 .articles article{
 	width: 100%;
@@ -493,6 +463,7 @@ input[type=submit]
 	box-sizing: border-box;
 	overflow: hidden;
 	margin: 20px 0;
+	background-color: white;
 }
 
 .articles article .leftArticle{
@@ -514,19 +485,20 @@ input[type=submit]
 }
 
 .articles p{
-	font-size: 0.813em;
 	margin-bottom: 10px;
 }
 
-.articles h5{
+.articles h4{
+	font-size: 18px;
 	text-align: justify;
 	color: #de9251;
-	margin: 5px 0;
+	margin: 8px 0;
 	font-family: "Oswald", Verdana;
 }
 
 .articles img{
 	width: 100%;
+	margin: 8px 0;
 	border-radius: 2px;
 	-ms-border-radius: 2px;
 	-o-border-radius: 2px;
@@ -544,7 +516,7 @@ input[type=submit]
 	text-align: right !important;
 }
 
-.rightA .rightArticle h5{
+.rightA .rightArticle h4{
 	text-align: right !important;
 }
 

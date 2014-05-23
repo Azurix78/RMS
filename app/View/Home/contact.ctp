@@ -29,11 +29,6 @@
 			<label>Votre objet :</label>
 			<input type="text" name="object" placeHolder="L'objet de votre message">
 		</section>
-		<section class="map">
-			<section>
-				<div id="map-canvas"></div>
-			</section>
-		</section>
 	</section>
 	<section class="textarea">
 		<label>Message :</label>
