@@ -56,19 +56,48 @@
 				<img alt="image" src="http://placehold.it/370x250/0eafff/ffffff.png" />
 			</a>
 		</section>
+
+		<section class="coaching-desc">
+			<header>
+				<h3>Qu'est ce que le coaching</h3>
+				<img alt="image" src="http://placehold.it/485x175/0eafff/ffffff.png" />
+			</header>
+			<article>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, pariatur, molestias, consequuntur quia illum nesciunt iure nostrum sapiente deleniti expedita esse ea eius eligendi libero voluptate non labore incidunt ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nostrum, atque fugit repellat autem soluta eos deleniti voluptas itaque hic? Architecto, deleniti, non laborum magnam voluptatibus a nesciunt culpa similique.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iste officia odit numquam enim ratione amet. Blanditiis, facilis qui et. Ab, quaerat aperiam veritatis molestias repellat delectus porro temporibus molestiae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quisquam, magnam, facilis, nisi est totam dolore ut nam expedita eveniet earum quas fugit necessitatibus!
+			</article>
+			<footer>
+				<a href="#" class="plus">lire plus</a>
+			</footer>
+		</section>
+		
 		<section class="cell2">
-			<section class="coaching-desc">
-				<header>
-					<h3>Qu'est ce que le coaching</h3>
-					<img alt="image" src="http://placehold.it/485x175/0eafff/ffffff.png" />
-				</header>
-				<article>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, pariatur, molestias, consequuntur quia illum nesciunt iure nostrum sapiente deleniti expedita esse ea eius eligendi libero voluptate non labore incidunt ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nostrum, atque fugit repellat autem soluta eos deleniti voluptas itaque hic? Architecto, deleniti, non laborum magnam voluptatibus a nesciunt culpa similique.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iste officia odit numquam enim ratione amet. Blanditiis, facilis qui et. Ab, quaerat aperiam veritatis molestias repellat delectus porro temporibus molestiae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quisquam, magnam, facilis, nisi est totam dolore ut nam expedita eveniet earum quas fugit necessitatibus!
-				</article>
-				<footer>
-					<a href="#" class="plus">lire plus</a>
-				</footer>
+			<section class="our-values-container">
+				<section>
+					<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
+					<article>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, saepe, velit magnam corporis unde alias perspiciatis iure consectetur repudiandae est mollitia ut dolores impedit officiis fugit tempore iusto! Quasi, tempora!
+					</article>
+				</section>
+				<section>
+					<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
+					<article>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, molestiae, culpa, placeat, maxime eius hic voluptate eos veritatis ab pariatur eum maiores doloremque eligendi totam unde soluta consequuntur? Totam, quia.
+					</article>
+				</section>
+				<section>
+					<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
+					<article>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellendus possimus nisi. Repellendus, ipsum, nisi excepturi autem ipsam libero ratione inventore odio doloremque impedit sed labore voluptatem dignissimos itaque corrupti.
+					</article>
+				</section>
+				<section>
+					<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
+					<article>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, assumenda, est, molestiae aspernatur error dicta commodi expedita facere vitae ab quae provident esse ipsam architecto iusto a dolor fugiat quaerat.
+					</article>
+				</section>
 			</section>
+			
 			<section class="action-desc">
 				<header>
 					<h3>Nos dernières actions</h3>
@@ -90,32 +119,7 @@
 				</footer>
 			</section>
 		</section>
-		<section class="our-values-container">
-			<section>
-				<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
-				<article>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, saepe, velit magnam corporis unde alias perspiciatis iure consectetur repudiandae est mollitia ut dolores impedit officiis fugit tempore iusto! Quasi, tempora!
-				</article>
-			</section>
-			<section>
-				<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
-				<article>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, molestiae, culpa, placeat, maxime eius hic voluptate eos veritatis ab pariatur eum maiores doloremque eligendi totam unde soluta consequuntur? Totam, quia.
-				</article>
-			</section>
-			<section>
-				<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
-				<article>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellendus possimus nisi. Repellendus, ipsum, nisi excepturi autem ipsam libero ratione inventore odio doloremque impedit sed labore voluptatem dignissimos itaque corrupti.
-				</article>
-			</section>
-			<section>
-				<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
-				<article>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, assumenda, est, molestiae aspernatur error dicta commodi expedita facere vitae ab quae provident esse ipsam architecto iusto a dolor fugiat quaerat.
-				</article>
-			</section>
-		</section>
+		
 		<section class="slider-partners-container">
 			<h3>Il nous aident au quotidien</h3>
 			<section class="slider-partners">
@@ -187,9 +191,9 @@
 			</header>
 			<article>
 				<ul>
-					<li><a href="#">Notre page Facebook <img src="/img/facebook.png" alt="image"></a></li>
-					<li><a href="#">Notre page Viadeo <img src="/img/viadeo.png" alt="image"></a></li>
-					<li><a href="#">Notre page Linkedin <img src="/img/linkedin.png" alt="image"></a></li>
+					<li><a href="#"><img src="/img/facebook.png" alt="image"></a></li>
+					<li><a href="#"><img src="/img/viadeo.png" alt="image"></a></li>
+					<li><a href="#"><img src="/img/linkedin.png" alt="image"></a></li>
 				</ul>
 			</article>
 		</section>

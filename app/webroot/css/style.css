@@ -137,7 +137,7 @@ transition: 0.2s all; }
 				.accueil .slick-slide .container-slider-desc p{ height: 170px; line-height: 17px; overflow: hidden; text-overflow: ellipsis;font-size: 14px; color: #ffffff; font-family: Verdana; }
 
 /* SLIDER PARTNERS */
-.slider-partners-container{ width: 60%; float: left; }
+.slider-partners-container{ width: 70%; float: left; }
 	.slider-partners-container button { background: #911f77; border-radius: 50%; } 
 		.slider-partners-container button:before { content: "<"; font-family: Arial; } 
 		.slider-partners-container button.slick-next:before { content: ">";} 
@@ -149,26 +149,27 @@ transition: 0.2s all; }
 
 /* ASSOS DESC */
 
-.association-desc { float: left; width: 60%; }
+.association-desc { float: left; width: 70%; }
 	.association-desc footer { overflow: hidden; margin: 5px 0;}
 		.association-desc footer a{ float: right; }
 
 /* HELP US */
-.help-us-container{ float: right; width: 35%; margin: 20px 0 20px 5%;}
+.help-us-container{ float: right; width: 25%; margin: 20px 0 20px 5%;}
 	.help-us-container a{display: block; height: 100%; width: 100%; padding: 0; margin: 0;}
 		.help-us-container a img{width: 100%; }
 
 /* OUR VALUES */
-.our-values-container{ float: right; width: 35%; margin: 20px 0 20px 5%;}
+.our-values-container{ float: left; width: 50%; }
 	.our-values-container > section{ width: 100%; height: 130px; }
 		.our-values-container article{ float: left;display: block; height: 100px; width: 65%; padding: 0; margin: 0; overflow: hidden;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;padding: 0 5px;}
 			.our-values-container img{float:left; width: 30%; margin-right: 5%;}
 
-.cell2{float: left; width: 60%; overflow: hidden;}
+.cell2{float: left; width: 70%; overflow: hidden;}
 
 /* COACH DESC */
 
-.coaching-desc { float: left; width: 50%; }
+.coaching-desc { float: right; width: 25%; margin: 20px 0 20px 5%;}
+
 	.coaching-desc header img { width: 100%; height: auto; }
 	.coaching-desc article { height: 300px; line-height: 20px; overflow: hidden; text-align: justify;}
 	.coaching-desc footer { overflow: hidden; margin: 5px 0;}
@@ -184,11 +185,12 @@ transition: 0.2s all; }
 		.action-desc footer a{ float: right; }
 
 /* SOCIAL DESC */
-.socials-desc { float: right; width: 35%; margin-left: 5%; }
+.socials-desc { float: right; width: 25%; margin-left: 5%; }
 	.socials-desc article { overflow: hidden;}
-		.socials-desc article ul{list-style: initial; padding: 10px 0 10px 20px;  }
-			.socials-desc article li{ margin-bottom: 10px;list-style-type: disc;}
-			.socials-desc article a{ height: 25px; line-height: 25px; text-decoration: none; color: #868686;}
+		.socials-desc article ul{list-style: none; padding: 0px;  }
+			.socials-desc article li{ margin-bottom: 10px; display: block; float: left; margin-right: 10px; height: 50px;}
+			.socials-desc article a{ height: 50px; line-height: 50px; text-decoration: none; color: #868686;}
+				.socials-desc article img{ height: 50px; width: 50px; }
 	.socials-desc footer { overflow: hidden; margin: 5px 0;}
 		.socials-desc footer a{ float: right; }
 
