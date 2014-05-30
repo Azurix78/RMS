@@ -7,7 +7,7 @@ class UsersController extends AppController {
 			if ($this->request->is('post')) {
 				if ($this->Auth->login()) {
 					$this->Session->setFlash("Vous êtes maintenant connecté !", 'notif');
-					$this->redirect('/');
+					$this->redirect(array('controller' => 'admin', 'action' => 'index', 'admin' => true));
 				}else
 					$this->Session->setFlash("Username ou Mots de passe incorrect !", 'notif', array('type' => 'error'));
 			}

@@ -50,8 +50,13 @@ class AppController extends Controller {
 			$this->layout = 'maintenance_default';
 			$this->set('msg', $m['Param']['param_message_maintenance']);
 		}
-		if (isset($this->request->params['prefix']) && !empty($this->request->params['prefix']) && $this->request->params['prefix'] == 'admin')
-			$this->layout = 'admin_login';
+		if (isset($this->request->params['prefix']) && !empty($this->request->params['prefix']) && $this->request->params['prefix'] == 'admin') {
+			if ($this->Auth->loggedIn()) {
+				$this->layout = 'admin_default';
+			}else{
+				$this->layout = 'admin_login';
+			}
+		}
 
 	}
 }
