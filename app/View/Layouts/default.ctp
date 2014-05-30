@@ -13,7 +13,7 @@
 	<body>
 		<header class="header">
 			<section id="logo-site">
-				<a href="/"><img alt="logo" src="/img/logo-site.png" /></a>
+				<a href="/home/"><img alt="logo" src="/img/logo-site.png" /></a>
 			</section>
 			<nav>
 				<ul class="navigation-site">
@@ -36,13 +36,13 @@
 						<a href="/home/actions" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Les programmes</span></a>
 					</li>
 					<li>
-						<a href="#"><span>Le coaching</span></a>
+						<a href="/home/coaching" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Le coaching</span></a>
 						</li>
 					<li>
-						<a href="#"><span>Les actualités</span></a>
+						<a href="/home/news" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Les actualités</span></a>
 					</li>
 					<li>
-						<a <?php if($this->params['action'] == "" || $this->params['action'] == "index"){ echo 'class="active"'; } ?> href="/"><span>Acceuil</span></a>
+						<a href="/home/" <?php if($this->params['action'] == "" || $this->params['action'] == "index"){ echo 'class="active"'; } ?>><span>Accueil</span></a>
 					</li>
 				</ul>
 			</nav>

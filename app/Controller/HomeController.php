@@ -6,6 +6,14 @@ class HomeController extends AppController {
 		
 	}
 
+	public function news() {
+		
+	}
+
+	public function coaching() {
+		
+	}
+
 	public function partners(){
 		
 	}
