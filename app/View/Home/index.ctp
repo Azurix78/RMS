@@ -71,7 +71,7 @@
 		</section>
 		
 		<section class="cell2">
-			<section class="our-values-container">
+			<section class="actus-container">
 				<section>
 					<img alt="image" src="http://placehold.it/100x100/0eafff/ffffff.png" />
 					<article>
