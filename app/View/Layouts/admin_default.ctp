@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title><?php echo $title; ?></title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,6 +30,7 @@
       echo $this->Html->css('/lib/fullcalendar/fullcalendar');
 
       echo $this->Html->script('/lib/modernizr/modernizr.min');
+      echo $this->Html->script('custom');
     ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -148,9 +149,7 @@
         <ul id="menu" class="">
           <li class="nav-header">Menu</li>
           <li class="nav-divider"></li>
-          <li>
-            <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
-          </li>
+          <?php echo $this->Html->link("<i class=\"fa fa-power-off\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'btn btn-metis-1 btn-sw','admin' => truz, 'escape'=>false)); ?>
           <li>
             <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
           </li>

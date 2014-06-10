@@ -13,7 +13,7 @@ class UsersController extends AppController {
 			}
 		}else{
 			$this->Session->setFlash("Vous êtes déjà connecté !", 'notif');
-			$this->redirect('/');
+			$this->redirect(array('controller' => 'admin', 'action' => 'index', 'admin' => true));
 		}
 	}
 

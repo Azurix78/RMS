@@ -44,11 +44,12 @@ class MediasController extends AppController {
 	}
 
 	public function admin_activated($id) {
+		$this->autoRender = false;
 		$data = $this->Media->find('first', array('conditions' => array('media_id' => $id)));
 		$this->media->id = $data['Media']['media_id'];
 		($data['Media']['media_is_activated'] == 0) ? $this->Media->saveField('media_is_activated', 1) : $this->Media->saveField('media_is_activated', 0);
 		$this->Session->setFlash("Le media à bien été mise à jour !", 'notif');
-		$this->redirect($this->referer());
+		$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
 	}
 }
 

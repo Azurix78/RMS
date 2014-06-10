@@ -43,11 +43,12 @@ class SlidersController extends AppController {
 	}
 
 	public function admin_activated($id) {
+		$this->autoRender = false;
 		$data = $this->Slider->find('first', array('conditions' => array('slider_id' => $id)));
 		$this->Slider->id = $data['Slider']['slider_id'];
 		($data['Slider']['slider_is_activated'] == 0) ? $this->Slider->saveField('slider_is_activated', 1) : $this->Slider->saveField('slider_is_activated', 0);
 		$this->Session->setFlash("l'article à bien été modifié !", 'notif');
-		$this->redirect($this->referer());
+		$this->redirect(array('controller' => 'sliders', 'action' => 'index', 'admin' => true));
 	}
 }
 

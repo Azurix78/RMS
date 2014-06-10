@@ -3,7 +3,7 @@
 class PartnersController extends AppController {
 
 	public function admin_index() {
-		$this->set('data', $this->Partner->find('all'));
+		$this->set('datas', $this->Partner->find('all'));
 	}
 
 	public function admin_add() {
@@ -46,16 +46,15 @@ class PartnersController extends AppController {
 	}
 
 	public function admin_activated($type, $id) {
-		if (isset($type) && !empty($type)) {
-			$data = $this->Partner->find('first', array('conditions' => array('partner_id' => $id)));
-			$this->Partner->id = $data['Partner']['partner_id'];
-			if ($type == 0)
-				($data['Partner']['partner_to_home'] == 0) ? $this->Partner->saveField('partner_to_home', 1) : $this->Partner->saveField('partner_to_home', 0);
-			else if ($type == 1)
-				($data['Partner']['^partner_to_page'] == 0) ? $this->Partner->saveField('^partner_to_page', 1) : $this->Partner->saveField('^partner_to_page', 0);
-			$this->Session->setFlash("Le partenaire à bien été modifié !", 'notif');
-			$this->redirect($this->referer());
-		}
+		$this->autoRender = false;
+		$data = $this->Partner->find('first', array('conditions' => array('partner_id' => $id)));
+		$this->Partner->id = $data['Partner']['partner_id'];
+		if ($type == 0)
+			($data['Partner']['partner_to_home'] == 0) ? $this->Partner->saveField('partner_to_home', 1) : $this->Partner->saveField('partner_to_home', 0);
+		else if ($type == 1)
+			($data['Partner']['partner_to_page'] == 0) ? $this->Partner->saveField('partner_to_page', 1) : $this->Partner->saveField('partner_to_page', 0);
+		$this->Session->setFlash("Le partenaire à bien été modifié !", 'notif');
+		$this->redirect(array('controller' => 'partners', 'action' => 'index', 'admin' => true));
 	}
 }
 

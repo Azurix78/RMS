@@ -57,6 +57,5 @@ class AppController extends Controller {
 				$this->layout = 'admin_login';
 			}
 		}
-
 	}
 }

@@ -44,11 +44,12 @@ class NewsController extends AppController {
 	}
 
 	public function admin_activated($id) {
+		$this->autoRender = true;
 		$data = $this->News->find('first', array('conditions', array('news_id' => $id)));
 		$this->News->id = $data['News']['news_id'];
 		($data['News']['news_is_activated'] == 0) ? $this->News->saveField('news_is_activated', 1) : $this->News->saveField('news_is_activated', 0);
 		$this->Session->setFlash("La news à bien été activé !", 'notif', array('type' => 'error'));
-		$this->redirect($this->referer());
+		$this->redirect(array('controller' => 'news', 'action' => 'index', 'admin' => true));
 	}
 }
 
