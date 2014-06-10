@@ -11,7 +11,7 @@ class HomeController extends AppController {
 	}
 
 	public function news() {
-		$this->set('news', $this->News->find('all', array('condidtions' => array())));
+		$this->set('news', $this->News->find('all', array('conditions' => array('News.news_is_activated >' => 0))));
 	}
 
 	public function coaching() {
