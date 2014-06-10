@@ -1,0 +1,1 @@
+<?php echo $coaching['Coatch']['coatch_content']; ?>
