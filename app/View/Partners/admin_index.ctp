@@ -1,3 +1,4 @@
+<?php echo $this->Html->link("<i class=\"fa fa-plus\"></i><span class=\"link-title\"> Ajouter un partenaire</span>", array('controller'=>'partners','action'=>'add', 'admin' => true), array('class' => 'link-title btn btn-primary btn-xs pull-right','admin' => true, 'style' => 'margin-bottom: 10px', 'escape'=>false)); ?>
 <table class="table table-bordered sortableTable responsive-table">
   <thead>
     <tr>

@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title><?php echo $title; ?></title>
+    <title><?php echo $this->fetch('title'); ?></title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +11,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <!--<link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
 
     <!-- Font Awesome --><!--
-    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
     <!-- Metis core stylesheet --><!--
-    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="/css/main.min.css">
 
     <!-- Metis Theme stylesheet -->
-    <!--<link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/lib/fullcalendar/fullcalendar.css">-->
+    <!--<link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/lib/fullcalendar/fullcalendar.css">-->
     <?php
       echo $this->Html->css('/lib/bootstrap/css/bootstrap.min');
       echo $this->Html->css('/lib/font-awesome/css/font-awesome.min');
@@ -30,7 +30,6 @@
       echo $this->Html->css('/lib/fullcalendar/fullcalendar');
 
       echo $this->Html->script('/lib/modernizr/modernizr.min');
-      echo $this->Html->script('custom');
     ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -43,7 +42,7 @@
         <![endif]-->
 
     <!--Modernizr 2.7.2-->
-    <!--<script src="assets/lib/modernizr/modernizr.min.js"></script>-->
+    <!--<script src="/lib/modernizr/modernizr.min.js"></script>-->
   </head>
   <body>
     <div id="wrap">
@@ -61,7 +60,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="index.html" class="navbar-brand">
+              <a href="" class="navbar-brand">
                 <img src="/img/logo.png" alt="">
               </a> 
             </header>
@@ -130,7 +129,7 @@
           <div class="user-wrapper">
             <a class="user-link" href="">
               <img class="media-object img-thumbnail user-img" alt="User Picture" src="/img/user.gif">
-              <span class="label label-danger user-label">16</span>
+              <!--<span class="label label-danger user-label">16</span>-->
             </a>
             <div class="media-body">
               <h5 class="media-heading"><?php echo ucfirst($this->Session->read('Auth.User.username')); ?></h5>
@@ -149,24 +148,26 @@
         <ul id="menu" class="">
           <li class="nav-header">Menu</li>
           <li class="nav-divider"></li>
-          <?php echo $this->Html->link("<i class=\"fa fa-power-off\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'btn btn-metis-1 btn-sw','admin' => truz, 'escape'=>false)); ?>
           <li>
-            <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"> L'équipe</span>", array('controller'=>'teams','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"> Les partenaires</span>", array('controller'=>'partners','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"> Les programmes</span>", array('controller'=>'programs','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <a href="dashboard.html"><i class="fa fa-dashboard"></i><span class="link-title"> Dashboard</span></a>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+          </li>
+          <li>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
           </li>
           <li class="">
             <a href="javascript:;"><i class="fa fa-tasks"></i><span class="link-title"> Components</span><span class="fa arrow"></span></a>
@@ -224,7 +225,7 @@
     </script>
     <?php
       echo $this->Html->script('main');
-      echo $this->Html->script('style-switcher');
+      //echo $this->Html->script('style-switcher');
       echo $this->Html->script('/lib/jquery/jquery.min');
       echo $this->Html->script('/lib/jquery-ui/jquery-ui.min');
       echo $this->Html->script('/lib/fullcalendar/fullcalendar.min');
@@ -233,6 +234,7 @@
       echo $this->Html->script('/lib/flot/jquery.flot');
       echo $this->Html->script('/lib/flot/jquery.flot.selection');
       echo $this->Html->script('/lib/flot/jquery.flot.resize');
+      echo $this->Html->script('custom');
     ?>
 
     <!-- Metis core scripts -->

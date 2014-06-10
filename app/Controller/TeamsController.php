@@ -10,6 +10,7 @@ class TeamsController extends AppController {
 		if ($this->request->is('post')) {
 			$d = $this->request->data;
 			$d['Team']['team_id'] = null;
+			$d['Team']['team_img'] = null;
 			if ($this->Team->save($d, true, array('team_id', 'team_name', 'team_desc', 'team_img'))) {
 				$this->Session->setFlash("L'intervenant à bien été ajouté !", 'notif');
 				$this->redirect(array('controller' => 'teams', 'action' => 'index', 'admin' => true));
@@ -40,6 +41,14 @@ class TeamsController extends AppController {
 		$this->Team->delete($id);
 		$this->Session->setFlash("L'intervenant à bien été supprimé !", 'notif');
 		$this->redirect($this->referer());
+	}
+
+	public function admin_activated($id) {
+		$this->autoRender = false;
+		$data = $this->Team->find('first', array('conditions' => array('team_id' => $id)));
+		($data['Team']['team_is_activated'] == 0) ? $this->Action->saveField('team_is_activated', 1) : $this->Action->saveField('team_is_activated', 0);
+		$this->Session->setFlash("L'intervenant à bien été modifié !", 'notif');
+		$this->redirect(array('controller' => 'teams', 'action' => 'index', 'admin' => true));
 	}
 }
 

@@ -13,7 +13,7 @@ class ActionsController extends AppController {
 
 			} else {
 				$this->Session->setFlash("Un problème est survenu, Réeessayez !", 'notif', array('type' => 'error'));
-				$this->redirect($this->referer())
+				$this->redirect($this->referer());
 			}
 		}
 	}
