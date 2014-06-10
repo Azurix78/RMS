@@ -6,6 +6,8 @@ class UsersController extends AppController {
 		if (!$this->Auth->loggedIn()) {
 			if ($this->request->is('post')) {
 				if ($this->Auth->login()) {
+					$this->User->id = $this->Session->read('Auth.User.id');
+					$this->User->saveField('modified', date('Y-m-d H:m:s'));
 					$this->Session->setFlash("Vous êtes maintenant connecté !", 'notif');
 					$this->redirect(array('controller' => 'admin', 'action' => 'index', 'admin' => true));
 				}else

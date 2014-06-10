@@ -43,7 +43,12 @@ class ProgramsController extends AppController {
 	}
 
 	public function admin_activated($id) {
-
+		$this->autoRender = false;
+		$data = $this->Program->find('first', array('conditions' => array('program_id' => $id)));
+		$this->Program->id = $d['Program']['program_id'];
+		($d['Program']['program_is_activated'] == 0) ? $this->Program->saveField('program_is_activated', 1) : $this->Program->saveField('program_is_activated', 0);
+		$this->Session->setFlash("L'action à bien été edité !", 'notif');
+		$this->redirect(array('controller' => 'actions', 'action' => 'index', 'admin' => true));
 	}
 }
 
