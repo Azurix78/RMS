@@ -30,6 +30,10 @@
       echo $this->Html->css('/lib/fullcalendar/fullcalendar');
 
       echo $this->Html->script('/lib/modernizr/modernizr.min');
+      echo $this->Html->script('custom');
+
+      /* CKEditor */
+      echo $this->Html->script('/lib/ckeditor/ckeditor.js');
     ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
