@@ -50,3 +50,21 @@ body:not(.sidebar-left-mini) #menu {
     background: darken(@baseColor, 10%);
   }
 }*/
+
+.navbar-brand{
+  display: table;
+  table-layout: fixed;
+  height: 58px;
+}
+
+.navbar-brand > span{
+  display: table-cell;
+  padding: 0 10px;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+.media-object.img-thumbnail.user-img{
+  width: 64px;
+  height: 64px;
+}

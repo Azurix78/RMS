@@ -64,8 +64,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="" class="navbar-brand">
-                <img src="/img/logo.png" alt="">
+              <a href="/admin/admin" class="navbar-brand">
+                <span>RMA</span>
               </a> 
             </header>
             <div class="topnav"><!--
@@ -107,21 +107,9 @@
           </div><!-- /.container-fluid -->
         </nav><!-- /.navbar -->
         <header class="head">
-          <div class="search-bar">
-            <form class="main-search" action="">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Live Search ...">
-                <span class="input-group-btn">
-                  <button class="btn btn-primary btn-sm text-muted" type="button">
-                      <i class="fa fa-search"></i>
-                  </button>
-                </span>
-              </div>
-            </form><!-- /.main-search -->
-          </div><!-- /.search-bar -->
           <div class="main-bar">
             <h3>
-              <i class="fa fa-dashboard"></i> Dashboard</h3>
+              <i class="fa fa-dashboard"></i> Administration</h3>
           </div><!-- /.main-bar -->
         </header><!-- /.head -->
       </div><!-- /#top -->
@@ -132,7 +120,7 @@
           </div>
           <div class="user-wrapper">
             <a class="user-link" href="">
-              <img class="media-object img-thumbnail user-img" alt="User Picture" src="/img/user.gif">
+              <img class="media-object img-thumbnail user-img" alt="User Picture" src="/img/logo-site.png">
               <!--<span class="label label-danger user-label">16</span>-->
             </a>
             <div class="media-body">
@@ -172,17 +160,6 @@
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
-          </li>
-          <li class="">
-            <a href="javascript:;"><i class="fa fa-tasks"></i><span class="link-title"> Components</span><span class="fa arrow"></span></a>
-            <ul>
-              <li class=""><a href="icon.html"><i class="fa fa-angle-right"></i>&nbsp;Icon</a></li>
-              <li class=""><a href="button.html"><i class="fa fa-angle-right"></i>&nbsp;Button</a></li>
-              <li class=""><a href="progress.html"><i class="fa fa-angle-right"></i>&nbsp;Progress</a></li>
-              <li class=""><a href="pricing.html"><i class="fa fa-credit-card"></i>&nbsp;Pricing Table</a></li>
-              <li class=""><a href="bgimage.html"><i class="fa fa-angle-right"></i>&nbsp;Bg Image</a></li>
-              <li class=""><a href="bgcolor.html"><i class="fa fa-angle-right"></i>&nbsp;Bg Color</a></li>
-            </ul>
           </li>
           <li class="nav-divider"></li>
         </ul><!-- /#menu -->
