@@ -58,4 +58,26 @@ class AppController extends Controller {
 			}
 		}
 	}
+
+	public function upload_file($file, $dir, $auth_extensions = array('gif', 'jpeg', 'jpg', 'png')) {
+		if ($file['error'] == 0) {
+			$tmp_name = $file['tmp_name'];
+			$extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+			if (in_array(strtolower($extension), $auth_extensions)) {
+				$name = (string)time() . '.' . $extension;
+				if (move_uploaded_file($tmp_name, IMAGES  . '..' . DS . 'files' . DS  . 'images' . DS . $dir . DS . $name) == true) {
+					return $name;
+				}
+				return false;
+			}
+			return false;
+		}
+		return false;
+	}
+
+	public function delete_file($file, $dir) {
+		if (unlink(IMAGES  . '..' . DS . 'files' . DS  . 'images' . DS . $dir . DS . $file))
+			return true;
+		return false;
+	}
 }
