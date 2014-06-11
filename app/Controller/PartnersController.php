@@ -38,7 +38,7 @@ class PartnersController extends AppController {
 						$this->redirect(array('controller' => 'partners', 'action' => 'index', 'admin' => true));
 					} else {
 						$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
-						$this->redirect^($this->referer());
+						$this->redirect($this->referer());
 					}
 				}
 			}
