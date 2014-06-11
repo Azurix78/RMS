@@ -10,7 +10,7 @@ class MediasController extends AppController {
 		if ($this->request->is('post')) {
 			$d = $this->request->data;
 			$d['Media']['media_id'] = null;
-			if ($this->Media->save($d, true, array('media_id', 'media_name', 'media_desc', 'media_img'))) {
+			if ($this->Media->save($d, true, array('media_id', 'media_name', 'media_desc', 'media_img', 'media_link'))) {
 				$this->Session->setFlash("Le media à bien été ajouté !", 'notif');
 				$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
 			} else {
@@ -24,8 +24,8 @@ class MediasController extends AppController {
 		$data = $this->Media->find('first', array('conditions' => array('media_id' => $id)));
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
-			$this->Media->id = $d['Media']['media_id'];
-			if ($this->Media->save($d, true, array('media_name', 'media_desc', 'media_img'))) {
+			$this->Media->id = $id;
+			if ($this->Media->save($d, true, array('media_name', 'media_desc', 'media_img', 'media_link'))) {
 				$this->Session->setFlash("Le media à bien été édité !", 'notif');
 				$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
 			} else {
@@ -46,7 +46,7 @@ class MediasController extends AppController {
 	public function admin_activated($id) {
 		$this->autoRender = false;
 		$data = $this->Media->find('first', array('conditions' => array('media_id' => $id)));
-		$this->media->id = $data['Media']['media_id'];
+		$this->Media->id = $id;
 		($data['Media']['media_is_activated'] == 0) ? $this->Media->saveField('media_is_activated', 1) : $this->Media->saveField('media_is_activated', 0);
 		$this->Session->setFlash("Le media à bien été mise à jour !", 'notif');
 		$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
