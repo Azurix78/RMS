@@ -30,16 +30,16 @@ class PartnersController extends AppController {
 			$d = $this->request->data;
 			$d['Partner']['partner_id'] = $data['Partner']['partner_id'];
 			$this->Partner->id = $data['Partner']['partner_id'];
-			$d['Partner']['partner_img'] = $this->upload_file($d['Partner']['partner_img'], 'partners');
+			$d['Partner']['partner_img'] = $d['Partner']['partner_img']['size'] == 0 ? $data['Partner']['partner_img'] : $this->upload_file($d['Partner']['partner_img'], 'partners');
 			if ($d['Partner']['partner_img'] != false) {
-				if ($this->delete_file($data['Partner']['partner_img'], 'partners')) {
-					if ($this->Partner->save($d, true, array('partner_type', 'partner_name', 'partner_desc', 'partner_img', 'partner_to_home', 'partner_to_page'))) {
-						$this->Session->setFlash("Le partenaire à bien été edité !", 'notif');
-						$this->redirect(array('controller' => 'partners', 'action' => 'index', 'admin' => true));
-					} else {
-						$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
-						$this->redirect($this->referer());
-					}
+				if ($data['Partner']['partner_img'] != $d['Partner']['partner_img'])
+					$this->delete_file($data['Partner']['partner_img'], 'partners');
+				if ($this->Partner->save($d, true, array('partner_type', 'partner_name', 'partner_desc', 'partner_img', 'partner_to_home', 'partner_to_page'))) {
+					$this->Session->setFlash("Le partenaire à bien été edité !", 'notif');
+					$this->redirect(array('controller' => 'partners', 'action' => 'index', 'admin' => true));
+				} else {
+					$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
+					$this->redirect($this->referer());
 				}
 			}
 		}
@@ -64,6 +64,8 @@ class PartnersController extends AppController {
 			($data['Partner']['partner_to_home'] == 0) ? $this->Partner->saveField('partner_to_home', 1) : $this->Partner->saveField('partner_to_home', 0);
 		else if ($type == 1)
 			($data['Partner']['partner_to_page'] == 0) ? $this->Partner->saveField('partner_to_page', 1) : $this->Partner->saveField('partner_to_page', 0);
+		else if ($type == 2)
+			($data['Partner']['partner_type'] == 0) ? $this->Partner->saveField('partner_type', 1) : $this->Partner->saveField('partner_type', 0);
 		$this->Session->setFlash("Le partenaire à bien été modifié !", 'notif');
 		$this->redirect(array('controller' => 'partners', 'action' => 'index', 'admin' => true));
 	}
