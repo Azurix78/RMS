@@ -65,7 +65,7 @@
                 <span class="icon-bar"></span>
               </button>
               <a href="/admin/admin" class="navbar-brand">
-                <span>RMA</span>
+                <span><i class="fa fa-dashboard"></i> Administration</span>
               </a> 
             </header>
             <div class="topnav"><!--
@@ -88,7 +88,7 @@
                 </a> 
               </div>-->
               <div class="btn-group">
-                <?php echo $this->Html->link("<i class=\"fa fa-power-off\"></i>", array('controller'=>'users','action'=>'logout', 'admin' => true), array('class' => 'btn btn-metis-1 btn-sw', 'escape'=>false)); ?>
+                <?php echo $this->Html->link("<i class=\"fa fa-power-off\"></i>", array('controller'=>'users','action'=>'logout', 'admin' => true), array('class' => 'btn btn-metis-3 btn-sw', 'escape'=>false)); ?>
               </div><!--
               <div class="btn-group">
                 <a data-placement="bottom" data-original-title="Show / Hide Left" data-toggle="tooltip" class="btn btn-primary btn-sm toggle-left" id="menu-toggle">
@@ -106,12 +106,12 @@
             </div>
           </div><!-- /.container-fluid -->
         </nav><!-- /.navbar -->
-        <header class="head">
+       <!--  <header class="head">
           <div class="main-bar">
             <h3>
               <i class="fa fa-dashboard"></i> Administration</h3>
-          </div><!-- /.main-bar -->
-        </header><!-- /.head -->
+          </div> /.main-bar 
+        </header> --><!-- /.head -->
       </div><!-- /#top -->
       <div id="left">
         <div class="media user-media">
@@ -138,28 +138,28 @@
         </div>
         <!-- #menu -->
         <ul id="menu" class="">
-          <li class="nav-header">Menu</li>
+          <li class="nav-header" data-current="<?php echo $this->params['controller']; ?>">Menu</li>
           <li class="nav-divider"></li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"> L'équipe</span>", array('controller'=>'teams','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-home\"></i><span class=\"link-title\"> Acceuil</span>", array('controller'=>'admin','action'=>'index', 'admin' => true), array('class' => 'link-title li-admin','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"> Les partenaires</span>", array('controller'=>'partners','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-user\"></i><span class=\"link-title\"> L'équipe</span>", array('controller'=>'teams','action'=>'index', 'admin' => true), array('class' => 'link-title li-teams','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"> Les programmes</span>", array('controller'=>'programs','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"> Les partenaires</span>", array('controller'=>'partners','action'=>'index', 'admin' => true), array('class' => 'link-title li-partners','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-briefcase\"></i><span class=\"link-title\"> Les programmes</span>", array('controller'=>'programs','action'=>'index', 'admin' => true), array('class' => 'link-title li-programs','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-globe\"></i><span class=\"link-title\"> L'actualité</span>", array('controller'=>'news','action'=>'index', 'admin' => true), array('class' => 'link-title li-news','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-dashboard\"></i><span class=\"link-title\"> Le coaching</span>", array('controller'=>'coaching','action'=>'index', 'admin' => true), array('class' => 'link-title li-coaching','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-star\"></i><span class=\"link-title\"></span>", array('controller'=>'partner','action'=>'index', 'admin' => true), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-envelope\"></i><span class=\"link-title\"> Informations de contact</span>", array('controller'=>'contact','action'=>'edit', 'admin' => true), array('class' => 'link-title li-contact','admin' => true, 'escape'=>false)); ?>
           </li>
           <li class="nav-divider"></li>
         </ul><!-- /#menu -->
@@ -224,4 +224,8 @@
     <!--For Demo Only. Not required -->
     <!--<script src="assets/js/style-switcher.min.js"></script>-->
   </body>
+  <?php echo $this->Html->script('jQuery-v1.11.1'); ?>
+  <script type="text/javascript">
+    $('.li-' + $('.nav-header').data('current')).addClass('active');
+  </script>
 </html>

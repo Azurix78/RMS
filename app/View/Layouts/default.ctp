@@ -36,10 +36,10 @@
 						<a href="/home/actions" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Les programmes</span></a>
 					</li>
 					<li>
-						<a href="/home/coaching" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Le coaching</span></a>
+						<a href="/home/coaching" <?php if($this->params['action'] == "coaching"){ echo 'class="active"'; } ?>><span>Le coaching</span></a>
 						</li>
 					<li>
-						<a href="/home/news" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Les actualités</span></a>
+						<a href="/home/news" <?php if($this->params['action'] == "news"){ echo 'class="active"'; } ?>><span>Les actualités</span></a>
 					</li>
 					<li>
 						<a href="/home/" <?php if($this->params['action'] == "" || $this->params['action'] == "index"){ echo 'class="active"'; } ?>><span>Accueil</span></a>

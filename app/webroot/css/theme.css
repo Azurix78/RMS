@@ -4,17 +4,34 @@
 * Copyright 2014
 * Licensed under MIT (https://github.com/onokumus/Bootstrap-Admin-Template/blob/master/LICENSE.md)
 */
+a{
+  color: #de9251;
+}
+
 #top > .navbar {
-  border-top: 3px solid #428bca;
+  border-top: 3px solid #de9251;
 }
 #top > .navbar .dropdown-menu > li > a:hover,
 #top > .navbar .dropdown-menu > li > a:focus {
-  background-color: #428bca;
+  background-color: #de9251;
   color: #000;
 }
 #wrap,
 #left {
   background-color: #333;
+}
+
+.message{
+  background: #cde69c;
+  padding: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  margin: 0 auto 10px auto;
+  border: solid 1px #a5d24a;
+  color: #638421;
 }
 /*
 // First Level
