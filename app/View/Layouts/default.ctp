@@ -21,7 +21,7 @@
 						<a href="/home/help" class="help-us-link"><span class="btn">Nous aider</span></a>
 					</li>
 					<li>
-						<a href="/home/contact" <?php if($this->params['action'] == "contact"){ echo 'class="active"'; } ?>><span>Contact</span></a>
+						<a href="/contact" <?php if($this->params['controller'] == "contact"){ echo 'class="active"'; } ?>><span>Contact</span></a>
 					</li>
 					<li>
 						<a href="/home/presse" <?php if($this->params['action'] == "presse"){ echo 'class="active"'; } ?>><span>Presse</span></a>

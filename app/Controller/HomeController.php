@@ -37,9 +37,6 @@ class HomeController extends AppController {
 
 	public function help(){
 	}
-
-	public function contact(){
-	}
 }
 
 ?>

@@ -2,7 +2,8 @@
 
 class ContactController extends AppController {
 
-	public $uses = array('User');
+	public $uses = array('Param');
+	var $components = array('Email');
 
 	public function admin_index() {
 
@@ -10,11 +11,11 @@ class ContactController extends AppController {
 
 	public function admin_edit() {
 
-		$user = $this->User->findById(2);
+		$user = $this->Param->findByParamId(1);
 
 	    if ($this->request->is(array('post', 'put'))) {
-	        $this->User->id = 2;
-	        if ($this->User->save($this->request->data)) {
+	        $this->Param->id = 1;
+	        if ($this->Param->save($this->request->data)) {
 	            $this->Session->setFlash(__('Informations mises à jour.'));
 	            return $this->redirect(array('action' => 'edit'));
 	        }
@@ -24,6 +25,41 @@ class ContactController extends AppController {
 	    if (!$this->request->data) {
 	        $this->request->data = $user;
 	    }
+	}
+
+	public function index(){
+		$data = $this->Param->findByParamId(1);
+		$this->set('data', $data);
+
+		if ($this->request->is(array('post', 'put'))) {
+			App::uses('CakeEmail', 'Network/Email');
+
+			$contact = $this->request->data;
+
+			$message  = 'Vous avez reçu un message depuis le site RéussirMoiAussi.fr :<br>';
+			$message .= 'Nom / Prénom : ' . $contact['name'] . '<br>';
+			$message .= 'Mail : ' . $contact['mail'] . '<br>';
+			$message .= 'Telephone : ' . $contact['tel'] . '<br>';
+			$message .= 'Objet : ' . $contact['object'] . '<br>';
+			$message .= 'Message : <br>' . $contact['message'];
+
+		    $this->Email->to = $data['Param']['param_mail_contact'];
+			$this->Email->subject = '[ReussirMoiAussi] ' . $contact['object'];
+			$this->Email->from = 'noreply@reussirmoiaussi.fr';
+			$this->Email->smtpOptions = array(
+			'port'=>'465',
+			'timeout'=>'30',
+			'host' => 'ssl://smtp.gmail.com',
+			'username'=>'reussirmoiaussismtp@gmail.com',
+			'password'=>'smtprma75',
+			);
+			$this->Email->delivery = 'smtp';
+			if ($this->Email->send($message)) {
+				$this->Session->setFlash(__('Message envoyé'));
+			} else {
+				$this->Session->setFlash(__($this->Email->smtpError));
+			}
+		}
 	}
 }
 

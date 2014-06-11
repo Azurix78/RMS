@@ -161,6 +161,9 @@
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-envelope\"></i><span class=\"link-title\"> Informations de contact</span>", array('controller'=>'contact','action'=>'edit', 'admin' => true), array('class' => 'link-title li-contact','admin' => true, 'escape'=>false)); ?>
           </li>
+          <li>
+            <?php echo $this->Html->link("<i class=\"fa fa-share\"></i><span class=\"link-title\"> Retour au site</span>", array('controller'=>'home','action'=>'index', 'admin' => false), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
+          </li>
           <li class="nav-divider"></li>
         </ul><!-- /#menu -->
       </div><!-- /#left -->
