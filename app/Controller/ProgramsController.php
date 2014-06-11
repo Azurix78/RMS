@@ -2,8 +2,15 @@
 
 class ProgramsController extends AppController {
 
+	public $uses = array('Action', 'Report')
+
 	public function admin_index() {
 		$this->set('datas', $this->Program->find('all'));
+	}
+
+	public function admin_show($id) {
+		$this->ser('actions', $this->Action->find('all'));
+		$this->set('reports', $this->Report->find('all'));
 	}
 
 	public function admin_add() {
