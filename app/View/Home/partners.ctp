@@ -3,8 +3,7 @@
 	<section class="partners">
 	<?php foreach ($partnersTop as $key => $partner): ?>
 		<section>
-			<img src="/img/partenaire.png" alt="Nom du partner">
-			<!-- <img src="<?php echo $partner['Partner']['partner_img']; ?>" alt="<?php echo $partner['Partner']['partner_name']; ?>"> -->
+			<img src="/files/images/partners/<?php echo $partner['Partner']['partner_img']; ?>" alt="<?php echo $partner['Partner']['partner_name']; ?>">
 			<h4><?php echo $partner['Partner']['partner_name']; ?></h4>
 			<p><?php echo $partner['Partner']['partner_desc']; ?></p>
 		</section>
@@ -21,8 +20,7 @@
 <section class="ctnPartners partnersSecond">
 	<?php foreach ($partnersBot as $key => $partner): ?>
 		<section>
-			<img src="/img/partenaire.png" alt="Nom du partner">
-			<!-- <img src="<?php echo $partner['Partner']['partner_img']; ?>" alt="<?php echo $partner['Partner']['partner_name']; ?>"> -->
+			<img src="/files/images/partners/<?php echo $partner['Partner']['partner_img']; ?>" alt="<?php echo $partner['Partner']['partner_name']; ?>">
 			<h5><?php echo $partner['Partner']['partner_name']; ?></h5>
 		</section>
 	<?php endforeach ?>

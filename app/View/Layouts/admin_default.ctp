@@ -156,13 +156,16 @@
             <?php echo $this->Html->link("<i class=\"fa fa-globe\"></i><span class=\"link-title\"> L'actualité</span>", array('controller'=>'news','action'=>'index', 'admin' => true), array('class' => 'link-title li-news','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-dashboard\"></i><span class=\"link-title\"> Le coaching</span>", array('controller'=>'coaching','action'=>'index', 'admin' => true), array('class' => 'link-title li-coaching','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-dashboard\"></i><span class=\"link-title\"> Le coaching</span>", array('controller'=>'coach','action'=>'edit', 'admin' => true), array('class' => 'link-title li-coaching','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-envelope\"></i><span class=\"link-title\"> Informations de contact</span>", array('controller'=>'contact','action'=>'edit', 'admin' => true), array('class' => 'link-title li-contact','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-heart\"></i><span class=\"link-title\"> Nous aider</span>", array('controller'=>'help','action'=>'index', 'admin' => true), array('class' => 'link-title li-help','admin' => true, 'escape'=>false)); ?>
+          </li>
+          <li>
+            <?php echo $this->Html->link("<i class=\"fa fa-globe\"></i><span class=\"link-title\"> Médias</span>", array('controller'=>'Medias','action'=>'index', 'admin' => true), array('class' => 'link-title li-media','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-share\"></i><span class=\"link-title\"> Retour au site</span>", array('controller'=>'home','action'=>'index', 'admin' => false), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>

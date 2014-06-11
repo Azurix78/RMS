@@ -1,1 +1,1 @@
-<?php echo $coatch['Coatch']['coatch_content']; ?>
+<?php echo $coatch['Coach']['coach_content']; ?>
