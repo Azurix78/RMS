@@ -21,5 +21,5 @@
 		<h4>Nom prénom</h4>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus elementum, dignissim sapien id, consectetur massa. Nulla auctor sapien ut quam blandit mattis. Fusce tempus, metus a ultricies mollis, leo purus egestas nulla, vitae adipiscing 
 	</section>
-	 -->
+	-->
 </section>

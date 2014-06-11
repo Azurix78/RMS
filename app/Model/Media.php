@@ -1,7 +1,8 @@
 <?php
 
-class Medias extends AppModel {
+class Media extends AppModel {
 	public $primaryKey = 'media_id';
+	public $useTable = 'medias';
 }
 
 ?>
