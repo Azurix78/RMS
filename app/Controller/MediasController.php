@@ -12,7 +12,7 @@ class MediasController extends AppController {
 			$d['Media']['media_id'] = null;
 			if ($this->Media->save($d, true, array('media_id', 'media_name', 'media_desc', 'media_img'))) {
 				$this->Session->setFlash("Le media à bien été ajouté !", 'notif');
-				$this->redirect(array('controller' => 'medias', 'action' => 'index'), 'admin' => true)
+				$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
 			} else {
 				$this->Session->setFlash("Un problème est survenu, Réessayer !", 'notif', array('type' => 'error'));
 				$this->redirect($this->referer());
