@@ -1,4 +1,3 @@
-<?php debug($news) ?>
 <h3>Nos Actualités</h3>
 <section class="articles">
 <?php foreach ($news as $key => $new): ?>
