@@ -18,7 +18,7 @@
 			<nav>
 				<ul class="navigation-site">
 					<li>
-						<a href="/home/help" class="help-us-link"><span class="btn">Nous aider</span></a>
+						<a href="/help" class="help-us-link"><span class="btn">Nous aider</span></a>
 					</li>
 					<li>
 						<a href="/contact" <?php if($this->params['controller'] == "contact"){ echo 'class="active"'; } ?>><span>Contact</span></a>
@@ -42,7 +42,7 @@
 						<a href="/home/news" <?php if($this->params['action'] == "news"){ echo 'class="active"'; } ?>><span>Les actualités</span></a>
 					</li>
 					<li>
-						<a href="/home/" <?php if($this->params['action'] == "" || $this->params['action'] == "index"){ echo 'class="active"'; } ?>><span>Accueil</span></a>
+						<a href="/home/" <?php if($this->params['controller'] == "home" && ( $this->params['action'] == "" || $this->params['action'] == "index")){ echo 'class="active"'; } ?>><span>Accueil</span></a>
 					</li>
 				</ul>
 			</nav>

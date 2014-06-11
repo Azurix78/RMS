@@ -23,7 +23,6 @@ time, mark, audio, video {
 	outline: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -222,12 +221,11 @@ transition: 0.2s all; }
 /* HELPS */
 .helps{ margin: 20px 0; }
 	.helps article{ overflow: hidden; }
-		.helps article img{ float: left; display: block; width: 30%; margin-right: 5%;}
-		.helps article p{ float: left; width: 65%; }
+		.helps td:first-child img{ float: left; display: block; width: 95%; margin-right: 5%;}
 	.helps footer{ height: 50px; text-align: right; margin: 5px 0}
-		.helps footer a{ line-height: 50px; text-decoration: none; }
-		.helps footer a.Paypal-btn{  text-transform: none; background:  #de9251; }
-			.helps footer a img{ display: inline; vertical-align: middle; }
+		.helps-btn{ line-height: 50px; text-decoration: none; }
+		.helps a.Paypal-btn{  text-transform: none; background:  #de9251; text-decoration: none;}
+			.helps a img{ display: inline; vertical-align: middle; }
 
 
 /*Nicolas Riviere*/
