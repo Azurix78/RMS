@@ -64,6 +64,8 @@ class PartnersController extends AppController {
 			($data['Partner']['partner_to_home'] == 0) ? $this->Partner->saveField('partner_to_home', 1) : $this->Partner->saveField('partner_to_home', 0);
 		else if ($type == 1)
 			($data['Partner']['partner_to_page'] == 0) ? $this->Partner->saveField('partner_to_page', 1) : $this->Partner->saveField('partner_to_page', 0);
+		else if ($type == 2)
+			($data['Partner']['partner_type'] == 0) ? $this->Partner->saveField('partner_type', 1) : $this->Partner->saveField('partner_type', 0);
 		$this->Session->setFlash("Le partenaire à bien été modifié !", 'notif');
 		$this->redirect(array('controller' => 'partners', 'action' => 'index', 'admin' => true));
 	}
