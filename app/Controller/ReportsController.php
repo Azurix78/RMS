@@ -44,6 +44,7 @@ class ReportsController extends AppController {
 	public function admin_activated($id) {
 		$this->autoRender = false;
 		$data = $this->Report->find('first', array('conditions' => array('report_id' => $id)));
+		$this->Report->id = $data['Report']['report_id'];
 		($data['Report']['report_is_activated'] == 0) ? $this->Report->saveField('report_is_activated', 1) : $this->Report->saveField('report_is_activated', 0);
 		$this->Session->setFlash("Le rapport à bien été modifié !", 'notif');
 		$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => true));
