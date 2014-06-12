@@ -7,10 +7,10 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-	config.filebrowserBrowseUrl = '/RMS/lib/kcfinder/browse.php?opener=ckeditor&type=files';
-	config.filebrowserImageBrowseUrl = '/RMS/lib/kcfinder/browse.php?opener=ckeditor&type=images';
-	config.filebrowserFlashBrowseUrl = '/RMS/lib/kcfinder/browse.php?opener=ckeditor&type=flash';
-	config.filebrowserUploadUrl = '/RMS/lib/kcfinder/upload.php?opener=ckeditor&type=files';
-	config.filebrowserImageUploadUrl = '/RMS/lib/kcfinder/upload.php?opener=ckeditor&type=images';
-	config.filebrowserFlashUploadUrl = '/RMS/lib/kcfinder/upload.php?opener=ckeditor&type=flash';
+	config.filebrowserBrowseUrl = '/lib/kcfinder/browse.php?opener=ckeditor&type=files';
+	config.filebrowserImageBrowseUrl = '/lib/kcfinder/browse.php?opener=ckeditor&type=images';
+	config.filebrowserFlashBrowseUrl = '/lib/kcfinder/browse.php?opener=ckeditor&type=flash';
+	config.filebrowserUploadUrl = '/lib/kcfinder/upload.php?opener=ckeditor&type=files';
+	config.filebrowserImageUploadUrl = '/lib/kcfinder/upload.php?opener=ckeditor&type=images';
+	config.filebrowserFlashUploadUrl = '/lib/kcfinder/upload.php?opener=ckeditor&type=flash';
 };
