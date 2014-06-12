@@ -1,3 +1,13 @@
+<blockquote class="small"><p>Grâce à ce formulaire, vous pourrez modifier le contenu des informations présentes dans la page de l'équipe.<br> Il vous suffit de modifier les informations et de cliquer sur "Modifier"</p></blockquote>
+<?php echo $this->Form->create('Param');
+  echo $this->Form->input('param_team_desc', array('label' => 'Informations sur l\'équipe', 'type' => 'textarea', 'class' => 'form-control', 'placeholder' => "Les informations présentes au début de la page équipe"));
+  echo $this->Form->button('Modifier', array('type' => 'submit', 'class' => 'btn btn-primary pull-right', 'style' => 'margin-top:10px'));
+  echo $this->Form->input('id', array('type' => 'hidden'));
+  echo $this->Form->end();
+?>
+<div style="clear:both"></div>
+<hr>
+
 <?php echo $this->Html->link("<i class=\"fa fa-plus\"></i><span class=\"link-title\"> Ajouter un intervenant</span>", array('controller'=>'teams','action'=>'add', 'admin' => true), array('class' => 'link-title btn btn-primary btn-xs pull-right','admin' => true, 'style' => 'margin-bottom: 10px', 'escape'=>false)); ?>
 <table class="table table-bordered sortableTable responsive-table">
   <thead>
@@ -27,3 +37,8 @@
   <?php } ?>
   </tbody>
 </table>
+
+
+<script>
+  CKEDITOR.replace( 'ParamParamTeamDesc' );
+</script>

@@ -10,17 +10,8 @@ class HomeController extends AppController {
 		$this->set('partners', $this->Partner->find('all', array('conditions' => array())));
 	}
 
-	public function news() {
-		$this->set('news', $this->News->find('all', array('conditions' => array('news_is_activated >' => 0))));
-	}
-
 	public function coaching() {
 		$this->set('coachs', $this->Coach->find('first'));
-	}
-
-	public function coachs(){
-		$this->set('teams', $this->Team->find('all', array('conditions' => array('team_is_activated >' => 0))));
-		$this->set('params', $this->Param->find('first'));
 	}
 
 	public function actions(){

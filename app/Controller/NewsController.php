@@ -62,6 +62,19 @@ class NewsController extends AppController {
 		$this->Session->setFlash("La news à bien été activé !", 'notif');
 		$this->redirect(array('controller' => 'news', 'action' => 'index', 'admin' => true));
 	}
+
+	public function index() {
+		$this->set('news', $this->News->find('all', array('conditions' => array('news_is_activated >' => 0))));
+	}
+
+	public function view($id = null) {
+		$view = $this->News->find('first', array('conditions' => array('news_id' => $id)));
+		if($view)
+			$this->set('news', $view);
+		else
+			$this->redirect('/error');
+
+	}
 }
 
 ?>
