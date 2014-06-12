@@ -3,8 +3,7 @@
   <thead>
     <tr>
       <th>#<i class="fa sort"></i></th>
-      <th>Nom du programme<i class="fa sort"></i></th>
-      <th>Contenu du programme<i class="fa sort"></i></th>
+      <th>Titre du programme<i class="fa sort"></i></th>
       <th>Publiée<i class="fa sort"></i></th>
       <th>Date de création<i class="fa sort"></i></th>
       <th>Options</th>
@@ -15,7 +14,6 @@
       <tr>
         <td><?php echo $data['Program']['program_id']; ?></td>
         <td><?php echo $data['Program']['program_name']; ?></td>
-        <td><?php echo $data['Program']['program_content']; ?></td>
         <td><?php echo ($data['Program']['program_is_activated'] == 1) ? "<a href=\"/admin/program/activated/" . $data['Program']['program_is_activated'] . "\" class=\"btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/program/activated/" . $data['Program']['program_id'] . "\" class=\"btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
         <td><?php echo $data['Program']['created']; ?></td>
         <td><?php
