@@ -2,7 +2,7 @@
 
 class HomeController extends AppController {
 
-	public $uses = array('Action', 'News', 'Partner', 'Slider', 'Team', 'Param', 'Coatch');
+	public $uses = array('Action', 'News', 'Partner', 'Slider', 'Team', 'Param', 'Coach');
 
 	public function index() {
 		$this->set('actions', $this->Action->find('all', array('conditions' => array())));
@@ -15,7 +15,7 @@ class HomeController extends AppController {
 	}
 
 	public function coaching() {
-		$this->set('coatch', $this->Coatch->find('first'));
+		$this->set('coach', $this->Coatch->find('first'));
 	}
 
 	public function partners(){
