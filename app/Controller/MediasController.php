@@ -10,12 +10,15 @@ class MediasController extends AppController {
 		if ($this->request->is('post')) {
 			$d = $this->request->data;
 			$d['Media']['media_id'] = null;
-			if ($this->Media->save($d, true, array('media_id', 'media_name', 'media_desc', 'media_img', 'media_link'))) {
-				$this->Session->setFlash("Le media à bien été ajouté !", 'notif');
-				$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
-			} else {
-				$this->Session->setFlash("Un problème est survenu, Réessayer !", 'notif', array('type' => 'error'));
-				$this->redirect($this->referer());
+			$d['Media']['media_img'] = $this->upload_file($d['Media']['media_img'], 'medias');
+			if ($d['Media']['media_img'] != false) {
+				if ($this->Media->save($d, true, array('media_id', 'media_name', 'media_desc', 'media_img', 'media_link'))) {
+					$this->Session->setFlash("Le media à bien été ajouté !", 'notif');
+					$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
+				} else {
+					$this->Session->setFlash("Un problème est survenu, Réessayer !", 'notif', array('type' => 'error'));
+					$this->redirect($this->referer());
+				}
 			}
 		}
 	}
@@ -25,12 +28,17 @@ class MediasController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
 			$this->Media->id = $id;
-			if ($this->Media->save($d, true, array('media_name', 'media_desc', 'media_img', 'media_link'))) {
-				$this->Session->setFlash("Le media à bien été édité !", 'notif');
-				$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
-			} else {
-				$this->Session->setFlash("Un problème est survenu, Réessayer !", 'notif', array('type' => 'error'));
-				$this->redirect($this->referer());
+			$d['Media']['media_img'] = $d['Media']['media_img']['size'] == 0 ? $data['Media']['media_img'] : $this->upload_file($d['Media']['media_img'], 'medias');
+			if ($d['Media']['media_img'] != false) {
+				if ($data['Media']['media_img'] != $d['Media']['media_img'])
+					$this->delete_file($data['Media']['media_img'], 'medias');
+				if ($this->Media->save($d, true, array('media_name', 'media_desc', 'media_img', 'media_link'))) {
+					$this->Session->setFlash("Le media à bien été édité !", 'notif');
+					$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
+				} else {
+					$this->Session->setFlash("Un problème est survenu, Réessayer !", 'notif', array('type' => 'error'));
+					$this->redirect($this->referer());
+				}
 			}
 		}
 		$this->request->data = $data;
@@ -38,9 +46,12 @@ class MediasController extends AppController {
 
 	public function admin_remove($id) {
 		$this->autoRender = false;
-		$this->Media->delete($id);
-		$this->Session->setFlash("Le media à bien été supprimé !", 'notif');
-		$this->redirect($this->referer());
+		$media = $this->Media->find('first', array('conditions' => array('media_id' => $id)));
+		if ($this->delete_file($media['Media']['media_img'], 'medias')) {
+			$this->Media->delete($id);
+			$this->Session->setFlash("Le media à bien été supprimé !", 'notif');
+			$this->redirect($this->referer());
+		}
 	}
 
 	public function admin_activated($id) {
