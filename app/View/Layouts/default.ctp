@@ -24,10 +24,10 @@
 						<a href="/contact" <?php if($this->params['controller'] == "contact"){ echo 'class="active"'; } ?>><span>Contact</span></a>
 					</li>
 					<li>
-						<a href="/home/presse" <?php if($this->params['action'] == "presse"){ echo 'class="active"'; } ?>><span>Presse</span></a>
+						<a href="/medias" <?php if($this->params['action'] == "presse"){ echo 'class="active"'; } ?>><span>Presse</span></a>
 					</li>
 					<li>
-						<a href="/home/partners" <?php if($this->params['action'] == "partners"){ echo 'class="active"'; } ?>><span>Nos partenaires</span></a>
+						<a href="/partners" <?php if($this->params['action'] == "partners"){ echo 'class="active"'; } ?>><span>Nos partenaires</span></a>
 					</li>
 					<li>
 						<a href="/home/coachs" <?php if($this->params['action'] == "coachs"){ echo 'class="active"'; } ?>><span>Notre équipe</span></a>

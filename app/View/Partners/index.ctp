@@ -1,9 +1,10 @@
 <h3>Nos institutions partenaires, mécènes et soutiens</h3>
 <section class="ctnPartners">
-	<section class="partners">
 	<?php foreach ($partnersTop as $key => $partner): ?>
 		<section>
-			<img src="/files/images/partners/<?php echo $partner['Partner']['partner_img']; ?>" alt="<?php echo $partner['Partner']['partner_name']; ?>">
+			<div class="imgPartner">
+				<img src="/files/images/partners/<?php echo $partner['Partner']['partner_img']; ?>" alt="<?php echo $partner['Partner']['partner_name']; ?>">
+			</div>
 			<h4><?php echo $partner['Partner']['partner_name']; ?></h4>
 			<p><?php echo $partner['Partner']['partner_desc']; ?></p>
 		</section>
@@ -13,7 +14,6 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus elementum, dignissim sapien id, consectetur massa. Nulla auctor sapien ut quam blandit mattis. Fusce tempus, metus a ultricies mollis, leo purus egestas nulla, vitae adipiscing quam lectus quis tellus. Cras id sapien id libero viverra porttitor at sagittis nisl. Maecenas laoreet mollis enim, at </p>
 		</section>
 	<?php endforeach ?>
-	</section>
 </section>
 
 <h3>Nos entreptises partenaires pour rapprocher les jeunes et l’entreprise</h3>

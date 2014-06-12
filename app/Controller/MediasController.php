@@ -62,6 +62,12 @@ class MediasController extends AppController {
 		$this->Session->setFlash("Le media à bien été mise à jour !", 'notif');
 		$this->redirect(array('controller' => 'medias', 'action' => 'index', 'admin' => true));
 	}
+
+	public function index(){
+		$dataMedia = $this->Media->find('all');
+
+		$this->set('dataMedia', $dataMedia);
+	}
 }
 
 ?>

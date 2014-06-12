@@ -69,6 +69,11 @@ class PartnersController extends AppController {
 		$this->Session->setFlash("Le partenaire à bien été modifié !", 'notif');
 		$this->redirect(array('controller' => 'partners', 'action' => 'index', 'admin' => true));
 	}
+
+	public function index(){
+		$this->set('partnersTop', $this->Partner->find('all', array('conditions' => array('partner_to_page >' => 0, 'partner_type'=> 1))));
+		$this->set('partnersBot', $this->Partner->find('all', array('conditions' => array('partner_to_page >' => 0, 'partner_type'=> 0))));
+	}
 }
 
 ?>

@@ -18,17 +18,9 @@ class HomeController extends AppController {
 		$this->set('coachs', $this->Coach->find('first'));
 	}
 
-	public function partners(){
-		$this->set('partnersTop', $this->Partner->find('all', array('conditions' => array('partner_to_page >' => 0, 'partner_type'=> 1))));
-		$this->set('partnersBot', $this->Partner->find('all', array('conditions' => array('partner_to_page >' => 0, 'partner_type'=> 0))));
-	}
-
 	public function coachs(){
 		$this->set('teams', $this->Team->find('all', array('conditions' => array('team_is_activated >' => 0))));
 		$this->set('params', $this->Param->find('first'));
-	}
-
-	public function presse(){
 	}
 
 	public function actions(){

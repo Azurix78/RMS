@@ -278,29 +278,21 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 	overflow: hidden;
 }
 
-.partners{
+.ctnPartners section{
 	float: left;
-	width: 50%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.partners section{
-	float: left;
-	width: 50%;
+	width: 25%;
 	padding: 15px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.partners section p{
+.ctnPartners section p{
 	text-align: justify;
 	line-height: 15px;
 }
 
-.partners section h4{
+.ctnPartners section h4{
 	font-size: 16px;
 	text-align: justify;
 	color: #de9251;
@@ -308,9 +300,16 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 	font-family: "Oswald", Verdana;
 }
 
-.partners section img{
+.ctnPartners .imgPartner{
 	width: 100%;
+	height: 150px;
+	overflow: hidden;
 	box-shadow: 0 0 5px #cdcdcd;
+	background-color: white;
+}
+
+.ctnPartners section img{
+	width: 100%;
 }
 
 .partnersSecond section{
@@ -328,6 +327,7 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 
 .partnersSecond section img{
 	width: 100%;
+	max-height: 100px;
 }
 
 .partnersSecond section h5{
