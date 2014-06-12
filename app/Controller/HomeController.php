@@ -15,7 +15,7 @@ class HomeController extends AppController {
 	}
 
 	public function coaching() {
-		$this->set('coach', $this->Coatch->find('first'));
+		$this->set('coachs', $this->Coach->find('first'));
 	}
 
 	public function partners(){
