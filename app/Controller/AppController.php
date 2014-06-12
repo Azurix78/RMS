@@ -79,6 +79,8 @@ class AppController extends Controller {
 	}
 
 	public function delete_file($file, $dir) {
+		if (strlen($file) == 0)
+			return true;
 		if (unlink(IMAGES  . '..' . DS . 'files' . DS  . 'images' . DS . $dir . DS . $file))
 			return true;
 		return false;
