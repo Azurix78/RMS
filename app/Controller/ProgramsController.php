@@ -2,7 +2,7 @@
 
 class ProgramsController extends AppController {
 
-	public $uses = array('Action', 'Report')
+	public $uses = array('Action', 'Program', 'Report');
 
 	public function admin_index() {
 		$this->set('datas', $this->Program->find('all'));
