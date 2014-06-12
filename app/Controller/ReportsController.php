@@ -2,12 +2,14 @@
 
 class ReportsController extends AppController {
 
-	public function admin_add() {
+	public function admin_add($id) {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
-			if ($this->Report->save($d, true, array(''))) {
+			$d['Report']['report_id'] = null;
+			$d['Report']['program_id'] = $id;
+			if ($this->Report->save($d, true, array('report_id', 'program_id', 'report_name', 'report_content', 'report_date', 'report_is_activated'))) {
 				$this->Session->setFlash("Le rapport à bien été ajouté !", 'notif');
-				$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => true));
+				$this->redirect(array('controller' => 'programs', 'action' => 'edit', $id, 'admin' => true));
 			} else {
 				$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
 				$this->redirect($this->referer());
@@ -19,9 +21,10 @@ class ReportsController extends AppController {
 		$data = $this->Report->find('first', array('conditions' => array('report_id' => $id)));
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
-			if ($this->Report->save($d, true, array('report_name', 'report_content', 'reoport_date', 'report_is_activated')) {
-				$this->Session->setFlash("Le rapport à bien été édité !", 'notif', array('type' => 'error'));
-				$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => true));
+			$this->Report->id = $data['Report']['report_id'];
+			if ($this->Report->save($d, true, array('report_name', 'report_content', 'report_date', 'report_is_activated'))) {
+				$this->Session->setFlash("Le rapport à bien été édité !", 'notif');
+				$this->redirect(array('controller' => 'programs', 'action' => 'edit', $data['Report']['program_id'], 'admin' => true));
 			} else {
 				$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
 				$this->redirect($this->referer());
@@ -32,9 +35,10 @@ class ReportsController extends AppController {
 
 	public function admin_remove($id) {
 		$this->autoRender = false;
+		$data = $this->Report->find('first', array('conditions' => array('report_id' => $id)));
 		$this->Report->delete($id);
 		$this->Session->setFlash("Le rapport à bien été supprimé !", 'notif');
-		$this->redirect($this->referer());
+		$this->redirect(array('controller' => 'programs', 'action' => 'edit', $data['Report']['program_id'], 'admin' => true));
 	}
 
 	public function admin_activated($id) {

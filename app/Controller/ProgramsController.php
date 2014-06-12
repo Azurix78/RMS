@@ -9,14 +9,14 @@ class ProgramsController extends AppController {
 	}
 
 	public function admin_show($id) {
-		$this->ser('actions', $this->Action->find('all'));
+		$this->set('actions', $this->Action->find('all'));
 		$this->set('reports', $this->Report->find('all'));
 	}
 
 	public function admin_add() {
 		if ($this->request->is('post')) {
 			$d = $this->request->data;
-			$d['Programs']['program_id'] = null;
+			$d['Program']['program_id'] = null;
 			if ($this->Program->save($d, true, array('program_id', 'program_name', 'program_content', 'program_is_activated'))) {
 				$this->Session->setFlash("Le programme à bien été ajouté !", 'notif');
 				$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => true));
@@ -29,8 +29,9 @@ class ProgramsController extends AppController {
 
 	public function admin_edit($id) {
 		$data = $this->Program->find('first', array('conditions' => array('program_id' => $id)));
-		if ($this->requet->is('post') || $this->request->is('put')) {
+		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
+			$this->Program->id = $id;
 			if ($this->Program->save($d, true, array('program_name', 'program_content', 'program_is_activated'))) {
 				$this->Session->setFlash("Le programme à bien été ajouté !", 'notif');
 				$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => true));
@@ -40,6 +41,9 @@ class ProgramsController extends AppController {
 			}
 		}
 		$this->request->data = $data;
+		$this->set('id', $data['Program']['program_id']);
+		$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $id))));
+		$this->set('reports', $this->Report->find('all', array('conditions' => array('program_id' => $id))));
 	}
 
 	public function admin_remove($id) {
