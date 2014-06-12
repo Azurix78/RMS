@@ -331,7 +331,7 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 }
 
 .partnersSecond section h5{
-	background-color: rgba(222,146,81, 0.3);
+	background-color: rgb(240, 194, 155);
 	position: absolute;
 	width: 90%;
 	font-size: 10px;
