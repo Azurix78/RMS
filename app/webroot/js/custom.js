@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	$("#custom-activated").hover(
+	$(".custom-activated").hover(
 	  function() {
 	  	alert('test');
 	  }, function() {

@@ -30,7 +30,6 @@
       echo $this->Html->css('/lib/fullcalendar/fullcalendar');
 
       echo $this->Html->script('/lib/modernizr/modernizr.min');
-      echo $this->Html->script('custom');
 
       /* CKEditor */
       echo $this->Html->script('/lib/ckeditor/ckeditor.js');
@@ -156,7 +155,7 @@
             <?php echo $this->Html->link("<i class=\"fa fa-globe\"></i><span class=\"link-title\"> L'actualité</span>", array('controller'=>'news','action'=>'index', 'admin' => true), array('class' => 'link-title li-news','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-dashboard\"></i><span class=\"link-title\"> Le coaching</span>", array('controller'=>'coach','action'=>'edit', 'admin' => true), array('class' => 'link-title li-coaching','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-dashboard\"></i><span class=\"link-title\"> Le coaching</span>", array('controller'=>'coach','action'=>'index', 'admin' => true), array('class' => 'link-title li-coaching','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-envelope\"></i><span class=\"link-title\"> Informations de contact</span>", array('controller'=>'contact','action'=>'edit', 'admin' => true), array('class' => 'link-title li-contact','admin' => true, 'escape'=>false)); ?>
