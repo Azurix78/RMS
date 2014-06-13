@@ -5,13 +5,10 @@ class ContactController extends AppController {
 	public $uses = array('Param');
 	var $components = array('Email');
 
-	public function admin_index() {
-
-	}
-
+	// Edition des informations de contact
 	public function admin_edit() {
-
-		$user = $this->Param->findByParamId(1);
+		// Get informations de la page contact
+		$contactInfo = $this->Param->findByParamId(1);
 
 	    if ($this->request->is(array('post', 'put'))) {
 	        $this->Param->id = 1;
@@ -23,10 +20,11 @@ class ContactController extends AppController {
 	    }
 
 	    if (!$this->request->data) {
-	        $this->request->data = $user;
+	        $this->request->data = $contactInfo;
 	    }
 	}
 
+	// Page contact
 	public function index(){
 		$data = $this->Param->findByParamId(1);
 		$this->set('data', $data);
@@ -36,6 +34,7 @@ class ContactController extends AppController {
 
 			$contact = $this->request->data;
 
+			// Creation du message et envoi du mail
 			$message  = 'Vous avez reçu un message depuis le site RéussirMoiAussi.fr :<br>';
 			$message .= 'Nom / Prénom : ' . $contact['name'] . '<br>';
 			$message .= 'Mail : ' . $contact['mail'] . '<br>';

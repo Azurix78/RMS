@@ -3,6 +3,7 @@ class CoachController extends AppController {
 
 	public function admin_index() {
 		$id = 1;
+		// Get informations sur le coaching
 		$data = $this->Coach->find('first', array('conditions' => array('coach_id' => $id)));
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;

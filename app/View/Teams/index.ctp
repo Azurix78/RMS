@@ -7,7 +7,7 @@
 <h3>Nos coachs</h3>
 <section style="display:none" class="viewTeam">
 	<div>
-		<span class="closeTeam"></span>
+		<span class="closeTeam">Fermer</span>
 		<img src="" alt="">
 		<h2></h2>
 		<p></p>
@@ -23,7 +23,7 @@
 			<p>
 				<?php echo $team['Team']['team_desc']; ?>
 			</p>
-			<a href="javacript:;" class="plusMember">Voir</a>
+			<a href="javacript:;" class="plusMember">Voir plus</a>
 		</section>
 	<?php endforeach ?>
 	<!-- GABARIT -->

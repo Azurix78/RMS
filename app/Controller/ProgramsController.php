@@ -8,8 +8,10 @@ class ProgramsController extends AppController {
 		$this->set('programs', $this->Program->find('all', array('conditions' =>array('program_is_activated >' => 0))));
 	}
 
+	// Vue des programmes
 	public function view($id){
 		if($this->Program->find('first', array('conditions' => array('program_id' => $id, 'program_is_activated >' => 0)))){
+			// Get info sur le programme, les actions et les compte rendu
 			$this->set('programs', $this->Program->find('all', array('conditions' =>array('program_is_activated >' => 0))));
 			$this->set('prog', $this->Program->find('first', array('conditions' => array('program_id' => $id, 'program_is_activated >' => 0))));
 			$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $id, 'action_is_activated >' => 0))));
@@ -29,10 +31,11 @@ class ProgramsController extends AppController {
 		$this->set('reports', $this->Report->find('all'));
 	}
 
+	// Ajout de programmes
 	public function admin_add() {
 		if ($this->request->is('post')) {
 			$d = $this->request->data;
-			$d['Program']['program_id'] = null;
+			$d['Program']['program_id'] = null; // Secu - Eviter l'edit depuis l'ajout
 			if ($this->Program->save($d, true, array('program_id', 'program_name', 'program_content', 'program_is_activated'))) {
 				$this->Session->setFlash("Le programme à bien été ajouté !", 'notif');
 				$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => true));
@@ -43,7 +46,9 @@ class ProgramsController extends AppController {
 		}
 	}
 
+	// Edit du programme
 	public function admin_edit($id) {
+		// Get info sur le programme
 		$data = $this->Program->find('first', array('conditions' => array('program_id' => $id)));
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;

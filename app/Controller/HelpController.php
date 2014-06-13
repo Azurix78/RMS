@@ -5,13 +5,14 @@ class HelpController extends AppController {
 	public $uses = array('Help');
 
 	public function index(){
+		// Get info pour la page nous aider
 		$help = $this->Help->findByHelpId(1);
 		$this->set('help', $help);
 	}
 
 	public function admin_index() {
-
-		$user = $this->Help->findByHelpId(1);
+		// Get info pour la page nous aider
+		$infoHelp = $this->Help->findByHelpId(1);
 
 	    if ($this->request->is(array('post', 'put'))) {
 	        $this->Help->id = 1;
@@ -23,7 +24,7 @@ class HelpController extends AppController {
 	    }
 
 	    if (!$this->request->data) {
-	        $this->request->data = $user;
+	        $this->request->data = $infoHelp;
 	    }
 	}
 }

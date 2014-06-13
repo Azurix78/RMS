@@ -45,11 +45,13 @@ class AppController extends Controller {
 
 	public function beforeRender() {
 		$this->loadModel('Param');
+		// Vérification si le site est en maintenance
 		$m = $this->Param->find('first', array('conditions' => array('param_id' => 1)));
 		if(isset($m) && !empty($m) && $m['Param']['param_is_maintenance'] == true) {
 			$this->layout = 'maintenance_default';
 			$this->set('msg', $m['Param']['param_message_maintenance']);
 		}
+		// Gestion des layouts (admin ou login)
 		if (isset($this->request->params['prefix']) && !empty($this->request->params['prefix']) && $this->request->params['prefix'] == 'admin') {
 			if ($this->Auth->loggedIn()) {
 				$this->layout = 'admin_default';
@@ -59,10 +61,12 @@ class AppController extends Controller {
 		}
 	}
 
+	// Récupérer l'url complète du fichier
 	public function get_file($file, $dir) {
 		return IMAGES  . '..' . DS . 'files' . DS  . 'images' . DS . $dir . DS . $file;
 	}
 
+	// Upload des images
 	public function upload_file($file, $dir, $auth_extensions = array('gif', 'jpeg', 'jpg', 'png')) {
 		if ($file['error'] == 0) {
 			$tmp_name = $file['tmp_name'];
@@ -78,6 +82,7 @@ class AppController extends Controller {
 		return false;
 	}
 
+	// Supprimer une image
 	public function delete_file($file, $dir) {
 		if (strlen($file) == 0)
 			return true;
