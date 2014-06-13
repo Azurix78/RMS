@@ -16,6 +16,7 @@
 <?php	echo $this->Form->input('param_mail_contact', array('label' => '', 'type' => 'mail', 'class' => 'form-control', 'placeholder' => "Adresse, fax, boîte postale...")); ?>
 </div>
 	<?php echo $this->Form->button('Modifier', array('type' => 'submit', 'class' => 'btn btn-primary pull-right', 'style' => 'margin-top:10px'));
+	echo $this->Html->link("Annuler", array('controller' => 'contact', 'action' => 'index'), array('class' => 'btn btn-default pull-right', 'style' => 'margin:10px;', 'admin' => true, 'escape' => false));
 echo $this->Form->end(); ?>
 
 <script>

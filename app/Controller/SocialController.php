@@ -27,7 +27,7 @@ class SocialsController extends AppController {
 			$this->Social->id = $data['Social']['social_id'];
 			if ($this->Social->save($d, true, array('social_name', 'social_img', 'social_link', 'social_is_activated'))) {
 				$this->Session->setFlash("Le réseau à bien été édité !", 'notif');
-				$this->redirect(array('controller' =< 'socials', 'action' => 'index', 'admin' => true));
+				$this->redirect(array('controller' => 'socials', 'action' => 'index', 'admin' => true));
 			} else {
 				$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
 				$this->redirect($this->referer());
