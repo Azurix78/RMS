@@ -21,7 +21,6 @@ echo $this->Form->end();
     <tr>
       <th>#<i class="fa sort"></i></th>
       <th>Nom de l'action<i class="fa sort"></i></th>
-      <th>Contenu de l'action<i class="fa sort"></i></th>
       <th>Publiée<i class="fa sort"></i></th>
       <th>Date de création<i class="fa sort"></i></th>
       <th>Options</th>
@@ -32,8 +31,7 @@ echo $this->Form->end();
       <tr>
         <td><?php echo $data['Action']['action_id']; ?></td>
         <td><?php echo $data['Action']['action_title']; ?></td>
-        <td><?php echo $data['Action']['action_content']; ?></td>
-        <td><?php echo ($data['Action']['action_is_activated'] == 1) ? "<a href=\"/admin/action/activated/" . $data['Action']['action_is_activated'] . "\" class=\"btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/action/activated/" . $data['Action']['action_id'] . "\" class=\"btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
+        <td><?php echo ($data['Action']['action_is_activated'] == 1) ? "<a href=\"/admin/actions/activated/" . $data['Action']['action_id'] . "\" class=\"btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/actions/activated/" . $data['Action']['action_id'] . "\" class=\"btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
         <td><?php echo $data['Action']['action_date_created']; ?></td>
         <td><?php
           echo $this->Html->link('<i class="glyphicon glyphicon-pencil"></i>', array('controller' => 'actions', 'action' => 'edit', $data['Action']['action_id']), array('class' => 'btn btn-xs btn-default', 'style' => 'color:blue;', 'admin' => true, 'escape' => false));
@@ -49,7 +47,6 @@ echo $this->Form->end();
   <thead>
     <tr>
       <th>#<i class="fa sort"></i></th>
-      <th>Nom du comtpe rendu<i class="fa sort"></i></th>
       <th>Titre du compte rendu<i class="fa sort"></i></th>
       <th>Publié<i class="fa sort"></i></th>
       <th>Date de création<i class="fa sort"></i></th>
@@ -61,8 +58,7 @@ echo $this->Form->end();
       <tr>
         <td><?php echo $data['Report']['report_id']; ?></td>
         <td><?php echo $data['Report']['report_name']; ?></td>
-        <td><?php echo $data['Report']['report_content']; ?></td>
-        <td><?php echo ($data['Report']['report_is_activated'] == 1) ? "<a href=\"/admin/reports/activated/" . $data['Report']['report_is_activated'] . "\" class=\"btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/reports/activated/" . $data['Report']['report_id'] . "\" class=\"btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
+        <td><?php echo ($data['Report']['report_is_activated'] == 1) ? "<a href=\"/admin/reports/activated/" . $data['Report']['report_id'] . "\" class=\"btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/reports/activated/" . $data['Report']['report_id'] . "\" class=\"btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
         <td><?php echo $data['Report']['report_date']; ?></td>
         <td><?php
           echo $this->Html->link('<i class="glyphicon glyphicon-pencil"></i>', array('controller' => 'reports', 'action' => 'edit', $data['Report']['report_id']), array('class' => 'btn btn-xs btn-default', 'style' => 'color:blue;', 'admin' => true, 'escape' => false));

@@ -9,7 +9,7 @@ class ReportsController extends AppController {
 			$d['Report']['program_id'] = $id;
 			if ($this->Report->save($d, true, array('report_id', 'program_id', 'report_name', 'report_content', 'report_date', 'report_is_activated'))) {
 				$this->Session->setFlash("Le rapport à bien été ajouté !", 'notif');
-				$this->redirect(array('controller' => 'reports', 'action' => 'edit', $id, 'admin' => true));
+				$this->redirect(array('controller' => 'programs', 'action' => 'edit', $id, 'admin' => true));
 			} else {
 				$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
 				$this->redirect($this->referer());
@@ -47,7 +47,7 @@ class ReportsController extends AppController {
 		$this->Report->id = $data['Report']['report_id'];
 		($data['Report']['report_is_activated'] == 0) ? $this->Report->saveField('report_is_activated', 1) : $this->Report->saveField('report_is_activated', 0);
 		$this->Session->setFlash("Le rapport à bien été modifié !", 'notif');
-		$this->redirect(array('controller' => 'reports', 'action' => 'index', 'admin' => true));
+		$this->redirect(array('controller' => 'programs', 'action' => 'edit', $data['Report']['program_id'], 'admin' => true));
 	}
 }
 

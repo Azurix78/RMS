@@ -48,10 +48,10 @@ class ActionsController extends AppController {
 	public function admin_activated($id) {
 		$this->autoRender = false;
 		$data = $this->Action->find('first', array('conditions' => array('action_id' => $id)));
-		$this->Action->id = $d['Action']['action_id'];
-		($d['Action']['action_is_activated'] == 0) ? $this->Action->saveField('action_is_activated', 1) : $this->Action->saveField('action_is_activated', 0);
+		$this->Action->id = $data['Action']['action_id'];
+		($data['Action']['action_is_activated'] == 0) ? $this->Action->saveField('action_is_activated', 1) : $this->Action->saveField('action_is_activated', 0);
 		$this->Session->setFlash("L'action à bien été edité !", 'notif');
-		$this->redirect(array('controller' => 'actions', 'action' => 'index', 'admin' => true));
+		$this->redirect(array('controller' => 'programs', 'action' => 'edit', $data['Action']['program_id'], 'admin' => true));
 	}
 }
 
