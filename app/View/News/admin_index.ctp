@@ -14,7 +14,7 @@
       <tr>
         <td><?php echo $data['News']['news_id']; ?></td>
         <td><?php echo $data['News']['news_title']; ?></td>
-        <td><?php echo ($data['News']['news_is_activated'] == 1) ? "<a href=\"/admin/news/activated/" . $data['News']['news_is_activated'] . "\" class=\"btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/news/activated/" . $data['News']['news_id'] . "\" class=\"btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
+        <td><?php echo ($data['News']['news_is_activated'] == 1) ? "<a href=\"/admin/news/activated/" . $data['News']['news_id'] . "\" class=\"btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/news/activated/" . $data['News']['news_id'] . "\" class=\"btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
         <td><?php echo $data['News']['created']; ?></td>
         <td><?php
           echo $this->Html->link('<i class="glyphicon glyphicon-pencil"></i>', array('controller' => 'news', 'action' => 'edit', $data['News']['news_id']), array('class' => 'btn btn-xs btn-default', 'style' => 'color:blue;', 'admin' => true, 'escape' => false));
