@@ -78,7 +78,7 @@
                 <li>Dernière connexion :
                   <br>
                   <small>
-                    <i class="fa fa-calendar"></i>&nbsp;16 Mar 16:32</small>
+                    <i class="fa fa-calendar"></i>&nbsp;<?php echo $this->Session->read('Auth.User.modified'); ?></small>
                 </li>
               </ul>
             </div>
