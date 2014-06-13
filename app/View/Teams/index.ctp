@@ -8,6 +8,7 @@
 <section style="display:none" class="viewTeam">
 	<div>
 		<a href="javascript:;" class="closeTeam"></a>
+		<img src="" alt="">
 		<h2></h2>
 		<p></p>
 	</div>
@@ -39,6 +40,7 @@
 	$('.plusMember').click(function(){
 		$('.viewTeam div h2').html($(this).parent().children('h4').html());
 		$('.viewTeam div p').html($(this).parent().children('p').html());
+		$('.viewTeam div img').attr('src',$(this).parent().children('div').children().attr('src'));
 		$('.viewTeam').fadeIn();
 	});
 
