@@ -1,52 +1,108 @@
-<?php
-/**
- *
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <title>RMA Administration - Connexion</title>
 
-$cakeDescription = __d('cake_dev', 'Administration login');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+    <!--IE Compatibility modes-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		echo $this->Html->css('cake.generic');
+    <!--Mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-			<?php echo $this->Session->flash(); ?>
+    <?php
+      echo $this->Html->css('/lib/bootstrap/css/bootstrap.min');
+      echo $this->Html->css('/lib/font-awesome/css/font-awesome.min');
+      echo $this->Html->css('main.min');
+      echo $this->Html->css('theme');
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-	</div>
-</body>
+      echo $this->Html->script('/lib/modernizr/modernizr.min');
+    ?>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+      <script src="/lib/html5shiv/html5shiv.js"></script>
+        <script src="/lib/respond/respond.min.js"></script>
+        <![endif]-->
+
+    <!--Modernizr 2.7.2-->
+    <!--<script src="/lib/modernizr/modernizr.min.js"></script>-->
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="top">
+
+        <!-- .navbar -->
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container-fluid">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <header class="navbar-header">
+              <a href="/admin/admin" class="navbar-brand">
+                <span>Connexion</span>
+              </a> 
+            </header>
+            <div class="topnav">
+              <div class="btn-group">
+                <?php echo $this->Html->link("<i class=\"fa fa-share\"></i> Retour au site", array('controller'=>'home','action'=>'index', 'admin' => false), array('class' => 'btn btn-metis-3 btn-sw', 'escape'=>false)); ?>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+              <!-- .nav -->
+              <ul class="nav navbar-nav">
+                <!--<li class="active"><a href="dashboard.html">Dashboard</a></li>-->
+              </ul><!-- /.nav -->
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div><!-- /#top -->
+      <div id="content">
+        <div class="outer">
+          <div class="inner">
+            <div class="row">
+              <div class="col-lg-12">
+                <?php echo $this->Session->flash(); ?>
+                <?php echo $this->fetch('content'); ?>
+              </div>
+            </div>
+          </div><!-- /.inner -->
+        </div><!-- /.outer -->
+      </div><!-- /#content -->
+    </div><!-- /#wrap -->
+    <footer id="footer">
+      <p>2014 &copy; Metis Bootstrap Admin Template</p>
+    </footer><!-- /#footer -->
+    <?php
+      echo $this->Html->script('/lib/jquery/jquery.min');
+      echo $this->Html->script('/lib/bootstrap/js/bootstrap.min');
+    ?>
+
+	<script>
+      $(function() {
+        dashboard();
+      });
+    </script>
+    <?php
+      echo $this->Html->script('main');
+      //echo $this->Html->script('style-switcher');
+      echo $this->Html->script('/lib/jquery/jquery.min');
+      echo $this->Html->script('/lib/jquery-ui/jquery-ui.min');
+      echo $this->Html->script('/lib/fullcalendar/fullcalendar.min');
+      echo $this->Html->script('/lib/jquery.tablesorter/jquery.tablesorter.min');
+      echo $this->Html->script('/lib/jquery.sparkline/jquery.sparkline.min');
+      echo $this->Html->script('/lib/flot/jquery.flot');
+      echo $this->Html->script('/lib/flot/jquery.flot.selection');
+      echo $this->Html->script('/lib/flot/jquery.flot.resize');
+      echo $this->Html->script('custom');
+    ?>
+
+  </body>
+  <?php echo $this->Html->script('jQuery-v1.11.1'); ?>
+  <script type="text/javascript">
+    $('#wrap').css('min-height', $(window).height() - 42);
+  </script>
 </html>
