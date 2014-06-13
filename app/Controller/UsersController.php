@@ -23,11 +23,16 @@ class UsersController extends AppController {
 		if ($this->Auth->loggedIn()) {
 			$user_id = $this->Session->read('Auth.User.id');
 			if ($this->request->is('post') ||$this->request->is('put')) {
-				/**
-
-					A finir
-
-				*/
+				$d = $this->request->data;
+				$d['User']['password'] = Security::hash($d['User']['password'], null, true);
+				$this->User->id = $this->Session->read('Auth.User.id');
+				if ($this->User->save($d, true, array('password'))) {
+					$this->Session->setFlash("Votre mot de passe à bien été modifié !", 'notif');
+					$this->redirect(array('controller' => 'admin', 'action' => 'index', 'admin' => true));
+				} else {
+					$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
+					$this->redirect($this->referer());
+				}
 			}else
 				$this->request->data = $this->User->read();
 		}else{
