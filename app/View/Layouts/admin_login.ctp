@@ -60,7 +60,7 @@
           </div><!-- /.container-fluid -->
         </nav>
       </div><!-- /#top -->
-      <div id="content">
+      <div id="content" class="loginBlock">
         <div class="outer">
           <div class="inner">
             <div class="row">

@@ -471,6 +471,8 @@ input[type=submit]
 	overflow: hidden;
 	margin: 20px 0;
 	background-color: white;
+	position: relative;
+	padding-bottom: 30px;
 }
 
 .articles article .leftArticle{
@@ -515,7 +517,9 @@ input[type=submit]
 
 .articles .plus{
 	font-size: 0.750em;
-	float: right;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
 }
 
 .rightA .rightArticle{
@@ -528,7 +532,8 @@ input[type=submit]
 }
 
 .rightA .rightArticle .plus{
-	float: left !important;
+	right: auto;
+	left: 15px;
 }
 
 .rightA .leftArticle{

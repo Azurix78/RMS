@@ -41,9 +41,39 @@ a{
 }
 
 .loginBlock{
-  width: 960px;
+  width: 450px;
   margin: 150px auto;
 }
+
+.loginBlock legend{
+  display: none;
+}
+
+
+.loginBlock label{
+  display: block;
+  text-align: center;
+}
+
+.loginBlock input[type=text],
+.loginBlock input[type=password]{
+  display: block;
+  width: 100%;
+  margin: 8px 0 10px 0;
+  padding: 8px 12px;
+}
+
+.loginBlock button[type=submit]{
+  display: block;
+  width: 100%;
+  margin: 5px auto 0 auto;
+  padding: 8px 12px;
+}
+
+.loginBlock .inner{
+  padding: 10px 20px;
+}
+
 /*
 // First Level
 #menu > li {
