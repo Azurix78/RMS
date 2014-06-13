@@ -29,14 +29,16 @@ class SlidersController extends AppController {
 			$d = $this->request->data;
 			$this->Slider->id = $id;
 			$d['Slider']['slider_img'] = $d['Slider']['slider_img']['size'] == 0 ? $data['Slider']['slider_img'] : $this->upload_file($d['Slider']['slider_img'], 'sliders');
-			if ($this->Slider->save($d, true, array('slider_name', 'slider_desc', 'slider_img'))) {
-				if ($d['Slider']['slider_img'] != $data['Slider']['slider_img'])
-					$this->delete_file($data['Slider']['slider_img'], 'sliders');
-				$this->Session->setFlash("L'article à bien été supprimé !", 'notif');
-				$this->redirect(array('controller' => 'sliders', 'action' => 'index', 'admin' => true));
-			} else {
-				$this->Session->setFlash("Un problème est survenu, réessayer !", 'notif', array('type' => 'error'));
-				$this->redirect($this->referer());
+			if ($d['Slider']['slider_img'] != false) {
+				if ($this->Slider->save($d, true, array('slider_name', 'slider_desc', 'slider_img'))) {
+					if ($d['Slider']['slider_img'] != $data['Slider']['slider_img'])
+						$this->delete_file($data['Slider']['slider_img'], 'sliders');
+					$this->Session->setFlash("L'article à bien été supprimé !", 'notif');
+					$this->redirect(array('controller' => 'sliders', 'action' => 'index', 'admin' => true));
+				} else {
+					$this->Session->setFlash("Un problème est survenu, réessayer !", 'notif', array('type' => 'error'));
+					$this->redirect($this->referer());
+				}
 			}
 		}
 		$this->request->data = $data;

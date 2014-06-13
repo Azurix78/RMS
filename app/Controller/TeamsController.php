@@ -28,14 +28,16 @@ class TeamsController extends AppController {
 		if ($this->request->is('post')) {
 			$d = $this->request->data;
 			$d['Team']['team_id'] = null;
-			$d['Team']['team_img'] = null;
+			$d['Team']['team_img'] = $this->upload_file($d['Team']['team_img'], 'teams');
 			$d['Team']['team_date_added'] = date('Y-m-d');
-			if ($this->Team->save($d, true, array('team_id', 'team_name', 'team_desc', 'team_img', 'team_date_added'))) {
-				$this->Session->setFlash("L'intervenant à bien été ajouté !", 'notif');
-				$this->redirect(array('controller' => 'teams', 'action' => 'index', 'admin' => true));
-			} else {
-				$this->Session->setFlash("Un problème est survenu, réessayer !", 'notif', array('type' => 'error'));
-				$this->redirect($this->referer());
+			if ($d['Team']['team_img'] != false) {
+				if ($this->Team->save($d, true, array('team_id', 'team_name', 'team_desc', 'team_img', 'team_date_added'))) {
+					$this->Session->setFlash("L'intervenant à bien été ajouté !", 'notif');
+					$this->redirect(array('controller' => 'teams', 'action' => 'index', 'admin' => true));
+				} else {
+					$this->Session->setFlash("Un problème est survenu, réessayer !", 'notif', array('type' => 'error'));
+					$this->redirect($this->referer());
+				}
 			}
 		}
 	}
@@ -45,12 +47,17 @@ class TeamsController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
 			$this->Team->id = $id;
-			if ($this->Team->save($d, true, array())) {
-				$this->Session->setFlash("L'intervenat à bien été édité !", 'notif');
-				$this->redirect(array('controller' => 'teams', 'action' => 'index', 'admin' => true));
-			} else {
-				$this->Session->setFlash("Un problème est survenu, réessayer !", 'notif', array('type' => 'error'));
-				$this->redirect($this->referer());
+			$d['Team']['team_img'] = $d['Team']['team_img']['error'] == 0 ? $data['Team']['team_img'] : $this->upload_file($d['Team']['team_img'], 'teams');
+			if ($d['Team']['team_img'] != false) {
+				if ($this->Team->save($d, true, array())) {
+					if ($d['Team']['team_img'] != $data['Team']['team_img'])
+						$this->delete_file($data['Team']['team_img'], 'teams');
+					$this->Session->setFlash("L'intervenat à bien été édité !", 'notif');
+					$this->redirect(array('controller' => 'teams', 'action' => 'index', 'admin' => true));
+				} else {
+					$this->Session->setFlash("Un problème est survenu, réessayer !", 'notif', array('type' => 'error'));
+					$this->redirect($this->referer());
+				}
 			}
 		}
 		$this->request->data = $data;
@@ -58,9 +65,12 @@ class TeamsController extends AppController {
 
 	public function admin_remove($id) {
 		$this->autoRender = false;
-		$this->Team->delete($id);
-		$this->Session->setFlash("L'intervenant à bien été supprimé !", 'notif');
-		$this->redirect($this->referer());
+		$data = $this->Team->find('first', array('conditions' => array('team_id' => $id)));
+		if ($this->delete_file($data['Teams']['team_img'], 'teams')) {
+			$this->Team->delete($id);
+			$this->Session->setFlash("L'intervenant à bien été supprimé !", 'notif');
+			$this->redirect($this->referer());
+		}
 	}
 
 	public function admin_activated($id) {
