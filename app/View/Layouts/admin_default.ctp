@@ -143,6 +143,9 @@
             <?php echo $this->Html->link("<i class=\"fa fa-home\"></i><span class=\"link-title\"> Acceuil</span>", array('controller'=>'admin','action'=>'index', 'admin' => true), array('class' => 'link-title li-admin','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
+            <?php echo $this->Html->link("<i class=\"fa fa-bullhorn\"></i><span class=\"link-title\"> Le slider</span>", array('controller'=>'slider','action'=>'index', 'admin' => true), array('class' => 'link-title li-slider','admin' => true, 'escape'=>false)); ?>
+          </li>
+          <li>
             <?php echo $this->Html->link("<i class=\"fa fa-user\"></i><span class=\"link-title\"> L'équipe</span>", array('controller'=>'teams','action'=>'index', 'admin' => true), array('class' => 'link-title li-teams','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>

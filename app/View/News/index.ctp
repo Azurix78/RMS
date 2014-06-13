@@ -1,4 +1,4 @@
-<h3>l'actualité</h3>
+<h3>L'actualité :</h3>
 <section class="articles">
 	<?php foreach($news as $key => $news){?>
 		<article class="leftA">
