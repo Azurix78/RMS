@@ -144,11 +144,6 @@
       echo $this->Html->script('/lib/jquery/jquery.min');
       echo $this->Html->script('/lib/bootstrap/js/bootstrap.min');
     ?>
-    <script>
-      $(function() {
-        dashboard();
-      });
-    </script>
     <?php
       echo $this->Html->script('main');
       //echo $this->Html->script('style-switcher');
