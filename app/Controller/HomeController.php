@@ -8,7 +8,7 @@ class HomeController extends AppController {
 		// Get infos pour la page accueil
 		$this->set('param', $this->Param->find('first', array('conditions' => array())));
 		$this->set('socials', $this->Social->find('all', array('conditions' => array())));
-		$this->set('news', $this->News->find('all', array('conditions' => array('news_is_activated >' => 0),'limit' => 4)));
+		$this->set('news', $this->News->find('all', array('conditions' => array('news_is_activated >' => 0),'limit' => 2)));
 		$this->set('actions', $this->Action->find('all', array('conditions' => array('action_is_activated >' => 0),'limit' => 10)));
 		$this->set('sliders', $this->Slider->find('all', array('conditions' => array('slider_is_activated >' => 0 ))));
 		$this->set('partners', $this->Partner->find('all', array('conditions' => array('partner_to_home >' => 0))));
