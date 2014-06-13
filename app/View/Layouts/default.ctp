@@ -4,8 +4,12 @@
 		<title>Réussir Moi Aussi - <?php echo $this->fetch('title');?></title>
 		<meta name="author" content="rubio_n">
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
 		<?php
+		echo $this->Html->meta(
+		    'favicon.ico',
+		    'img/favicon.ico',
+		    array('type' => 'icon')
+		);
 			echo $this->Html->css('slick');
 			echo $this->Html->css('style');
 			echo $this->Html->script('jQuery-v1.11.1');
