@@ -199,10 +199,12 @@ transition: 0.2s all; }
 
 .left-nav{float: left; width: 25%;margin: 20px 5% 20px 0;}
 	.left-nav ul{background-color:white; border-radius: 4px; -ms-border-radius: 4px;-o-border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px; overflow: hidden; border-left: 2px #de9251 solid; border-right: 2px #de9251 solid; border-bottom: 2px solid #de9251;}
-	.left-nav ul li{ height: 40px; line-height: 40px; border-top: 2px #de9251 solid; padding: 0 5px; text-align: center; font-size: 14px; font-family: 'Oswald', Verdana;}
+	.left-nav ul li{height: auto;line-height: 40px; min-height: 40px; border-top: 2px #de9251 solid; padding: 0 5px; text-align: center; font-size: 14px; font-family: 'Oswald', Verdana;}
 	.left-nav ul li:first-child, .left-nav ul li.active{ background: #de9251; color:#ffffff; }
 	.left-nav ul li:hover{background: #f2d8c5; cursor: pointer;}
 	.left-nav ul li:first-child:hover{ background-color: #de9251; cursor: text;}
+		.left-nav ul li > a{ min-height: 40px;display: table; height: 100%; width: 100%; table-layout: fixed; text-decoration: none; color: #3e3e3e}
+			.left-nav ul li > a > span{ display: table-cell; vertical-align: middle; text-align: center; font-size: 14px; font-family: 'Oswald', Verdana; line-height: 20px;}
 
 .actions-content-container{ float: right; width: 70%; overflow: hidden; margin: 20px 0;}
 	.actions-programmes-desc { display: block; margin-bottom: 20px;}
@@ -217,6 +219,10 @@ transition: 0.2s all; }
 			.actions-action-date span + span{ font-weight: 700; font-size: 35px;  height: 50px; line-height: 50px;}
 			.actions-action-date span + span + span { font-weight: 700; font-size: 40px; color:#de9251; height: 60px; line-height: 60px;}
 		.actions-action article{ float: left; width: 70%; }
+
+.program-report{ padding: 10px 0; margin: 20px 0 10px }
+	.program-report > a{display: block;color: #de9251;text-decoration: none;}
+	.actions-programmes-desc .program-report > h2{ height: 30px; line-height: 30px; color: #3e3e3e; font-family: 'Oswald', Verdana;vertical-align: middle; font-size: 25px; }
 
 /* HELPS */
 .helps{ margin: 20px 0; }

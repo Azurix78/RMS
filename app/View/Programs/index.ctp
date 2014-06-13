@@ -4,7 +4,7 @@
 		<?php foreach ($programs as $key => $program): ?>
 			<li>
 				<?php 
-					echo $this->Html->link($program['Program']['program_name'], array('controller' => 'programs', 'action' => 'view', $program['Program']['program_id'], 'admin' => false, 'escape' => false));
+					echo $this->Html->link('<span>' . $program['Program']['program_name'] . '</span>', array('controller' => 'programs', 'action' => 'view', $program['Program']['program_id'], 'admin' => false),array('escape' => false));
 				?>
 			</li>
 		<?php endforeach ?>

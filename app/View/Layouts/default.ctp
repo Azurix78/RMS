@@ -33,7 +33,7 @@
 						<a href="/teams" <?php if($this->params['controller'] == "teams"){ echo 'class="active"'; } ?>><span>Notre équipe</span></a>
 					</li>
 					<li>
-						<a href="/home/actions" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Les programmes</span></a>
+						<a href="/programs/" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Les programmes</span></a>
 					</li>
 					<li>
 						<a href="/home/coaching" <?php if($this->params['action'] == "coaching"){ echo 'class="active"'; } ?>><span>Le coaching</span></a>
