@@ -17,7 +17,7 @@
 	<?php foreach ($teams as $key => $team): ?>
 		<section class="membre">
 			<div class="imgTeam">
-				<img src="<?php echo $team['Team']['team_img']; ?>" alt="photo <?php echo $team['Team']['team_name']; ?>">
+				<img src="/files/images/teams/<?php echo $team['Team']['team_img']; ?>" alt="photo <?php echo $team['Team']['team_name']; ?>">
 			</div>
 			<h4><?php echo $team['Team']['team_name']; ?></h4>
 			<p>

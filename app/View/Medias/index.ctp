@@ -3,7 +3,7 @@
 	<?php foreach($dataMedia as $key => $media){?>
 		<article class="<?php if($key%2 == 0){ echo 'leftA'; } else { echo 'rightA'; } ?>">
 			<section class="leftArticle">
-				<img src="<?php echo $media['Media']['media_img']; ?>" alt="<?php echo $media['Media']['media_name']; ?>">
+				<img src="/files/images/medias/<?php echo $media['Media']['media_img']; ?>" alt="<?php echo $media['Media']['media_name']; ?>">
 			</section>
 			<section class="rightArticle">
 				<h4><?php echo $media['Media']['media_name']; ?></h4>

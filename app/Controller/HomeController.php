@@ -6,7 +6,7 @@ class HomeController extends AppController {
 
 	public function index() {
 		$this->set('param', $this->Param->find('first', array('conditions' => array())));
-		$this->set('socials', $this->Param->find('all', array('conditions' => array())));
+		$this->set('socials', $this->Social->find('all', array('conditions' => array())));
 		$this->set('news', $this->News->find('all', array('conditions' => array('news_is_activated >' => 0),'limit' => 4)));
 		$this->set('actions', $this->Action->find('all', array('conditions' => array('action_is_activated >' => 0),'limit' => 10)));
 		$this->set('sliders', $this->Slider->find('all', array('conditions' => array('slider_is_activated >' => 0 ))));

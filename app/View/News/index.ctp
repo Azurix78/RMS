@@ -3,7 +3,7 @@
 	<?php foreach($news as $key => $news){?>
 		<article class="leftA">
 			<section class="leftArticle">
-				<img src="<?php echo $news['News']['news_img']; ?>" alt="<?php echo $news['News']['news_title']; ?>">
+				<img src="/files/images/news/<?php echo $news['News']['news_img']; ?>" alt="<?php echo $news['News']['news_title']; ?>">
 			</section>
 			<section class="rightArticle">
 				<h4><?php echo $news['News']['news_title']; ?></h4>

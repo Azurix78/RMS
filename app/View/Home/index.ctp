@@ -103,9 +103,9 @@
 			</header>
 			<article>
 				<ul>
-					<li><a href="#"><img src="/img/facebook.png" alt="image"></a></li>
-					<li><a href="#"><img src="/img/viadeo.png" alt="image"></a></li>
-					<li><a href="#"><img src="/img/linkedin.png" alt="image"></a></li>
+					<?php foreach ($socials as $key => $social): ?>
+						<li><a href="<?php echo $social['Social']['social_link'] ?>"><img src="/files/images/socials/<?php echo $social['Social']['social_img'] ?>" alt="image"></a></li>
+					<?php endforeach ?>
 				</ul>
 			</article>
 		</section>
