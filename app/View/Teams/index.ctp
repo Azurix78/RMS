@@ -1,17 +1,28 @@
+
 <section class="descTeam">
 	<h3>A propos de l'équipe Réussir Moi Aussi</h3>
 	<?php echo $params['Param']['param_team_desc']; ?>
 </section>
 
 <h3>Nos coachs</h3>
+<section style="display:none" class="viewTeam">
+	<div>
+		<a href="javascript:;" class="closeTeam"></a>
+		<h2></h2>
+		<p></p>
+	</div>
+</section>
 <section class="coachs">
 	<?php foreach ($teams as $key => $team): ?>
 		<section class="membre">
-			<img src="/img/membre.png" alt="photo <?php echo $team['Team']['team_name']; ?>">
+			<div class="imgTeam">
+				<img src="<?php echo $team['Team']['team_img']; ?>" alt="photo <?php echo $team['Team']['team_name']; ?>">
+			</div>
 			<h4><?php echo $team['Team']['team_name']; ?></h4>
 			<p>
 				<?php echo $team['Team']['team_desc']; ?>
 			</p>
+			<a href="javacript:;" class="plusMember">Voir</a>
 		</section>
 	<?php endforeach ?>
 	<!-- GABARIT -->
@@ -23,3 +34,15 @@
 	</section>
 	-->
 </section>
+
+<script type="text/javascript">
+	$('.plusMember').click(function(){
+		$('.viewTeam div h2').html($(this).parent().children('h4').html());
+		$('.viewTeam div p').html($(this).parent().children('p').html());
+		$('.viewTeam').fadeIn();
+	});
+
+	$('.closeTeam').click(function(){
+		$('.viewTeam').fadeOut();
+	});
+</script>

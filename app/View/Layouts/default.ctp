@@ -8,6 +8,7 @@
 		<?php
 			echo $this->Html->css('slick');
 			echo $this->Html->css('style');
+			echo $this->Html->script('jQuery-v1.11.1');
 		?>
 	</head>
 	<body>
@@ -61,7 +62,6 @@
 		
 		
 		<?php
-			echo $this->Html->script('jQuery-v1.11.1');
 			echo $this->Html->script('slick.min');
 			echo $this->Html->script('js');
 		?>
