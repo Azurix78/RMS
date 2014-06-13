@@ -12,7 +12,7 @@ class NewsController extends AppController {
 			$d['News']['news_id'] = null;
 			$d['News']['news_img'] = $this->upload_file($d['News']['news_img'], 'news');
 			if ($d['News']['news_img'] != false) {
-				if ($this->News->save($d, true, array('news_id', 'news_title', 'news_content', 'news_img', 'news_is_activated'))) {
+				if ($this->News->save($d, true, array('news_id', 'news_title', 'news_content', 'news_img', 'news_is_activated', 'news_summary'))) {
 					$this->Session->setFlash("La news à bien été ajouté !", 'notif');
 					$this->redirect(array('controller' => 'news', 'action' => 'index', 'admin' => true));
 				} else {
@@ -32,7 +32,7 @@ class NewsController extends AppController {
 			if ($d['News']['news_img'] != false) {
 				if ($data['News']['news_img'] != $d['News']['news_img'])
 					$this->delete_file($data['News']['news_img'], 'news');
-				if ($this->News->save($d, true, array('news_title', 'news_content', 'news_img', 'news_is_activated'))) {
+				if ($this->News->save($d, true, array('news_title', 'news_content', 'news_img', 'news_is_activated', 'news_summary'))) {
 					$this->Session->setFlash("La news à bien été édité !", 'notif');
 					$this->redirect(array('controller' => 'news', 'action' => 'index', 'admin' => true));
 				} else {

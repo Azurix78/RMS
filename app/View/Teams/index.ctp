@@ -7,7 +7,7 @@
 <h3>Nos coachs</h3>
 <section style="display:none" class="viewTeam">
 	<div>
-		<a href="javascript:;" class="closeTeam"></a>
+		<span class="closeTeam"></span>
 		<img src="" alt="">
 		<h2></h2>
 		<p></p>

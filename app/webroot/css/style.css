@@ -511,6 +511,10 @@ input[type=submit]
 	position: relative;
 }
 
+.viewTeam div img{
+	max-width: 100%;
+}
+
 .closeTeam{
 	display: block;
 	position: absolute;
@@ -519,6 +523,8 @@ input[type=submit]
 	background: url(../img/close.png) no-repeat;
 	height: 30px;
 	width: 30px;
+	cursor: pointer;
+	z-index: 9999;
 }
 
 /*----------*/

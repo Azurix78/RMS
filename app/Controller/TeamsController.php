@@ -47,7 +47,7 @@ class TeamsController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
 			$this->Team->id = $id;
-			$d['Team']['team_img'] = $d['Team']['team_img']['error'] == 0 ? $data['Team']['team_img'] : $this->upload_file($d['Team']['team_img'], 'teams');
+			$d['Team']['team_img'] = $d['Team']['team_img']['size'] == 0 ? $data['Team']['team_img'] : $this->upload_file($d['Team']['team_img'], 'teams');
 			if ($d['Team']['team_img'] != false) {
 				if ($this->Team->save($d, true, array())) {
 					if ($d['Team']['team_img'] != $data['Team']['team_img'])
