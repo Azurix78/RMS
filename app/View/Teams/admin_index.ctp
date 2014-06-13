@@ -27,7 +27,7 @@
       <tr>
         <td><?php echo $data['Team']['team_id']; ?></td>
         <td><?php echo $data['Team']['team_name']; ?></td>
-        <td><?php echo ($data['Team']['team_is_activated'] == 1) ? "<a href=\"/admin/teams/activated/" . $data['Team']['team_id'] . " class=\"custom-activated btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/teams/activated/" . $data['Team']['team_id'] . "\" class=\"custom-activated btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
+        <td><?php echo ($data['Team']['team_is_activated'] == 1) ? "<a href=\"/admin/teams/activated/" . $data['Team']['team_id'] . "\" class=\"custom-activated btn btn-success btn-xs btn-flat\">Activé</a>" : "<a href=\"/admin/teams/activated/" . $data['Team']['team_id'] . "\" class=\"custom-activated btn btn-danger btn-xs btn-flat\">Désactivé</a>"; ?></td>
         <td><?php echo $data['Team']['team_date_added']; ?></td>
         <td><?php
           echo $this->Html->link('<i class="glyphicon glyphicon-pencil"></i>', array('controller' => 'teams', 'action' => 'edit', $data['Team']['team_id']), array('class' => 'btn btn-xs btn-default', 'style' => 'color:blue;', 'admin' => true, 'escape' => false));
