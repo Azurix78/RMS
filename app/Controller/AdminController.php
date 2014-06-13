@@ -2,7 +2,7 @@
 
 class AdminController extends AppController {
 
-	public $uses = array('Param');
+	public $uses = array('Param', 'Social');
 
 	public function admin_index($id = 1) {
 		$data = $this->Param->find('first', array('conditions' => array('param_id' => $id)));
@@ -17,6 +17,8 @@ class AdminController extends AppController {
 				$this->redirect($this->referer());
 			}
 		}
+
+		$this->set('datas', $this->Social->find('all'));
 		$this->request->data = $data;
 	}
 
