@@ -13,4 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.filebrowserUploadUrl = '/lib/kcfinder/upload.php?opener=ckeditor&type=files';
 	config.filebrowserImageUploadUrl = '/lib/kcfinder/upload.php?opener=ckeditor&type=images';
 	config.filebrowserFlashUploadUrl = '/lib/kcfinder/upload.php?opener=ckeditor&type=flash';
+
+	config.contentsCss = '../../css/style.css';
+	config.font_names += ';Oswald/Oswald;';
 };
