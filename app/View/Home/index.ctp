@@ -12,7 +12,6 @@
 						<?php echo $slider['Slider']['slider_desc']; ?>
 					</p>
 				</article>
-				
 			</div>
 			<img alt="image" src="/files/images/sliders/<?php echo $slider['Slider']['slider_img']; ?>" />
 		</div>
@@ -49,11 +48,10 @@
 				<a href="#" class="plus">lire plus</a>
 			</footer>
 		</section>
-		
 		<section class="cell2">
 			<section class="actus-container">
 				<header>
-					<h3>Notre actualités</h3>
+					<h3>Notre actualité</h3>
 				</header>
 				<?php foreach ($news as $key => $new): ?>
 					<section>
@@ -67,7 +65,6 @@
 					<a href="#" class="plus">lire plus</a>
 				</footer>
 			</section>
-			
 			<section class="action-desc">
 				<header>
 					<h3>Nos dernières actions</h3>
@@ -81,9 +78,8 @@
 				</article>
 			</section>
 		</section>
-		
 		<section class="slider-partners-container">
-			<h3>Il nous aident au quotidien</h3>
+			<h3>Ils nous aident au quotidien</h3>
 			<section class="slider-partners">
 				<?php foreach ($partners as $key => $partner): ?>
 					<div>
@@ -109,5 +105,3 @@
 				</ul>
 			</article>
 		</section>
-		
-		

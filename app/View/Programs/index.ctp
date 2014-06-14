@@ -1,6 +1,6 @@
 <section class="left-nav">
 	<ul>
-		<li>Liste des programme</li>
+		<li>Liste des programmes</li>
 		<?php foreach ($programs as $key => $program): ?>
 			<li>
 				<?php 
