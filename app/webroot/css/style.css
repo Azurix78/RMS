@@ -122,6 +122,7 @@ transition: 0.2s all; }
 /* READ MORE */
 
 .plus{ text-decoration: none;font-size:1.143em; height: 30px; line-height: 30px; padding: 0 5px 0 25px; font-style: italic; color: #911f77; background: url(../img/link-plus.png) 0 center no-repeat; display: block;}
+.back{ background: url(../img/link-back.png) 0 center no-repeat;}
 
 
 /*  ACCUEIL  */
@@ -403,6 +404,28 @@ input[type=submit]
 .ctnContact{
 	margin-bottom: 5px;
 	overflow: hidden;
+}
+
+
+.alert-danger, .message {
+	background-color: #60bc23;
+	border-radius: 0 0 5px 5px;
+	padding: 10px;
+	text-align: center;
+}
+
+.message{
+	background-color: #76de51;
+}
+
+.alert-danger p, .message{
+	color: white !important;
+}
+
+.e{
+	font-size: 11px;
+	color:red;
+	margin-left: 5px;
 }
 
 /*----------*/
