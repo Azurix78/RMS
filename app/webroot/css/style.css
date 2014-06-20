@@ -644,8 +644,17 @@ input[type=submit]
 .articles .plus{
 	font-size: 0.750em;
 	position: absolute;
-	right: 15px;
-	bottom: 10px;
+	background-color: #de9251;
+	border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-o-border-radius: 5px 0 0 0;
+	-ms-border-radius: 5px 0 0 0;
+	background-position: 8px center;
+	right: 0;
+	color: white;
+	bottom: 0;
+	padding: 0 12px 0 35px;
 }
 
 .rightA .rightArticle{
@@ -659,7 +668,12 @@ input[type=submit]
 
 .rightA .rightArticle .plus{
 	right: auto;
-	left: 15px;
+	left: 0px;
+	border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-o-border-radius: 0 5px 0 0;
+	-ms-border-radius: 0 5px 0 0;
 }
 
 .rightA .leftArticle{
