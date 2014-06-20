@@ -1,3 +1,13 @@
+<section style="display:none" class="viewTeam">
+	<div class="container-team">
+		<div>
+			<span class="closeTeam">Fermer</span>
+			<img src="" alt="">
+			<h2></h2>
+			<p></p>
+		</div>
+	</div>
+</section>
 <h3>Nos institutions partenaires, mécènes et soutiens</h3>
 <section class="ctnPartners">
 	<?php foreach ($partnersTop as $key => $partner): ?>
@@ -7,11 +17,7 @@
 			</div>
 			<h4><?php echo $partner['Partner']['partner_name']; ?></h4>
 			<p><?php echo $partner['Partner']['partner_desc']; ?></p>
-		</section>
-		<section>
-			<img src="/img/partenaire.png" alt="Nom du partner">
-			<h4>Nom du partnaire</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus elementum, dignissim sapien id, consectetur massa. Nulla auctor sapien ut quam blandit mattis. Fusce tempus, metus a ultricies mollis, leo purus egestas nulla, vitae adipiscing quam lectus quis tellus. Cras id sapien id libero viverra porttitor at sagittis nisl. Maecenas laoreet mollis enim, at </p>
+			<a href="javacript:;" class="plus">Voir plus</a>
 		</section>
 	<?php endforeach ?>
 </section>
@@ -24,8 +30,16 @@
 			<h5><?php echo $partner['Partner']['partner_name']; ?></h5>
 		</section>
 	<?php endforeach ?>
-	<section>
-		<img src="/img/partenaire.png" alt="Nom du partner">
-		<h5>Nom du partnaire</h5>
-	</section>
 </section>
+<script type="text/javascript">
+	$('.plus').click(function(){
+		$('.viewTeam .container-team > div h2').html($(this).parent().children('h4').html());
+		$('.viewTeam .container-team > div p').html($(this).parent().children('p').html());
+		$('.viewTeam .container-team > div img').attr('src',$(this).parent().children('div').children().attr('src'));
+		$('.viewTeam').fadeIn();
+	});
+
+	$('.closeTeam').click(function(){
+		$('.viewTeam').fadeOut();
+	});
+</script>

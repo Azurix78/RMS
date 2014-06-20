@@ -6,11 +6,13 @@
 
 <h3>Nos coachs</h3>
 <section style="display:none" class="viewTeam">
-	<div>
-		<span class="closeTeam">Fermer</span>
-		<img src="" alt="">
-		<h2></h2>
-		<p></p>
+	<div class="container-team">
+		<div>
+			<span class="closeTeam">Fermer</span>
+			<img src="" alt="">
+			<h2></h2>
+			<p></p>
+		</div>
 	</div>
 </section>
 <section class="coachs">
@@ -26,21 +28,13 @@
 			<a href="javacript:;" class="plusMember">Voir plus</a>
 		</section>
 	<?php endforeach ?>
-	<!-- GABARIT -->
-	<!--
-	<section class="membre">
-		<img src="/img/membre.png" alt="Nom Prénom">
-		<h4>Nom prénom</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus elementum, dignissim sapien id, consectetur massa. Nulla auctor sapien ut quam blandit mattis. Fusce tempus, metus a ultricies mollis, leo purus egestas nulla, vitae adipiscing 
-	</section>
-	-->
 </section>
 
 <script type="text/javascript">
 	$('.plusMember').click(function(){
-		$('.viewTeam div h2').html($(this).parent().children('h4').html());
-		$('.viewTeam div p').html($(this).parent().children('p').html());
-		$('.viewTeam div img').attr('src',$(this).parent().children('div').children().attr('src'));
+		$('.viewTeam .container-team > div h2').html($(this).parent().children('h4').html());
+		$('.viewTeam .container-team > div p').html($(this).parent().children('p').html());
+		$('.viewTeam .container-team > div img').attr('src',$(this).parent().children('div').children().attr('src'));
 		$('.viewTeam').fadeIn();
 	});
 

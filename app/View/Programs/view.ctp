@@ -22,7 +22,7 @@
 					<h2>Compte(s) rendu(s):</h2>
 					<?php foreach ($reports as $key => $report): ?>
 						<?php
-							echo $this->Html->link($report['Report']['report_name'], array('controller' => 'reports', 'action' => 'view', $report['Report']['report_id'], 'admin' => false, 'escape' => false));
+							echo $this->Html->link($report['Report']['report_date'] . ' - ' . $report['Report']['report_name'], array('controller' => 'reports', 'action' => 'view', $report['Report']['report_id'], 'admin' => false, 'escape' => false));
 						?>
 					<?php endforeach ?>
 				</section>
