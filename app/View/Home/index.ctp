@@ -27,12 +27,11 @@
 				<?php echo $param['Param']['param_about_ours']; ?>
 			</article>
 			<footer>
-				<a href="#" class="plus">lire plus</a>
 			</footer>
 		</section>
 		<section class="help-us-container">
-			<a href="#">
-				<img alt="image" src="http://placehold.it/370x250/0eafff/ffffff.png" />
+			<a href="/help">
+				<img alt="image" src="/files/images/param/<?php echo $param['Param']['param_home_link']; ?>" />
 			</a>
 		</section>
 
@@ -57,12 +56,13 @@
 					<section>
 						<img alt="image" src="/files/images/news/<?php echo $new['News']['news_img']; ?>" />
 						<article>
-							<?php echo $new['News']['news_summary']; ?>
+							<a href="/news/view/<?php echo $new['News']['news_id']; ?>"><?php echo $new['News']['news_title']; ?></a>
+							<span class="news-date"><?php echo $new['News']['created']; ?></span>
+							<p><?php echo $new['News']['news_summary']; ?></p>
 						</article>
 					</section>
 				<?php endforeach ?>
 				<footer>
-					<a href="#" class="plus">lire plus</a>
 				</footer>
 			</section>
 			<section class="action-desc">
