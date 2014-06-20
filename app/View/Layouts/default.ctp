@@ -61,7 +61,9 @@
 			</section>
 		</section>
 		<footer class="footer">
-				
+				<section class="container">
+					<p>© 2014 - Réussir Moi Aussi - Tous droits reservés <em>Site réalisé par des étudiants de la Web@cadémie.</em></p>
+				</section>
 		</footer>
 		
 		

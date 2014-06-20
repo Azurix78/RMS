@@ -93,7 +93,9 @@ h3, .viewTeam h2 { font-size: 1.375em; color: #de9251;  margin: 10px 0 0 0; line
 .content{overflow: hidden;}
 .container{ max-width: 960px; margin: auto; overflow: hidden;}
 
-.footer{ background: #aaaaaa; min-height: 100px; border-bottom: 10px solid #ffffff; width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; margin-top: 20px;}
+.footer{ background: #de9251; min-height: 50px; line-height: 50px; width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; margin-top: 40px;}
+.footer p{ color: white; font-size: 12px}
+.footer em{ float: right; font-size: 12px; font-style: italic; color:#f6ddc7;}
 
 .header{ -webkit-transition: 0.2s all;
 -moz-transition: 0.2s all;
@@ -421,7 +423,7 @@ input[type=submit]
 
 
 .alert-danger, .message {
-	background-color: #60bc23;
+	background-color: #de5151;
 	border-radius: 0 0 5px 5px;
 	padding: 10px;
 	text-align: center;

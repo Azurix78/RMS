@@ -1,3 +1,4 @@
+<blockquote class="small"><p>Grâce à ce formulaire, vous pourrez modifier les images et le texte du slider.<br> Il vous suffit de modifier les informations et de cliquer sur "Modifier"</p></blockquote>
 <?php echo $this->Html->link("<i class=\"fa fa-plus\"></i><span class=\"link-title\"> Ajouter une actualité</span>", array('controller'=>'sliders','action'=>'add', 'admin' => true), array('class' => 'link-title btn btn-primary btn-xs pull-right','admin' => true, 'style' => 'margin-bottom: 10px', 'escape'=>false)); ?>
 <table class="table table-bordered sortableTable responsive-table">
   <thead>

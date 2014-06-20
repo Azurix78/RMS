@@ -74,7 +74,7 @@
             <div class="media-body">
               <h5 class="media-heading"><?php echo ucfirst($this->Session->read('Auth.User.username')); ?></h5>
               <ul class="list-unstyled user-info">
-                <li> <a href="">Administrateur</a>  </li>
+                <li class="adm">Administrateur</li>
                 <li>Dernière connexion :
                   <br>
                   <small>

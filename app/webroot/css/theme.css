@@ -74,6 +74,10 @@ a{
   padding: 10px 20px;
 }
 
+ .adm{
+  color: #de9251 !important;
+}
+
 /*
 // First Level
 #menu > li {
