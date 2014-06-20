@@ -2,6 +2,14 @@
 
 class ReportsController extends AppController {
 
+	public function view($id) {
+		if($id){
+			if($reports = $this->Report->find('first', array('conditions' => array('report_id' => $id, 'report_is_activated >' => 0))))
+				return $this->set('reports', $reports);
+		}
+		return $this->redirect(array('controller' => 'Programs', 'action' => 'index', 'admin' => false));
+	}
+
 	public function admin_add($id) {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;

@@ -15,7 +15,7 @@ class ProgramsController extends AppController {
 			$this->set('programs', $this->Program->find('all', array('conditions' =>array('program_is_activated >' => 0))));
 			$this->set('prog', $this->Program->find('first', array('conditions' => array('program_id' => $id, 'program_is_activated >' => 0))));
 			$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $id, 'action_is_activated >' => 0))));
-			$this->set('reports', $this->Report->find('all', array('conditions' => array('program_id' => $id, 'report_is_activated >' => 0))));
+			$this->set('reports', $this->Report->find('all', array('conditions' => array('program_id' => $id, 'report_is_activated >' => 0), 'order' => array('report_date DESC'))));
 		}
 		else{
 			$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => false));
