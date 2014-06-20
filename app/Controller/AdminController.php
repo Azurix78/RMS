@@ -9,8 +9,11 @@ class AdminController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
 			$this->Param->id = $id;
-			if ($this->Param->save($d, true, array('param_about_ours'))) {
-				$this->Session->setFlash("Les parramètres ont bien été modifiés !", 'notif');
+			$d['Param']['param_home_link'] = $d['Param']['param_home_link']['size'] == 0 ? $data['Param']['param_home_link'] : $this->upload_file($d['Param']['param_home_link'], 'param');
+			if ($this->Param->save($d, true, array('param_about_ours', 'param_home_link'))) {
+				if ($data['Param']['param_home_link'] != $d['Param']['param_home_link'])
+					$this->delete_file($data['Param']['param_home_link'], 'param');
+				$this->Session->setFlash("Les paramètres ont bien été modifiés !", 'notif');
 				$this->redirect($this->referer());
 			} else {
 				$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
