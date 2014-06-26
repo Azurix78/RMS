@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--[if lt IE 8]>
+	<html class="ie8">
+<![endif]-->
 <html>
 	<head>
 		<title>Réussir Moi Aussi - <?php echo $this->fetch('title');?></title>

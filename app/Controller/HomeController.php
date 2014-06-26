@@ -5,6 +5,7 @@ class HomeController extends AppController {
 	public $uses = array('Action', 'News', 'Partner', 'Slider', 'Team', 'Param', 'Coach', 'Social');
 
 	public function index() {
+		// die(Security::hash('admin', null, true));
 		// Get infos pour la page accueil
 		$this->set('param', $this->Param->find('first', array('conditions' => array())));
 		$this->set('coach', $this->Coach->find('first', array('conditions' => array())));
