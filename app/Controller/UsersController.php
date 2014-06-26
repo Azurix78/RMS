@@ -36,7 +36,7 @@ class UsersController extends AppController {
 			}else
 				$this->request->data = $this->User->read();
 		}else{
-			$this->Session->setFlash("Vous n'êtes pas connecté !", 'notif', array('type' => 'error'));
+			$this->Session->setFlash("Mot de passe invalide !", 'notif', array('type' => 'error'));
 			$this->redirect($this->referer());
 		}
 	}
