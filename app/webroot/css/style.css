@@ -209,8 +209,8 @@ transition: 0.2s all; }
 /* ERROR 404 */
 .error {overflow: hidden;}
 .error > a{ display: block; text-align: center;  color: #de9251; text-decoration: none;}
-.error > img{ max-width: 100%; width: auto; display: block; height: auto; margin: 30px auto; }
-.error > h2 { display:block; font-size: 1.375em; color: #de9251; line-height: 50px; font-weight: 700; font-family: "Oswald", Verdana;}
+.error > img{ max-width: 100%; width: auto; display: block; height: auto; margin: 0px auto 40px auto; }
+.error > h1 { display:block; font-size: 2em; color: #de9251; margin: 50px auto 40px auto; font-weight: 700; font-family: "Oswald", Verdana;}
 
 
 /*  PROGRAMS  */
@@ -271,6 +271,10 @@ input:-moz-placeholder { color:#cacaca; font-style:italic; }
 #field2::-moz-placeholder { color:#cacaca; font-style:italic; }
 #field3::-moz-placeholder { color:#cacaca; font-style:italic;}
 #field4::-moz-placeholder { font-style:italic; text-decoration:overline; letter-spacing:3px; color:#cacaca; }
+
+.text-center{
+	text-align: center;
+}
 
 .btn{
 	padding: 10px 15px;

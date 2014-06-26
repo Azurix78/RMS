@@ -25,7 +25,7 @@ if (Configure::read('debug') > 0):
 endif;
 ?>
 <div class="error">
-	<h2>Page introuvable</h2>
+	<h1 class="text-center" style="">Page introuvable</h1>
+	<img src="/img/error404.png" alt="404 image">
 	<a href="/">Retour au site</a>
-	<img src="http://thumbs.dreamstime.com/x/error-404-not-found-road-sign-26248459.jpg" alt="404 image">
 </div>
