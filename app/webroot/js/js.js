@@ -6,6 +6,7 @@ $( document ).ready(function() {
   		autoplay: true,
   		autoplaySpeed: 10000,
   		speed: 1000,
+      dots: true,
 	});
 
 	$('.slider-partners').slick({
