@@ -29,6 +29,23 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	Router::connect('/accueil', array('controller' => 'home', 'action' => 'index'));
+	Router::connect('/actualites', array('controller' => 'news', 'action' => 'index'));
+	Router::connect('/coaching', array('controller' => 'home', 'action' => 'coaching'));
+	Router::connect('/nos-actions', array('controller' => 'programs', 'action' => 'index'));
+	Router::connect(
+	    '/nos-actions/:id-:slug', // E.g. /blog/3-CakePHP_Rocks
+	    array('controller' => 'programs', 'action' => 'view'),
+	    array(
+	        // order matters since this will simply map ":id" to $articleId in your action
+	        'pass' => array('id'),
+	        'id' => '[0-9]+'
+	    )
+	);
+	Router::connect('/nos-intervenants', array('controller' => 'teams', 'action' => 'index'));
+	Router::connect('/nos-partenaires', array('controller' => 'partners', 'action' => 'index'));
+	Router::connect('/nous-aider', array('controller' => 'help', 'action' => 'index'));
+
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

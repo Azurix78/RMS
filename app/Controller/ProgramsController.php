@@ -8,17 +8,18 @@ class ProgramsController extends AppController {
 		if($this->Program->find('first', array('conditions' => array('program_is_activated >' => 0)))){
 			// Get info sur le programme, les actions et les compte rendu
 			
-			$this->set('programs', $this->Program->find('all', array('conditions' =>array('program_is_activated >' => 0))));
+			$programs = $this->Program->find('all', array('conditions' =>array('program_is_activated >' => 0)));
+			foreach ($programs as $key => $value) {
+				$programs[$key]['Program']['slug'] = $this->slug($value['Program']['program_name']);
+			}
 
-			$prog = $this->Program->find('first', array('conditions' =>array('program_is_activated >' => 0)));
-			$id = $prog['Program']['program_id'];
+			$this->set('programs', $programs);
 
-			$this->set('prog', $this->Program->find('first', array('conditions' => array('program_id' => $id, 'program_is_activated >' => 0))));
 			$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $id, 'action_is_activated >' => 0))));
 			$this->set('reports', $this->Report->find('all', array('conditions' => array('program_id' => $id, 'report_is_activated >' => 0), 'order' => array('report_date DESC'))));
 		}
 		else{
-			$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => false));
+			$this->redirect(array('controller' => 'home', 'action' => 'index', 'admin' => false));
 		}
 	}
 
@@ -26,7 +27,13 @@ class ProgramsController extends AppController {
 	public function view($id){
 		if($this->Program->find('first', array('conditions' => array('program_id' => $id, 'program_is_activated >' => 0)))){
 			// Get info sur le programme, les actions et les compte rendu
-			$this->set('programs', $this->Program->find('all', array('conditions' =>array('program_is_activated >' => 0))));
+
+			$programs = $this->Program->find('all', array('conditions' =>array('program_is_activated >' => 0)));
+			foreach ($programs as $key => $value) {
+				$programs[$key]['Program']['slug'] = $this->slug($value['Program']['program_name']);
+			}
+
+			$this->set('programs', $programs);
 			$this->set('prog', $this->Program->find('first', array('conditions' => array('program_id' => $id, 'program_is_activated >' => 0))));
 			$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $id, 'action_is_activated >' => 0))));
 			$this->set('reports', $this->Report->find('all', array('conditions' => array('program_id' => $id, 'report_is_activated >' => 0), 'order' => array('report_date DESC'))));

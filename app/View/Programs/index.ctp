@@ -4,7 +4,7 @@
 		<?php foreach ($programs as $key => $program): ?>
 			<li>
 				<?php 
-					echo $this->Html->link('<span>' . $program['Program']['program_name'] . '</span>', array('controller' => 'programs', 'action' => 'view', $program['Program']['program_id'], 'admin' => false), array('escape' => false));
+					echo $this->Html->link('<span>' . $program['Program']['program_name'] . '</span>', '/nos-actions/' . $program['Program']['program_id'] . '-' .  $program['Program']['slug'], array('escape' => false));
 				?>
 			</li>
 		<?php endforeach ?>
@@ -14,9 +14,9 @@
 	<section class="actions-programmes-desc">
 		<article>
 			<h2>
-				<span><?php echo $prog['Program']['program_name']; ?></span>
+				<span><?php echo $programs[0]['Program']['program_name']; ?></span>
 			</h2>
-			<?php echo $prog['Program']['program_content']; ?>
+			<?php echo $programs[0]['Program']['program_content']; ?>
 			<?php if (count($reports)>0): ?>
 				<section class="program-report">
 					<h2>Compte(s) rendu(s):</h2>

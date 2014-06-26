@@ -5,6 +5,10 @@ class ReportsController extends AppController {
 	public function view($id) {
 		if($id){
 			if($reports = $this->Report->find('first', array('conditions' => array('report_id' => $id, 'report_is_activated >' => 0))))
+				$prog = $this->Program->find('first', array('conditions' =>array('program_id' => $id, 'program_is_activated >' => 0)));
+				$prog['Program']['slug'] = $this->slug($value['Program']['program_name']);
+
+				$this->set('prog', $prog);
 				return $this->set('reports', $reports);
 		}
 		return $this->redirect(array('controller' => 'Programs', 'action' => 'index', 'admin' => false));

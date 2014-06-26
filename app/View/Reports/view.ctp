@@ -3,8 +3,8 @@
 	<div class="report_content">
 		<?php echo $reports['Report']['report_content']; ?>
 	</div>
-	<a href="/programs/view/<?php echo $reports['Report']['program_id']; ?>">
-		<span class="plus back">Retour</span>
-	</a>
+	<?php
+	echo $this->Html->link('<span class="plus back">Retour</span>', '/nos-actions/' . $prog['Program']['program_id'] . '-' .  $prog['Program']['slug'], array('escape' => false));
+	 ?>
 </div>
 	

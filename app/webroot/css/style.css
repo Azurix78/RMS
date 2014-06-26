@@ -19,7 +19,6 @@ footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	outline: 0;
 	font-size: 100%;
 	font: inherit;
@@ -248,9 +247,9 @@ transition: 0.2s all; }
 	.actions-programmes-desc .program-report > h2{ height: 30px; line-height: 30px; color: #3e3e3e; font-family: 'Oswald', Verdana;vertical-align: middle; font-size: 25px; }
 
 /* HELPS */
-.helps{ margin: 20px 0; }
+.helps{ margin: 20px 0 0 0; }
 	.helps article{ overflow: hidden; }
-		.helps td:first-child img{ float: left; display: block; width: 95%; margin-right: 5%;}
+		.helps td:first-child img{ float: left; display: block; max-width: 95% !important; margin-right: 5%;}
 	.helps footer{ height: 50px; text-align: right; margin: 5px 0}
 		.helps-btn{ line-height: 50px; text-decoration: none; }
 		.helps a.Paypal-btn{  text-transform: none; background:  #de9251; text-decoration: none;}

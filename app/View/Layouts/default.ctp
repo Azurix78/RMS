@@ -29,31 +29,31 @@
 			<nav>
 				<ul class="navigation-site">
 					<li>
-						<a href="/help" class="help-us-link"><span class="btn">Nous aider</span></a>
+						<a href="/nous-aider" class="help-us-link"><span class="btn">Nous aider</span></a>
 					</li>
 					<li>
 						<a href="/contact" <?php if($this->params['controller'] == "contact"){ echo 'class="active"'; } ?>><span>Contact</span></a>
 					</li>
 					<li>
-						<a href="/medias" <?php if($this->params['controller'] == "medias"){ echo 'class="active"'; } ?>><span>Presse</span></a>
+						<a href="/medias" <?php if($this->params['controller'] == "medias"){ echo 'class="active"'; } ?>><span>Médias</span></a>
 					</li>
 					<li>
-						<a href="/partners" <?php if($this->params['controller'] == "partners"){ echo 'class="active"'; } ?>><span>Nos partenaires</span></a>
+						<a href="/nos-partenaires" <?php if($this->params['controller'] == "partners"){ echo 'class="active"'; } ?>><span>Nos partenaires</span></a>
 					</li>
 					<li>
-						<a href="/teams" <?php if($this->params['controller'] == "teams"){ echo 'class="active"'; } ?>><span>Notre équipe</span></a>
+						<a href="/nos-intervenants" <?php if($this->params['controller'] == "teams"){ echo 'class="active"'; } ?>><span>Nos intervenants</span></a>
 					</li>
 					<li>
-						<a href="/programs/" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Les programmes</span></a>
+						<a href="/nos-actions" <?php if($this->params['action'] == "actions"){ echo 'class="active"'; } ?>><span>Nos actions</span></a>
 					</li>
 					<li>
-						<a href="/home/coaching" <?php if($this->params['action'] == "coaching"){ echo 'class="active"'; } ?>><span>Le coaching</span></a>
+						<a href="/coaching" <?php if($this->params['action'] == "coaching"){ echo 'class="active"'; } ?>><span>Le coaching</span></a>
 						</li>
 					<li>
-						<a href="/news" <?php if($this->params['controller'] == "news"){ echo 'class="active"'; } ?>><span>Les actualités</span></a>
+						<a href="/actualites" <?php if($this->params['controller'] == "news"){ echo 'class="active"'; } ?>><span>Actualités</span></a>
 					</li>
 					<li>
-						<a href="/home/" <?php if($this->params['controller'] == "home" && ( $this->params['action'] == "" || $this->params['action'] == "index")){ echo 'class="active"'; } ?>><span>Accueil</span></a>
+						<a href="/accueil" <?php if($this->params['controller'] == "home" && ( $this->params['action'] == "" || $this->params['action'] == "index")){ echo 'class="active"'; } ?>><span>Accueil</span></a>
 					</li>
 				</ul>
 			</nav>
