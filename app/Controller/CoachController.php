@@ -8,7 +8,7 @@ class CoachController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$d = $this->request->data;
 			$this->Coach->id = $id;
-			if ($this->Coach->save($d, true, array('coach_content'))) {
+			if ($this->Coach->save($d, true, array('coach_content', 'coach_summary')) ) {
 				$this->Session->setFlash("La page coaching à bien été édité !", 'notif');
 				$this->redirect($this->referer());
 			} else {

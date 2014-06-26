@@ -2,8 +2,11 @@
 <html>
 	<head>
 		<title>Réussir Moi Aussi - <?php echo $this->fetch('title');?></title>
-		<meta name="author" content="rubio_n">
+		<meta name="author" content="Ambroise Christea; Rémy Mulet; Nicolas Rivière; Nicolas Rubio">
 		<meta charset="utf-8" />
+		<meta name="description" content="Coaching &amp; insertion avec Réussir Moi Aussi : programme d'aide à la scolarité, à l'orientation et à l'insertion professionnelle">
+		<meta name="keywords" content="coaching scolaire, coaching d’étudiant, orientation scolaire, conseil d orientation,orientation professionnelle, Test d’orientation, orientation après le bac, conseiller d’orientation,orientation après la 3eme,centre d’orientation, test orientation professionnelle, orientation lycée, orientation études, orientation professionnel, orientation après la seconde, orientation universitaire, choisir orientation, bilan d’orientation, aide orientation, centre d’information et d’orientation, choisir un métier, accompagnement scolaire, iece, difficultés scolaire, orientation métier, orientation après la troisième, échec scolaire, bilan de compétence étudiant, coaching individuel, coaching personnel">
+		<meta name="copyright" content="www.iece.info">
 		<?php
 		echo $this->Html->meta(
 		    'favicon.ico',

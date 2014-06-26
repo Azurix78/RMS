@@ -16,4 +16,6 @@ CKEDITOR.editorConfig = function( config ) {
 
 	config.contentsCss = '../../css/style.css';
 	config.font_names += ';Oswald/Oswald;';
+	config.fontSize_defaultLabel = "13px";
+	config.font_defaultLabel = "Verdana";
 };

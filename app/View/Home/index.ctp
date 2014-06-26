@@ -38,10 +38,9 @@
 		<section class="coaching-desc">
 			<header>
 				<h3>Qu'est ce que le coaching</h3>
-				<img alt="image" src="http://placehold.it/485x175/0eafff/ffffff.png" />
 			</header>
 			<article>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, pariatur, molestias, consequuntur quia illum nesciunt iure nostrum sapiente deleniti expedita esse ea eius eligendi libero voluptate non labore incidunt ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nostrum, atque fugit repellat autem soluta eos deleniti voluptas itaque hic? Architecto, deleniti, non laborum magnam voluptatibus a nesciunt culpa similique.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iste officia odit numquam enim ratione amet. Blanditiis, facilis qui et. Ab, quaerat aperiam veritatis molestias repellat delectus porro temporibus molestiae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quisquam, magnam, facilis, nisi est totam dolore ut nam expedita eveniet earum quas fugit necessitatibus!
+				<?php echo $coach['Coach']['coach_summary']; ?>
 			</article>
 			<footer>
 				<a href="#" class="plus">lire plus</a>
@@ -56,8 +55,10 @@
 					<section>
 						<img alt="image" src="/files/images/news/<?php echo $new['News']['news_img']; ?>" />
 						<article>
-							<a href="/news/view/<?php echo $new['News']['news_id']; ?>"><?php echo $new['News']['news_title']; ?></a>
-							<span class="news-date"><?php echo $new['News']['created']; ?></span>
+							<div>
+								<a class="news-link" href="/news/view/<?php echo $new['News']['news_id']; ?>"><?php echo $new['News']['news_title']; ?></a>
+								<span class="news-date"><?php echo $new['News']['created']; ?></span>
+							</div>
 							<p><?php echo $new['News']['news_summary']; ?></p>
 						</article>
 					</section>

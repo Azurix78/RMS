@@ -16,16 +16,16 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<h2><?php echo $message; ?></h2>
-<p class="error">
-	<strong><?php echo __d('cake', 'Error'); ?>: </strong>
-	<?php printf(
-		__d('cake', 'The requested address %s was not found on this server.'),
-		"<strong>'{$url}'</strong>"
-	); ?>
-</p>
 <?php
 if (Configure::read('debug') > 0):
+	?>
+	<h2><?php echo $message; ?></h2>
+	<?php
 	echo $this->element('exception_stack_trace');
 endif;
 ?>
+<div class="error">
+	<h2>Page introuvable</h2>
+	<a href="/">Retour au site</a>
+	<img src="http://thumbs.dreamstime.com/x/error-404-not-found-road-sign-26248459.jpg" alt="404 image">
+</div>
