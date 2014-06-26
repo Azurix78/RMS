@@ -222,8 +222,8 @@ transition: 0.2s all; }
 .left-nav{float: left; width: 25%;margin: 20px 5% 20px 0;}
 	.left-nav ul{background-color:white; border-radius: 4px; -ms-border-radius: 4px;-o-border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px; overflow: hidden; border-left: 2px #de9251 solid; border-right: 2px #de9251 solid; border-bottom: 2px solid #de9251;}
 	.left-nav ul li{height: auto;line-height: 40px; min-height: 40px; border-top: 2px #de9251 solid; padding: 0 5px; text-align: center; font-size: 14px; font-family: 'Oswald', Verdana;}
-	.left-nav ul li:first-child, .left-nav ul li.active{ background: #de9251; color:#ffffff; }
-	.left-nav ul li:hover{background: #f2d8c5; cursor: pointer;}
+	.left-nav ul li:first-child{ background: #de9251; color:#ffffff; }
+	.left-nav ul li:hover, .left-nav ul li.activ{background: #f2d8c5; cursor: pointer;}
 	.left-nav ul li:first-child:hover{ background-color: #de9251; cursor: text;}
 		.left-nav ul li > a{ min-height: 40px;display: table; height: 100%; width: 100%; table-layout: fixed; text-decoration: none; color: #3e3e3e}
 			.left-nav ul li > a > span{ display: table-cell; vertical-align: middle; text-align: center; font-size: 14px; font-family: 'Oswald', Verdana; line-height: 20px;}

@@ -42,6 +42,24 @@
 	        'id' => '[0-9]+'
 	    )
 	);
+	Router::connect(
+	    '/nos-actions/compte-rendu/:id-:slug', // E.g. /blog/3-CakePHP_Rocks
+	    array('controller' => 'reports', 'action' => 'view'),
+	    array(
+	        // order matters since this will simply map ":id" to $articleId in your action
+	        'pass' => array('id'),
+	        'id' => '[0-9]+'
+	    )
+	);
+	Router::connect(
+	    '/actualites/:id-:slug', // E.g. /blog/3-CakePHP_Rocks
+	    array('controller' => 'news', 'action' => 'view'),
+	    array(
+	        // order matters since this will simply map ":id" to $articleId in your action
+	        'pass' => array('id'),
+	        'id' => '[0-9]+'
+	    )
+	);
 	Router::connect('/nos-intervenants', array('controller' => 'teams', 'action' => 'index'));
 	Router::connect('/nos-partenaires', array('controller' => 'partners', 'action' => 'index'));
 	Router::connect('/nous-aider', array('controller' => 'help', 'action' => 'index'));

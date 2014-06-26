@@ -15,8 +15,13 @@ class ProgramsController extends AppController {
 
 			$this->set('programs', $programs);
 
-			$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $id, 'action_is_activated >' => 0))));
-			$this->set('reports', $this->Report->find('all', array('conditions' => array('program_id' => $id, 'report_is_activated >' => 0), 'order' => array('report_date DESC'))));
+			$reports = $this->Report->find('all', array('conditions' => array('program_id' => $programs[0]['Program']['program_id'], 'report_is_activated >' => 0), 'order' => array('report_date DESC')));
+			foreach ($reports as $key => $value) {
+				$reports[$key]['Report']['slug'] = $this->slug($value['Report']['report_name']);
+			}
+
+			$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $programs[0]['Program']['program_id'], 'action_is_activated >' => 0))));
+			$this->set('reports', $reports);
 		}
 		else{
 			$this->redirect(array('controller' => 'home', 'action' => 'index', 'admin' => false));
@@ -33,10 +38,16 @@ class ProgramsController extends AppController {
 				$programs[$key]['Program']['slug'] = $this->slug($value['Program']['program_name']);
 			}
 
+			$reports = $this->Report->find('all', array('conditions' => array('program_id' => $id, 'report_is_activated >' => 0), 'order' => array('report_date DESC')));
+			foreach ($reports as $key => $value) {
+				$reports[$key]['Report']['slug'] = $this->slug($value['Report']['report_name']);
+			}
+
 			$this->set('programs', $programs);
 			$this->set('prog', $this->Program->find('first', array('conditions' => array('program_id' => $id, 'program_is_activated >' => 0))));
 			$this->set('actions', $this->Action->find('all', array('conditions' => array('program_id' => $id, 'action_is_activated >' => 0))));
-			$this->set('reports', $this->Report->find('all', array('conditions' => array('program_id' => $id, 'report_is_activated >' => 0), 'order' => array('report_date DESC'))));
+			$this->set('reports', $reports);
+			$this->set('id', $id);
 		}
 		else{
 			$this->redirect(array('controller' => 'programs', 'action' => 'index', 'admin' => false));

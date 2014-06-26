@@ -13,6 +13,9 @@
 				<a href="/news/view/<?php echo $news['News']['news_id']; ?>">
 					<span class="plus">Lire la suite</span>
 				</a>
+				<?php 
+					echo $this->Html->link('<span class="plus">Lire la suite</span>', '/actualites/' . $news['News']['news_id'] . '-' .  $news['News']['slug'], array('escape' => false));
+				?>
 			</section>
 		</article>
 	<?php } ?>

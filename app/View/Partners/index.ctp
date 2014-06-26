@@ -17,7 +17,7 @@
 			</div>
 			<h4><?php echo $partner['Partner']['partner_name']; ?></h4>
 			<p><?php echo $partner['Partner']['partner_desc']; ?></p>
-			<a href="javacript:;" class="plus">Voir plus</a>
+			<a href="#" class="plus">Voir plus</a>
 		</section>
 	<?php endforeach ?>
 </section>

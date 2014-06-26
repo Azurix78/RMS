@@ -2,11 +2,22 @@
 	<ul>
 		<li>Liste des programme</li>
 		<?php foreach ($programs as $key => $program): ?>
-			<li>
+			
 				<?php 
-					echo $this->Html->link('<span>' . $program['Program']['program_name'] . '</span>', '/nos-actions/' . $program['Program']['program_id'] . '-' .  $program['Program']['slug'], array('escape' => false));
+				if($id == $program['Program']['program_id'])
+				{ ?>
+					<li class="activ">
+					<?php echo $this->Html->link('<span>' . $program['Program']['program_name'] . '</span>', '/nos-actions/' . $program['Program']['program_id'] . '-' .  $program['Program']['slug'], array('escape' => false)); ?>
+					</li>
+				<?php }
+				else
+				{ ?>
+					<li>
+					<?php echo $this->Html->link('<span>' . $program['Program']['program_name'] . '</span>', '/nos-actions/' . $program['Program']['program_id'] . '-' .  $program['Program']['slug'], array('escape' => false)); ?>
+					</li>
+				<?php }
 				?>
-			</li>
+
 		<?php endforeach ?>
 	</ul>
 </section>
@@ -21,8 +32,8 @@
 				<section class="program-report">
 					<h2>Compte(s) rendu(s):</h2>
 					<?php foreach ($reports as $key => $report): ?>
-						<?php
-							echo $this->Html->link($report['Report']['report_date'] . ' - ' . $report['Report']['report_name'], array('controller' => 'reports', 'action' => 'view', $report['Report']['report_id'], 'admin' => false, 'escape' => false));
+						<?php 
+							echo $this->Html->link('<span>' . $report['Report']['report_name'] . '</span>', '/nos-actions/compte-rendu/' . $report['Report']['report_id'] . '-' .  $report['Report']['slug'], array('escape' => false));
 						?>
 					<?php endforeach ?>
 				</section>

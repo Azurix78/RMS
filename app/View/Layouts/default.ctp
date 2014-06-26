@@ -20,6 +20,9 @@
 			echo $this->Html->css('style');
 			echo $this->Html->script('jQuery-v1.11.1');
 		?>
+		<!--[if lt IE 8]>
+			<script type="text/javascript" src="/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<header class="header">

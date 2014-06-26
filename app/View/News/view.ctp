@@ -5,7 +5,7 @@
 				<div>
 					<?php echo $news['News']['news_content']; ?>
 				</div>
-				<a href="/news/">
+				<a href="/actualites/">
 					<span class="plus back">Retour</span>
 				</a>
 			</section>

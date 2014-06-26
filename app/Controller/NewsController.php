@@ -72,7 +72,11 @@ class NewsController extends AppController {
 
 	// Page de listing des news
 	public function index() {
-		$this->set('news', $this->News->find('all', array('conditions' => array('news_is_activated >' => 0))));
+		$news = $this->News->find('all', array('conditions' => array('news_is_activated >' => 0)));
+		foreach ($news as $key => $value) {
+			$news[$key]['News']['slug'] = $this->slug($value['News']['news_title']);
+		}
+		$this->set('news', $news);
 	}
 
 	// Vue pour les news

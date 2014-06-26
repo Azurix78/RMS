@@ -25,7 +25,7 @@
 			<p>
 				<?php echo $team['Team']['team_desc']; ?>
 			</p>
-			<a href="javacript:;" class="plusMember">Voir plus</a>
+			<a href="#" class="plusMember">Voir plus</a>
 		</section>
 	<?php endforeach ?>
 </section>
