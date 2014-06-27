@@ -14,9 +14,7 @@
 				</article>
 			</div>
 			<div class="img-sliders">
-				<div class="lover"></div>
 				<img class="img-slider" alt="image" src="/files/images/sliders/<?php echo $slider['Slider']['slider_img']; ?>" />
-				<div class="rover"></div>
 			</div>
 		</div>
 	<?php endforeach ?>

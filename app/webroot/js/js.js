@@ -24,10 +24,6 @@ $( document ).ready(function() {
     $(this).fadeOut();
   });
 
-  $( ".accueil .slick-slide .img-sliders" ).each(function( index ) {
-    $(this).css('width', $(this).children('.img-slider').width());
-  });
-
   $(document).on('click', '.left-nav li', function(event) {
     $( ".left-nav li" ).each(function() {
       $( this ).removeClass( "active" );
