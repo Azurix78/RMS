@@ -71,7 +71,7 @@
 		</section>
 		<footer class="footer">
 				<section class="container">
-					<p>© 2014 - Réussir Moi Aussi - Tous droits reservés <em>Site réalisé par des étudiants de la Web@cadémie.</em></p>
+					<p>© 2014 - <b>Réussir Moi Aussi</b> - Tous droits reservés <em>Site réalisé par des étudiants de la <a href="http://webacademie.org">Web@cadémie</a>.</em></p>
 				</section>
 		</footer>
 		

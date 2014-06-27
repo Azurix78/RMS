@@ -11,6 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php
+    echo $this->Html->meta(
+        'favicon.ico',
+        'img/favicon.ico',
+        array('type' => 'icon')
+    );
+    
       echo $this->Html->css('/lib/bootstrap/css/bootstrap.min');
       echo $this->Html->css('/lib/font-awesome/css/font-awesome.min');
       echo $this->Html->css('main.min');

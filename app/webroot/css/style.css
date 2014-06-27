@@ -95,6 +95,8 @@ h3, .viewTeam h2 { font-size: 1.375em; color: #de9251;  margin: 10px 0 0 0; line
 .footer{ background: #de9251; min-height: 50px; line-height: 50px; width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; margin-top: 40px;}
 .footer p{ color: white; font-size: 12px}
 .footer em{ float: right; font-size: 12px; font-style: italic; color:#f6ddc7;}
+.footer a, .footer b{ color: white; font-weight: bold; text-decoration: none;}
+.footer a:hover{ text-decoration: underline;}
 
 .header{ -webkit-transition: 0.2s all;
 -moz-transition: 0.2s all;
@@ -702,6 +704,8 @@ input[type=submit]
 .rightA .leftArticle{
 	float: right !important;
 }
+
+
 
 @media screen and (max-width: 1060px) {
 	.header .navigation-site > li > a > span{
