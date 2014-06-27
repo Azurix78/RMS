@@ -27,7 +27,7 @@
 	<body>
 		<header class="header">
 			<section id="logo-site">
-				<a href="/home/"><img alt="logo" src="/img/logo-site.png" /></a>
+				<a href="/"><img alt="logo" src="/img/logo-site.png" /></a>
 			</section>
 			<nav>
 				<ul class="navigation-site">

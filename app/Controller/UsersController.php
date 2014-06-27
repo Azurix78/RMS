@@ -11,7 +11,7 @@ class UsersController extends AppController {
 					$this->Session->setFlash("Vous êtes maintenant connecté !");
 					$this->redirect(array('controller' => 'admin', 'action' => 'index', 'admin' => true));
 				}else
-					$this->Session->setFlash("Username ou Mots de passe incorrect !", 'notif', array('type' => 'error'));
+					$this->Session->setFlash("Username ou Mot de passe incorrect !", 'notif', array('type' => 'error'));
 			}
 		}else{
 			$this->Session->setFlash("Vous êtes déjà connecté !", 'notif');
