@@ -42,23 +42,20 @@ class ContactController extends AppController {
 
 
 					// Creation du message et envoi du mail
-					$message  = 'Vous avez reçu un message depuis le site RéussirMoiAussi.fr :<br>';
-					$message .= 'Nom / Prénom : ' . $contact['name'] . '<br>';
-					$message .= 'Mail : ' . $contact['mail'] . '<br>';
-					$message .= 'Telephone : ' . $contact['tel'] . '<br>';
-					$message .= 'Objet : ' . $contact['object'] . '<br>';
-					$message .= 'Message : <br>' . $contact['message'];
+					$message  = 'Vous avez reçu un message depuis le site RéussirMoiAussi.fr :' . $contact['message'];
 
 				    $this->Email->to = $data['Param']['param_mail_contact'];
 					$this->Email->subject = '[ReussirMoiAussi] ' . $contact['object'];
-					$this->Email->from = 'noreply@reussirmoiaussi.fr';
 					$this->Email->smtpOptions = array(
 					'port'=>'465',
 					'timeout'=>'30',
 					'host' => 'ssl://smtp.gmail.com',
 					'username'=>'reussirmoiaussismtp@gmail.com',
 					'password'=>'smtprma75',
+					'replyTo'=>$contact['mail'],
 					);
+					$this->Email->from = 'noreply@reussirmoiaussi.fr';
+					$this->Email->sender = 'noreply@reussirmoiaussi.fr';
 					$this->Email->delivery = 'smtp';
 					if ($this->Email->send($message)) {
 						$this->Session->setFlash(__('Message envoyé'));

@@ -16,10 +16,9 @@ class Contact extends AppModel {
             )
         ),
         'object' => array(
-            'alphaNumeric' => array(
-                'rule'     => 'alphaNumeric',
-                'required' => true,
-                'message'  => 'Chiffres et lettres uniquement !'
+            'empty'=>array(
+                'rule' => 'notEmpty',
+                'message' => 'Ce champ ne peut pas être vide',
             ),
             'between' => array(
                 'rule'    => array('between', 5, 50),

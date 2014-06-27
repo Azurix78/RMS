@@ -77,6 +77,7 @@ class AppController extends Controller {
 					return $name;
 				return false;
 			}
+		die(var_dump($extension));
 			return false;
 		}
 		return false;

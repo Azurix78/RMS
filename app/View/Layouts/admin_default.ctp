@@ -92,10 +92,10 @@
         </div>
         <!-- #menu -->
         <ul id="menu" class="">
-          <li class="nav-header" data-current="<?php echo $this->params['controller']; ?>">Menu</li>
+          <li class="nav-header" data-current="<?php echo $this->params['controller']; ?>" data-current2="<?php echo $this->params['action']; ?>">Menu</li>
           <li class="nav-divider"></li>
           <li>
-            <?php echo $this->Html->link("<i class=\"fa fa-home\"></i><span class=\"link-title\"> Acceuil</span>", array('controller'=>'admin','action'=>'index', 'admin' => true), array('class' => 'link-title li-admin','admin' => true, 'escape'=>false)); ?>
+            <?php echo $this->Html->link("<i class=\"fa fa-home\"></i><span class=\"link-title\"> Acceuil</span>", array('controller'=>'admin','action'=>'index', 'admin' => true), array('class' => 'link-title li-admin_index','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-bullhorn\"></i><span class=\"link-title\"> Le slider</span>", array('controller'=>'sliders','action'=>'index', 'admin' => true), array('class' => 'link-title li-sliders','admin' => true, 'escape'=>false)); ?>
@@ -126,6 +126,9 @@
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-lock\"></i><span class=\"link-title\"> Editer mon compte</span>", array('controller'=>'users','action'=>'edit', 'admin' => true), array('class' => 'link-title li-users','admin' => true, 'escape'=>false)); ?>
+          </li>
+          <li>
+            <?php echo $this->Html->link("<i class=\"fa fa-book\"></i><span class=\"link-title\"> Documentation</span>", array('controller'=>'admin','action'=>'doc', 'admin' => true), array('class' => 'link-title li-admin_doc','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
             <?php echo $this->Html->link("<i class=\"fa fa-share\"></i><span class=\"link-title\"> Retour au site</span>", array('controller'=>'home','action'=>'index', 'admin' => false), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
@@ -169,7 +172,10 @@
   </body>
   <?php echo $this->Html->script('jQuery-v1.11.1'); ?>
   <script type="text/javascript">
-    $('.li-' + $('.nav-header').data('current')).addClass('active');
+    if($('.nav-header').data('current') != "admin")
+      $('.li-' + $('.nav-header').data('current')).addClass('active');
+    else
+      $('.li-' + $('.nav-header').data('current2')).addClass('active');
     $('#wrap').css('min-height', $(window).height() - 42);
   </script>
 </html>

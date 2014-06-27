@@ -25,6 +25,10 @@ class AdminController extends AppController {
 		$this->request->data = $data;
 	}
 
+	public function admin_doc() {
+		
+	}
+
 }
 
 ?>
