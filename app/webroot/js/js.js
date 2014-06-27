@@ -18,6 +18,12 @@ $( document ).ready(function() {
   		speed: 3000,
 	});
 
+  $(document).on('click', '.viewTeam', function(event) {
+    if( event.target !== this ) 
+       return;
+    $(this).fadeOut();
+  });
+
   $( ".accueil .slick-slide .img-sliders" ).each(function( index ) {
     $(this).css('width', $(this).children('.img-slider').width());
   });

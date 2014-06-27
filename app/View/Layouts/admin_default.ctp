@@ -119,6 +119,9 @@
             <?php echo $this->Html->link("<i class=\"fa fa-globe\"></i><span class=\"link-title\"> Médias</span>", array('controller'=>'Medias','action'=>'index', 'admin' => true), array('class' => 'link-title li-media','admin' => true, 'escape'=>false)); ?>
           </li>
           <li>
+            <?php echo $this->Html->link("<i class=\"fa fa-lock\"></i><span class=\"link-title\"> Utilisateur</span>", array('controller'=>'users','action'=>'edit', 'admin' => true), array('class' => 'link-title li-teams','admin' => true, 'escape'=>false)); ?>
+          </li>
+          <li>
             <?php echo $this->Html->link("<i class=\"fa fa-share\"></i><span class=\"link-title\"> Retour au site</span>", array('controller'=>'home','action'=>'index', 'admin' => false), array('class' => 'link-title','admin' => true, 'escape'=>false)); ?>
           </li>
           <li class="nav-divider"></li>

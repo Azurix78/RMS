@@ -28,7 +28,7 @@ class UsersController extends AppController {
 				$this->User->id = $this->Session->read('Auth.User.id');
 				if ($this->User->save($d, true, array('password'))) {
 					$this->Session->setFlash("Votre mot de passe à bien été modifié !", 'notif');
-					$this->redirect(array('controller' => 'admin', 'action' => 'index', 'admin' => true));
+					$this->redirect(array('controller' => 'users', 'action' => 'edit', 'admin' => true));
 				} else {
 					$this->Session->setFlash("Un problème est survenu !", 'notif', array('type' => 'error'));
 					$this->redirect($this->referer());
