@@ -4,7 +4,7 @@
 	</p>
 </blockquote>
 
-<h5>Tailles recommandées pour les images (en pixels)</h5>
+<h5 style="color: #de9251;">Tailles recommandées pour les images (en pixels)</h5>
 <em style="color: grey; font-size:12px;"><i class="fa fa-info-circle"></i> Ce sont des tailles recommandées, vous pouvez faire des images avec des tailles différentes mais le rendu de la page sera forcément impacté.</em>
 <p>
 	<br>
@@ -43,4 +43,36 @@
 	<ul>
 		<li>Images pour chaque paragraphe - 330 x 250</li>
 	</ul>
+</p>
+
+<hr>
+<h5 style="color: #de9251;">Modification des pages HTML</h5>
+<em style="color: grey; font-size:12px;"><i class="fa fa-info-circle"></i> Chaque page HTML est placée dans un dossier spécifique. Voici les liens pour chacune des pages. Attention a ce que vous faites, pensez à faire des sauvegardes avant.</em>
+<p>
+	<br>
+	<b>Accueil :</b>  /app/Views/Home/index.ctp
+	<br>
+	<b>Actualités :</b>  
+		<ul>
+			<li>Liste : /app/Views/News/index.ctp</li>
+			<li>Vue de la news : /app/Views/News/view.ctp</li>
+		</ul>
+	<br>
+	<b>Coaching :</b>  Directement depuis le panel admin
+	<br>
+	<b>Nos actions :</b>  
+		<ul>
+			<li>Liste : /app/Views/Programs/index.ctp</li>
+			<li>Vue de l'action : /app/Views/Programs/view.ctp</li>
+		</ul>
+	<br>
+	<b>Nos intervenants :</b>  /app/Views/Teams/index.ctp
+	<br>
+	<b>Nos partenaires :</b>  /app/Views/Partners/index.ctp
+	<br>
+	<b>Médias :</b>  /app/Views/Medias/index.ctp
+	<br>
+	<b>Contact :</b>  /app/Views/Contact/index.ctp
+	<br>
+	<b>Nous aider :</b>  /app/Views/Help/index.ctp
 </p>
